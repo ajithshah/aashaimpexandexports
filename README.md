@@ -1,3 +1,5 @@
+url = https://ajithshah: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@github.com/ajithshah/ygphotosworld.git
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
