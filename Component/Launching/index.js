@@ -1,4 +1,4 @@
-import styles from './Launching.module.css';
+import styles from "./Launching.module.css";
 
 const Launching = () => {
   return (
@@ -10,14 +10,12 @@ const Launching = () => {
             alt="Aasha Impex and Exports Logo"
             className={styles.logoGlow}
           />
-          <h1 className={styles.launchingTitle}>
-            LAUNCHING SOON
-          </h1>
-          <p className={styles.companyName}>
-            Aasha Impex and Exports
-          </p>
+          <h1 className={styles.launchingTitle}>LAUNCHING SOON</h1>
+          <p className={styles.companyName}>Aasha Impex and Exports</p>
           <p className={styles.description}>
-            Connecting global markets with quality products and reliable export-import solutions.<br />
+            Connecting global markets with quality products and reliable
+            export-import solutions.
+            <br />
             Our futuristic website is coming soon!
           </p>
           <nav className={styles.socialNav}>

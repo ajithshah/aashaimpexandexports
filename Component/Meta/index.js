@@ -18,16 +18,16 @@ const Meta = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-  <meta name="author" content="Aasha Impex and Exports" />
+      <meta name="author" content="Aasha Impex and Exports" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
       {/* Language and Locale */}
-  <meta httpEquiv="content-language" content="en-IN" />
-  <meta name="language" content="English" />
-  <meta name="geo.region" content="IN" />
-  <meta name="geo.country" content="India" />
+      <meta httpEquiv="content-language" content="en-IN" />
+      <meta name="language" content="English" />
+      <meta name="geo.region" content="IN" />
+      <meta name="geo.country" content="India" />
 
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
@@ -41,8 +41,8 @@ const Meta = ({
       <meta property="og:image:height" content="630" />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
-  <meta property="og:site_name" content={siteName} />
-  <meta property="og:locale" content="en_IN" />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:locale" content="en_IN" />
 
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -58,13 +58,16 @@ const Meta = ({
       {article && (
         <>
           <meta property="article:author" content="Aasha Impex and Exports" />
-          <meta property="article:publisher" content="Aasha Impex and Exports" />
+          <meta
+            property="article:publisher"
+            content="Aasha Impex and Exports"
+          />
         </>
       )}
 
       {/* Business/Contact Info */}
-  <meta name="contact" content="info@aashaimpexandexports.com" />
-  <meta name="copyright" content="Aasha Impex and Exports" />
+      <meta name="contact" content="info@aashaimpexandexports.com" />
+      <meta name="copyright" content="Aasha Impex and Exports" />
       <meta name="rating" content="general" />
       <meta name="distribution" content="global" />
 
@@ -75,11 +78,14 @@ const Meta = ({
         name="apple-mobile-web-app-status-bar-style"
         content="black-translucent"
       />
-  <meta name="apple-mobile-web-app-title" content="Aasha Impex and Exports" />
+      <meta
+        name="apple-mobile-web-app-title"
+        content="Aasha Impex and Exports"
+      />
 
       {/* Favicon and Icons */}
       <link rel="icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/logo.svg" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/logo.svg" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
 
@@ -87,8 +93,8 @@ const Meta = ({
       <link rel="manifest" href="/manifest.json" />
 
       {/* Theme Color */}
-  <meta name="theme-color" content="#38bdf8" />
-  <meta name="msapplication-TileColor" content="#38bdf8" />
+      <meta name="theme-color" content="#38bdf8" />
+      <meta name="msapplication-TileColor" content="#38bdf8" />
 
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
