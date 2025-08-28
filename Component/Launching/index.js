@@ -7,11 +7,11 @@ const Launching = () => {
         <div className={styles.centerContent}>
           <img
             src="/logo.png"
-            alt="Aasha Impex and Exports Logo"
+            alt="A A Sha Impex and Exports Logo"
             className={styles.logoGlow}
           />
-          <h1 className={styles.launchingTitle}>LAUNCHING SOON</h1>
-          <p className={styles.companyName}>Aasha Impex and Exports</p>
+          <h1 className={styles.launchingTitle}>Empowering Global Trade</h1>
+          <p className={styles.companyName}>A A Sha Impex and Exports</p>
           <p className={styles.description}>
             Connecting global markets with quality products and reliable
             export-import solutions.
@@ -30,8 +30,6 @@ const Launching = () => {
           </nav>
         </div>
       </div>
-      <div className={styles.bgGlow1} />
-      <div className={styles.bgGlow2} />
     </div>
   );
 };
