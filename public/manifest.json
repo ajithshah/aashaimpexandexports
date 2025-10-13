@@ -1,0 +1,23 @@
+{
+  "name": "A A Sha Impex and Exports",
+  "short_name": "AAShaImpex",
+  "description": "A A Sha Impex and Exports connects global markets with quality products and reliable import-export solutions. Based in India, we specialize in sourcing, exporting, and importing a wide range of goods worldwide.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#38bdf8",
+  "theme_color": "#38bdf8",
+  "orientation": "portrait",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+/* WhatsApp Floating Action Button */
+.whatsappFab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fabContainer {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.fabContainer i {
+  color: white;
+  font-size: 28px;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.whatsappFab:hover .fabContainer {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsappFab:hover .fabContainer i {
+  transform: scale(1.1);
+}
+
+/* Ripple Effect */
+.ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+}
+
+.whatsappFab:hover .ripple {
+  width: 120%;
+  height: 120%;
+}
+
+/* Pulsing Animation */
+.fabContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #25d366;
+  animation: pulse 2s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(15, 23, 42, 0.95);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: rgba(15, 23, 42, 0.95);
+}
+
+.whatsappFab:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(-10px);
+}
+
+/* Active/Click Effect */
+.whatsappFab:active .fabContainer {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .whatsappFab {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .fabContainer {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .fabContainer i {
+    font-size: 26px;
+  }
+  
+  .tooltip {
+    display: none; /* Hide tooltip on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsappFab {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .fabContainer {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .fabContainer i {
+    font-size: 24px;
+  }
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Entrance Animation */
+.whatsappFab {
+  animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .whatsappFab,
+  .fabContainer,
+  .ripple,
+  .tooltip {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .fabContainer::before {
+    animation: none !important;
+  }
+}
