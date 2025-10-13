@@ -1,0 +1,178 @@
+/* Modal Styles */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modalContent {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  animation: slideIn 0.3s ease-out;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.modalTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.closeButton:hover {
+  background: rgba(66, 153, 225, 0.1);
+  color: var(--logo-accent);
+  transform: scale(1.1);
+}
+
+.modalBody {
+  padding: 2rem;
+  overflow-y: auto;
+  max-height: calc(80vh - 120px);
+}
+
+.policyContent {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.policyContent h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--logo-accent);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.policyContent h3:first-child {
+  margin-top: 0;
+}
+
+.policyContent p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.policyContent ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.policyContent li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modalContent {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .modalHeader {
+    padding: 1.5rem;
+  }
+
+  .modalTitle {
+    font-size: 1.5rem;
+  }
+
+  .modalBody {
+    padding: 1.5rem;
+    max-height: calc(90vh - 100px);
+  }
+
+  .policyContent h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalContent {
+    width: 98%;
+    margin: 1rem;
+  }
+
+  .modalHeader {
+    padding: 1rem;
+  }
+
+  .modalTitle {
+    font-size: 1.3rem;
+  }
+
+  .modalBody {
+    padding: 1rem;
+  }
+
+  .closeButton {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+}

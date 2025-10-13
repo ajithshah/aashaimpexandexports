@@ -1,0 +1,182 @@
+import React, { useState } from 'react';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import styles from './Contact.module.css';
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+      message: ''
+    });
+  };
+
+  return (
+    <section id="contact" className={styles.contact}>
+      <div className={styles.container}>
+        <div className={styles.contactHeader}>
+          <h2 className={styles.sectionTitle}>Let's Work Together</h2>
+          <p className={styles.sectionDescription}>
+            Reach out for tailored import-export solutions that fit your needs.
+          </p>
+        </div>
+
+        <div className={styles.contactContent}>
+          <div className={styles.contactForm}>
+            <form onSubmit={handleSubmit} className={styles.form}>
+              <div className={styles.formRow}>
+                <div className={styles.formGroup}>
+                  <label htmlFor="name" className={styles.label}>Name <span style={{color: 'red'}}>*</span></label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className={styles.input}
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="email" className={styles.label}>Email <span style={{color: 'red'}}>*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className={styles.input}
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+
+              <div className={styles.formRow}>
+                <div className={styles.formGroup}>
+                  <label htmlFor="phone" className={styles.label}>Phone <span style={{color: 'red'}}>*</span></label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className={styles.input}
+                    placeholder="+91 9999999999"
+                  />
+                </div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="company" className={styles.label}>Company</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className={styles.input}
+                    placeholder="Your company name"
+                  />
+                </div>
+              </div>
+
+              <div className={styles.formGroup}>
+                <label htmlFor="message" className={styles.label}>Message <span style={{color: 'red'}}>*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className={styles.textarea}
+                  placeholder="Tell us about your import-export needs..."
+                  rows="5"
+                ></textarea>
+              </div>
+
+              <button type="submit" className={styles.submitBtn}>
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div className={styles.contactInfo}>
+            <div className={styles.infoCard}>
+              <h3 className={styles.infoTitle}>Contact Information</h3>
+              <div className={styles.infoItem}>
+                <div className={styles.infoIcon}><i className="bi bi-geo-alt-fill" style={{fontSize: '1.1em', verticalAlign: 'middle'}}></i></div>
+                <div>
+                  <strong>Office:</strong><br />
+                  24, Sembudoss Street, Parry's Corner, George Town,<br />
+                  Chennai, Tamil Nadu 600001
+                </div>
+              </div>
+              <div className={styles.infoItem}>
+                <div className={styles.infoIcon}><i className="bi bi-telephone-fill" style={{fontSize: '1.1em', verticalAlign: 'middle'}}></i></div>
+                <div>
+                  <strong>Phone:</strong><br />
+                  +91 9444184855<br />
+                  +91 8122816789
+                </div>
+              </div>
+              <div className={styles.infoItem}>
+                <div className={styles.infoIcon}><i className="bi bi-envelope-fill" style={{fontSize: '1.1em', verticalAlign: 'middle'}}></i></div>
+                <div>
+                  <strong>Email:</strong><br />
+                  aashaimpexandexports@gmail.com
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.quickLinks}>
+              <h3 className={styles.linksTitle}>Quick Links</h3>
+              <div className={styles.linksGrid}>
+                <a href="/about" className={styles.link}>About Us</a>
+                <a href="/products" className={styles.link}>Products</a>
+                <a href="/industries" className={styles.link}>Industries</a>
+                <a href="/contact" className={styles.link}>Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Google Map */}
+        <div className={styles.mapContainer} style={{marginTop: '2rem'}}>
+          <iframe
+            title="A A Sha Impex and Exports Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0756735748723!2d80.28444877532364!3d13.094390512173847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526f8c9f69363f%3A0x434d86e1f9007946!2sA%20A%20Sha%20Impex%20and%20Exports!5e0!3m2!1sen!2sin!4v1757837550725!5m2!1sen!2sin"
+            width="100%"
+            height="350"
+            style={{ border: 0, borderRadius: '8px', width: '100%' }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;

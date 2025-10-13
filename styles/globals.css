@@ -1,27 +1,48 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Logo-inspired color system with warm white theme */
+  --logo-white: #ffffff;
+  --logo-primary: #ffffff;
+  --logo-dark: #2d3748;
+  --logo-gray: #718096;
+  --logo-accent: #4299e1;      /* Warm blue accent */
+  --logo-secondary: #0b7edc;   /* Warm orange for highlights */
+  
+  /* Warm white-based color variations */
+  --white-pure: #ffffff;
+  --white-soft: #fefefe;
+  --white-muted: rgba(255, 255, 255, 0.95);
+  --white-transparent: rgba(255, 255, 255, 0.1);
+  --white-glow: rgba(255, 255, 255, 0.4);
+  
+  /* Warm background system */
+  --bg-primary: #fafafa;      /* Warm white */
+  --bg-secondary: #f7fafc;    /* Slightly warmer white */
+  --bg-tertiary: #edf2f7;     /* Light warm gray */
+  --bg-card: rgba(255, 255, 255, 0.9);
+  
+  /* Text colors for warm white theme */
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --text-dark: #1a202c;
+  
+  /* Glass morphism with warm white accents */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Gradients with warm white primary */
+  --gradient-primary: linear-gradient(135deg, #ffffff, #4299e1);
+  --gradient-accent: linear-gradient(135deg, #4299e1, #ffffff);
+  --gradient-subtle: linear-gradient(135deg, rgba(176, 143, 143, 0.2), rgba(255, 255, 255, 0.1));
+  
+  /* Legacy support */
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+  --primary: var(--logo-white);
+  --secondary: var(--logo-accent);
+  --accent: var(--logo-secondary);
+  --border: var(--glass-border);
 }
 
 * {
@@ -30,13 +51,114 @@ body {
   margin: 0;
 }
 
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-primary);
+  background: linear-gradient(135deg, 
+    var(--bg-primary) 0%, 
+    var(--bg-secondary) 25%, 
+    var(--bg-tertiary) 50%, 
+    var(--bg-secondary) 75%, 
+    var(--bg-primary) 100%);
+  background-attachment: fixed;
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 2.6;
+  padding-top: 80px; /* Account for fixed header */
+}
+
+/* Futuristic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+  box-shadow: 0 0 10px var(--white-glow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-accent);
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Selection styling */
+::selection {
+  background: var(--logo-accent);
+  color: var(--white-pure);
+}
+
+::-moz-selection {
+  background: var(--logo-accent);
+  color: var(--white-pure);
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Button reset */
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* List reset */
+ul, ol {
+  list-style: none;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Dark theme is default, but keeping media query for system preference */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #000814;
+    --foreground: #e0e6ed;
+  }
+}
+
+/* Accessibility - Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
