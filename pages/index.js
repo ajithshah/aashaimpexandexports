@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/Component/Header";
 import Hero from "@/Component/Hero";
 import Footer from "@/Component/Footer";
@@ -5,167 +6,139 @@ import Meta from "@/Component/Meta";
 import styles from "@/styles/Home.module.css";
 
 export default function Home() {
+
+useEffect(() => {
+  const orb = document.querySelector(`.${styles.orb}`);
+
+  const handleMouseMove = (e) => {
+    const x = (window.innerWidth / 2 - e.clientX) / 40;
+    const y = (window.innerHeight / 2 - e.clientY) / 40;
+    if (orb) {
+      orb.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  };
+
+  window.addEventListener("mousemove", handleMouseMove);
+
+  return () => window.removeEventListener("mousemove", handleMouseMove);
+}, []);
+
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className={`${styles.pageWrapper} d-flex flex-column min-vh-100`}>
       <Meta
         title="A A Sha Impex and Exports - Empowering Global Trade"
-        description="A A Sha Impex and Exports connects global markets with quality products and reliable import-export solutions. Specializing in sourcing, exporting, and importing a wide range of goods worldwide. Contact us for trusted trade partnerships."
-        keywords="import export, export company, import company, global trade, India export, India import, sourcing, international trade, export business, import business, trade solutions, A A Sha Impex, A A Sha Exports, B2B trade, global sourcing, product sourcing, logistics, supply chain, Indian exporter, Indian importer, export-import services"
+        description="A A Sha Impex and Exports connects global markets with quality products and reliable import-export solutions."
+        keywords="import export, global trade, India export, logistics, supply chain"
         url="https://aashaimpexandexports.com"
         image="/logo.png"
         siteName="A A Sha Impex and Exports"
       />
+
       <Header />
-      <main className="flex-grow-1">
+
+      <main className={`${styles.mainContent} flex-grow-1`}>
+
+        {/* HERO */}
         <Hero />
 
-        {/* About Section */}
-        <section className={styles.aboutSection}>
-          <div className={styles.aboutContainer}>
-            <div className={styles.aboutGrid}>
-              <div className={styles.aboutContent}>
-                <h2 className={styles.aboutTitle}>
-                  Your Partner for Global Trade Excellence
+        {/* ================= ABOUT ================= */}
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <div className={styles.gridTwo}>
+              <div className={styles.fadeLeft}>
+                <h2 className={styles.sectionTitle}>
+                  25+ Years of Global Trade Excellence
                 </h2>
-                <h3 className={styles.aboutSubtitle}>
-                  We are into this business since last more than 25 years
-                </h3>
-                <p className={styles.aboutDescription}>
-                  Powering international commerce with quality, reliability, and innovation.
-                  A A Sha Impex and Exports is a leading import-export company with a heritage
-                  spanning over 25 years. We have been at the forefront of providing cutting-edge
-                  trade solutions to businesses worldwide.
+                <p className={styles.sectionText}>
+                  A A Sha Impex and Exports has been driving international commerce
+                  with precision, reliability, and innovation for over two decades.
                 </p>
-                <p className={styles.aboutDescription}>
-                  Our expertise lies in sourcing, exporting, and importing a wide range of products,
-                  ensuring seamless global trade operations for our clients.
+                <p className={styles.sectionText}>
+                  We specialize in intelligent sourcing, seamless logistics,
+                  and next-generation import-export solutions.
                 </p>
-                <div className={styles.aboutActions}>
-                  <a href="/products" className={styles.aboutPrimaryBtn}>
-                    Explore Our Products
+
+                <div className={styles.buttonGroup}>
+                  <a href="/products" className={styles.primaryBtn}>
+                    Explore Products
                   </a>
-                  <a href="/contact" className={styles.aboutSecondaryBtn}>
+                  <a href="/contact" className={styles.secondaryBtn}>
                     Get In Touch
                   </a>
                 </div>
               </div>
-              <div className={styles.aboutImage}>
-                <span className={styles.aboutImageText}>Global Trade Solutions</span>
+
+              <div className={styles.aiVisual}>
+                <div className={styles.orb}></div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className={styles.servicesSection}>
-          <div className={styles.servicesContainer}>
-            <div className={styles.servicesHeader}>
-              <h2 className={styles.servicesTitle}>Our Services</h2>
-              <p className={styles.servicesDescription}>
-                Comprehensive import-export solutions tailored to meet your global business needs
-              </p>
-            </div>
-            <div className={styles.servicesGrid}>
+        {/* ================= SERVICES ================= */}
+        <section className={styles.sectionDark}>
+          <div className={styles.container}>
+            <h2 className={styles.centerTitle}>Our Intelligent Trade Services</h2>
+
+            <div className={styles.cardGrid}>
               {[
-                { icon: 'bi-rocket-takeoff', title: 'Import Services', desc: 'Comprehensive import solutions with customs clearance, documentation, and logistics support.' },
-                { icon: 'bi-box-seam', title: 'Export Services', desc: 'End-to-end export management including market research, documentation, and shipping.' },
-                { icon: 'bi-truck', title: 'Logistics & Supply Chain', desc: 'Integrated logistics solutions with warehousing, transportation, and supply chain management.' },
-                { icon: 'bi-briefcase', title: 'Trade Consulting', desc: 'Expert trade consulting services including market analysis and regulatory compliance.' }
-              ].map((service, index) => (
-                <div key={index} className={styles.serviceCard}>
-                  <div className={styles.serviceIcon}>
-                    <i className={service.icon}></i>
-                  </div>
-                  <h3 className={styles.serviceTitle}>{service.title}</h3>
-                  <p className={styles.serviceDescription}>{service.description}</p>
+                "Import Solutions",
+                "Export Management",
+                "AI Logistics Optimization",
+                "Global Trade Consulting"
+              ].map((item, index) => (
+                <div key={index} className={styles.card}>
+                  <div className={styles.cardGlow}></div>
+                  <h3>{item}</h3>
+                  <p>
+                    Smart, automated, and optimized global trade operations
+                    powered by experience and technology.
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Products Section */}
-        <section className={styles.productsSection}>
-          <div className={styles.productsContainer}>
-            <div className={styles.productsHeader}>
-              <h2 className={styles.productsTitle}>Our Product Categories</h2>
-              <p className={styles.productsDescription}>
-                Discover our comprehensive range of products for global markets
-              </p>
-            </div>
-            <div className={styles.productsGrid}>
-              {[
-                'Electronics & Technology',
-                'Industrial Machinery',
-                'Textiles & Fabrics',
-                'Agricultural Products',
-                'Chemicals & Raw Materials',
-                'Consumer Goods'
-              ].map((product, index) => (
-                <div key={index} className={styles.productCard}>
-                  <div className={styles.productIcon}>
-                    <i className="bi-box-seam"></i>
-                  </div>
-                  <h3 className={styles.productTitle}>{product}</h3>
-                  <p className={styles.productDescription}>High-quality {product.toLowerCase()} for global markets</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* ================= INDUSTRIES ================= */}
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <h2 className={styles.centerTitle}>Industries We Empower</h2>
 
-        {/* Industries Section */}
-        <section className={styles.industriesSection}>
-          <div className={styles.industriesContainer}>
-            <div className={styles.industriesHeader}>
-              <h2 className={styles.industriesTitle}>Industries We Serve</h2>
-              <p className={styles.industriesDescription}>
-                We provide comprehensive import-export solutions across diverse industries worldwide
-              </p>
-            </div>
-            <div className={styles.industriesGrid}>
+            <div className={styles.industryGrid}>
               {[
-                { name: 'Electronics & Technology', icon: 'bi-laptop' },
-                { name: 'Textiles & Fashion', icon: 'bi-scissors' },
-                { name: 'Agriculture & Food', icon: 'bi-tree' },
-                { name: 'Chemicals & Pharmaceuticals', icon: 'bi-flask' },
-                { name: 'Automotive & Machinery', icon: 'bi-car-front' },
-                { name: 'Construction & Building', icon: 'bi-building' },
-                { name: 'Consumer Goods', icon: 'bi-bag' },
-                { name: 'Industrial Equipment', icon: 'bi-gear' }
+                "Technology",
+                "Textiles",
+                "Agriculture",
+                "Pharmaceuticals",
+                "Automotive",
+                "Industrial Equipment"
               ].map((industry, index) => (
-                <div key={index} className={styles.industryCard}>
-                  <div className={styles.industryIcon}>
-                    <i className={industry.icon}></i>
-                  </div>
-                  <h3 className={styles.industryName}>{industry.name}</h3>
+                <div key={index} className={styles.industryItem}>
+                  {industry}
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* ================= CTA ================= */}
         <section className={styles.ctaSection}>
-          <div className={styles.ctaContainer}>
+          <div className={styles.container}>
             <h2 className={styles.ctaTitle}>
-              Ready to Expand Your Global Business?
+              Ready to Expand Globally?
             </h2>
-            <p className={styles.ctaDescription}>
-              Join hundreds of successful businesses that trust A A Sha Impex and Exports
-              for their international trade needs.
+            <p className={styles.ctaText}>
+              Join the future of AI-powered global trade and accelerate your growth.
             </p>
-            <div className={styles.ctaActions}>
-              <a href="/contact" className={styles.ctaPrimaryBtn}>
-                Start Your Journey <i className="bi-rocket-takeoff"></i>
-              </a>
-              <a href="/products" className={styles.ctaSecondaryBtn}>
-                Explore Products
-              </a>
-            </div>
+            <a href="/contact" className={styles.ctaButton}>
+              Start Your Journey →
+            </a>
           </div>
         </section>
+
       </main>
+
       <Footer />
     </div>
   );
