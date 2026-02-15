@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import styles from './CTA.module.css';
+import React from "react";
+import Link from "next/link";
+import styles from "./CTA.module.css";
 
 const CTA = () => {
   return (
@@ -12,9 +12,9 @@ const CTA = () => {
               Ready to Expand Your Global Business?
             </h2>
             <p className={styles.ctaDescription}>
-              Join hundreds of successful businesses that trust A A Sha Impex and Exports
-              for their international trade needs. Let's discuss how we can help you achieve
-              your global business goals.
+              Join hundreds of successful businesses that trust A A Sha Impex
+              and Exports for their international trade needs. Let's discuss how
+              we can help you achieve your global business goals.
             </p>
           </div>
 

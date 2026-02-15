@@ -73,16 +73,23 @@ const Products = () => {
   return (
     <section id="products" className={styles.products}>
       <div className={styles.container}>
-        
         {/* Section Header */}
         <header className={`${styles.sectionHeader} fade-in`}>
-          <h2 className={styles.sectionTitle}>
-            Global Product Portfolio
-          </h2>
+          <h2 className={styles.sectionTitle}>Global Product Portfolio</h2>
           <p className={styles.sectionDescription}>
-            Delivering world-class products across industries with 50+ years
-            of expertise in international trade.
+            Delivering world-class products across industries with 50+ years of
+            expertise in international trade.
           </p>
+          <div className={styles.headerActions}>
+            <a
+              href="/catalog/catalog.pdf"
+              download="AASha-Product-Catalog.pdf"
+              className={styles.downloadBtn}
+              aria-label="Download product catalog PDF"
+            >
+              Download Product Catalog (PDF)
+            </a>
+          </div>
         </header>
 
         {/* Product Categories */}
@@ -103,9 +110,7 @@ const Products = () => {
               </div>
 
               <div className={styles.categoryContent}>
-                <h3 className={styles.categoryTitle}>
-                  {category.title}
-                </h3>
+                <h3 className={styles.categoryTitle}>{category.title}</h3>
                 <p className={styles.categoryDescription}>
                   {category.description}
                 </p>
@@ -119,9 +124,7 @@ const Products = () => {
 
         {/* Featured Products */}
         <div className={`${styles.topProducts} fade-in`}>
-          <h3 className={styles.topProductsTitle}>
-            Featured Export Products
-          </h3>
+          <h3 className={styles.topProductsTitle}>Featured Export Products</h3>
 
           <div className={styles.productsGrid}>
             {topProducts.map((product, index) => (
@@ -140,9 +143,7 @@ const Products = () => {
                 </div>
 
                 <div className={styles.productContent}>
-                  <h4 className={styles.productTitle}>
-                    {product.title}
-                  </h4>
+                  <h4 className={styles.productTitle}>{product.title}</h4>
                   <p className={styles.productDescription}>
                     {product.description}
                   </p>
@@ -167,7 +168,6 @@ const Products = () => {
             Contact Our Trade Experts →
           </Link>
         </div>
-
       </div>
     </section>
   );

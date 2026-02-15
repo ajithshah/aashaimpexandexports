@@ -26,15 +26,21 @@ const Hero = () => {
       const clampedX = Math.max(0, Math.min(rect.width, relativeX));
       const clampedY = Math.max(0, Math.min(rect.height, relativeY));
 
-      const tiltY = ((clampedX / rect.width) - 0.5) * 10;
-      const tiltX = ((clampedY / rect.height) - 0.5) * -10;
+      const tiltY = (clampedX / rect.width - 0.5) * 10;
+      const tiltX = (clampedY / rect.height - 0.5) * -10;
 
       hero.style.setProperty("--mouse-x", `${clampedX}px`);
       hero.style.setProperty("--mouse-y", `${clampedY}px`);
       hero.style.setProperty("--rotate-x", `${tiltX.toFixed(2)}deg`);
       hero.style.setProperty("--rotate-y", `${tiltY.toFixed(2)}deg`);
-      hero.style.setProperty("--rotate-x-inverse", `${(tiltX * -0.7).toFixed(2)}deg`);
-      hero.style.setProperty("--rotate-y-inverse", `${(tiltY * -0.7).toFixed(2)}deg`);
+      hero.style.setProperty(
+        "--rotate-x-inverse",
+        `${(tiltX * -0.7).toFixed(2)}deg`,
+      );
+      hero.style.setProperty(
+        "--rotate-y-inverse",
+        `${(tiltY * -0.7).toFixed(2)}deg`,
+      );
 
       frameRef.current = null;
     };
@@ -107,9 +113,10 @@ const Hero = () => {
           </h2>
 
           <p className={styles.heroDescription}>
-            Harnessing cutting-edge technology and AI-driven logistics to connect markets
-            across continents. Experience seamless, intelligent trade solutions that
-            transcend traditional boundaries and accelerate your business growth.
+            Harnessing cutting-edge technology and AI-driven logistics to
+            connect markets across continents. Experience seamless, intelligent
+            trade solutions that transcend traditional boundaries and accelerate
+            your business growth.
           </p>
 
           <div className={styles.heroActions}>

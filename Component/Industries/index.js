@@ -1,16 +1,16 @@
-import React from 'react';
-import styles from './Industries.module.css';
+import React from "react";
+import styles from "./Industries.module.css";
 
 const Industries = () => {
   const industries = [
-    { name: 'Electronics & Technology', icon: 'bi-laptop' },
-    { name: 'Textiles & Fashion', icon: 'bi-scissors' },
-    { name: 'Agriculture & Food', icon: 'bi-tree' },
-    { name: 'Chemicals & Pharmaceuticals', icon: 'bi-flask' },
-    { name: 'Automotive & Machinery', icon: 'bi-car-front' },
-    { name: 'Construction & Building', icon: 'bi-building' },
-    { name: 'Consumer Goods', icon: 'bi-bag' },
-    { name: 'Industrial Equipment', icon: 'bi-gear' }
+    { name: "Electronics & Technology", icon: "bi-laptop" },
+    { name: "Textiles & Fashion", icon: "bi-scissors" },
+    { name: "Agriculture & Food", icon: "bi-tree" },
+    { name: "Chemicals & Pharmaceuticals", icon: "bi-flask" },
+    { name: "Automotive & Machinery", icon: "bi-car-front" },
+    { name: "Construction & Building", icon: "bi-building" },
+    { name: "Consumer Goods", icon: "bi-bag" },
+    { name: "Industrial Equipment", icon: "bi-gear" },
   ];
 
   return (
@@ -19,7 +19,8 @@ const Industries = () => {
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Industries We Serve</h2>
           <p className={styles.sectionDescription}>
-            We provide comprehensive import-export solutions across diverse industries worldwide
+            Future-ready import-export intelligence for high-impact industries
+            across global markets
           </p>
         </div>
 
@@ -31,7 +32,8 @@ const Industries = () => {
               </div>
               <h3 className={styles.industryName}>{industry.name}</h3>
               <p className={styles.industryDescription}>
-                Specialized import-export services tailored for {industry.name.toLowerCase()} industry requirements.
+                Intelligent sourcing, compliant trade operations, and precision
+                logistics tailored for the {industry.name.toLowerCase()} sector.
               </p>
             </div>
           ))}

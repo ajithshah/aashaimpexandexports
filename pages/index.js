@@ -6,22 +6,21 @@ import Meta from "@/Component/Meta";
 import styles from "@/styles/Home.module.css";
 
 export default function Home() {
+  useEffect(() => {
+    const orb = document.querySelector(`.${styles.orb}`);
 
-useEffect(() => {
-  const orb = document.querySelector(`.${styles.orb}`);
+    const handleMouseMove = (e) => {
+      const x = (window.innerWidth / 2 - e.clientX) / 40;
+      const y = (window.innerHeight / 2 - e.clientY) / 40;
+      if (orb) {
+        orb.style.transform = `translate(${x}px, ${y}px)`;
+      }
+    };
 
-  const handleMouseMove = (e) => {
-    const x = (window.innerWidth / 2 - e.clientX) / 40;
-    const y = (window.innerHeight / 2 - e.clientY) / 40;
-    if (orb) {
-      orb.style.transform = `translate(${x}px, ${y}px)`;
-    }
-  };
+    window.addEventListener("mousemove", handleMouseMove);
 
-  window.addEventListener("mousemove", handleMouseMove);
-
-  return () => window.removeEventListener("mousemove", handleMouseMove);
-}, []);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   return (
     <div className={`${styles.pageWrapper} d-flex flex-column min-vh-100`}>
@@ -37,7 +36,6 @@ useEffect(() => {
       <Header />
 
       <main className={`${styles.mainContent} flex-grow-1`}>
-
         {/* HERO */}
         <Hero />
 
@@ -50,12 +48,13 @@ useEffect(() => {
                   25+ Years of Global Trade Excellence
                 </h2>
                 <p className={styles.sectionText}>
-                  A A Sha Impex and Exports has been driving international commerce
-                  with precision, reliability, and innovation for over two decades.
+                  A A Sha Impex and Exports has been driving international
+                  commerce with precision, reliability, and innovation for over
+                  two decades.
                 </p>
                 <p className={styles.sectionText}>
-                  We specialize in intelligent sourcing, seamless logistics,
-                  and next-generation import-export solutions.
+                  We specialize in intelligent sourcing, seamless logistics, and
+                  next-generation import-export solutions.
                 </p>
 
                 <div className={styles.buttonGroup}>
@@ -78,14 +77,16 @@ useEffect(() => {
         {/* ================= SERVICES ================= */}
         <section className={styles.sectionDark}>
           <div className={styles.container}>
-            <h2 className={styles.centerTitle}>Our Intelligent Trade Services</h2>
+            <h2 className={styles.centerTitle}>
+              Our Intelligent Trade Services
+            </h2>
 
             <div className={styles.cardGrid}>
               {[
                 "Import Solutions",
                 "Export Management",
                 "AI Logistics Optimization",
-                "Global Trade Consulting"
+                "Global Trade Consulting",
               ].map((item, index) => (
                 <div key={index} className={styles.card}>
                   <div className={styles.cardGlow}></div>
@@ -112,7 +113,7 @@ useEffect(() => {
                 "Agriculture",
                 "Pharmaceuticals",
                 "Automotive",
-                "Industrial Equipment"
+                "Industrial Equipment",
               ].map((industry, index) => (
                 <div key={index} className={styles.industryItem}>
                   {industry}
@@ -125,18 +126,16 @@ useEffect(() => {
         {/* ================= CTA ================= */}
         <section className={styles.ctaSection}>
           <div className={styles.container}>
-            <h2 className={styles.ctaTitle}>
-              Ready to Expand Globally?
-            </h2>
+            <h2 className={styles.ctaTitle}>Ready to Expand Globally?</h2>
             <p className={styles.ctaText}>
-              Join the future of AI-powered global trade and accelerate your growth.
+              Join the future of AI-powered global trade and accelerate your
+              growth.
             </p>
             <a href="/contact" className={styles.ctaButton}>
               Start Your Journey →
             </a>
           </div>
         </section>
-
       </main>
 
       <Footer />

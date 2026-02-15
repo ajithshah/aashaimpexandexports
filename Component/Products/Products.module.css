@@ -33,6 +33,45 @@
   line-height: 1.7;
 }
 
+.headerActions {
+  margin-top: 1.3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.78rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(66, 153, 225, 0.35);
+  background: linear-gradient(
+    135deg,
+    rgba(66, 153, 225, 0.12),
+    rgba(255, 255, 255, 0.85)
+  );
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.24s ease,
+    box-shadow 0.24s ease,
+    border-color 0.24s ease,
+    background 0.24s ease;
+}
+
+.downloadBtn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(66, 153, 225, 0.6);
+  background: linear-gradient(
+    135deg,
+    rgba(66, 153, 225, 0.18),
+    rgba(255, 255, 255, 0.95)
+  );
+  box-shadow: 0 12px 24px rgba(66, 153, 225, 0.2);
+}
+
 /* ================= CATEGORY GRID ================= */
 
 .categoriesGrid {
@@ -242,5 +281,10 @@
 
   .productsCta {
     padding: 40px 20px;
+  }
+
+  .downloadBtn {
+    width: 100%;
+    max-width: 320px;
   }
 }

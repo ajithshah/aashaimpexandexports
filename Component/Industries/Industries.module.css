@@ -1,124 +1,279 @@
 .industries {
-  padding: 100px 0;
+  --fx-cyan: #06b6d4;
+  --fx-blue: #2563eb;
+  --fx-teal: #0f766e;
+  --fx-ink: #0f172a;
+  --fx-muted: #475569;
+  --fx-border: rgba(148, 163, 184, 0.3);
+
   position: relative;
+  overflow: hidden;
+  padding: clamp(5rem, 10vw, 7rem) 0;
+  background:
+    radial-gradient(circle at 10% -8%, rgba(56, 189, 248, 0.18), transparent 34%),
+    radial-gradient(circle at 88% 4%, rgba(37, 99, 235, 0.14), transparent 30%),
+    linear-gradient(160deg, rgba(248, 252, 255, 0.96), rgba(241, 248, 255, 0.94));
+}
+
+.industries::before,
+.industries::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.industries::before {
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.38) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.38) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at 50% 32%, black 24%, transparent 78%);
+}
+
+.industries::after {
+  background:
+    radial-gradient(circle at 24% 24%, rgba(6, 182, 212, 0.09), transparent 40%),
+    radial-gradient(circle at 78% 74%, rgba(37, 99, 235, 0.08), transparent 42%);
+  animation: ambientDrift 18s linear infinite;
 }
 
 .container {
-  width: 90%;
-  max-width: 1300px;
+  width: min(92%, 1240px);
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 /* ================= HEADER ================= */
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: clamp(2.2rem, 5vw, 4rem);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.55s ease-out forwards;
 }
 
 .sectionTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  background: linear-gradient(135deg, #2d3748, #4299e1);
+  margin: 0 0 0.7rem;
+  font-family: "Sora", "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: clamp(2rem, 4.4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  background: linear-gradient(95deg, #0891b2 0%, #2563eb 48%, #0f766e 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .sectionDescription {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  max-width: 700px;
   margin: 0 auto;
-  line-height: 1.7;
+  max-width: 700px;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  line-height: 1.72;
+  color: var(--fx-muted);
 }
 
 /* ================= GRID ================= */
 
 .industriesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
 }
 
 /* ================= CARD ================= */
 
 .industryCard {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(14px);
-  border-radius: 20px;
-  padding: 40px 30px;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-  transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+  padding: 1.55rem 1.2rem;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid var(--fx-border);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(242, 249, 255, 0.92)),
+    linear-gradient(180deg, rgba(56, 189, 248, 0.08), transparent 48%);
+  box-shadow:
+    0 14px 28px rgba(15, 23, 42, 0.08),
+    0 0 0 1px rgba(125, 211, 252, 0.08) inset;
+  transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: cardIn 0.5s ease-out forwards;
+}
+
+.industryCard:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.industryCard:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.industryCard:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.industryCard:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.industryCard:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.industryCard:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.industryCard:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.industryCard:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+.industryCard::before,
+.industryCard::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
 }
 
 .industryCard::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(66, 153, 225, 0.15),
-    transparent
-  );
-  transition: 0.6s;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(56, 189, 248, 0.18) 48%, transparent 100%);
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
 }
 
-.industryCard:hover::before {
-  left: 100%;
+.industryCard::after {
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 1px rgba(14, 165, 233, 0) inset;
+  transition: box-shadow 0.26s ease;
 }
 
 .industryCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 60px rgba(66, 153, 225, 0.2);
+  transform: translateY(-5px);
+  border-color: rgba(14, 165, 233, 0.42);
+  box-shadow:
+    0 22px 36px rgba(15, 23, 42, 0.12),
+    0 0 0 1px rgba(125, 211, 252, 0.15) inset;
+}
+
+.industryCard:hover::before {
+  transform: translateX(120%);
+}
+
+.industryCard:hover::after {
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.35) inset;
 }
 
 /* ================= ICON ================= */
 
 .industryIcon {
-  font-size: 2.5rem;
-  color: var(--logo-accent);
-  margin-bottom: 20px;
-  transition: all 0.4s ease;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin: 0 auto 0.82rem;
+  border-radius: 12px;
+  display: inline-grid;
+  place-items: center;
+  font-size: 1.35rem;
+  color: #ffffff;
+  border: 1px solid rgba(125, 211, 252, 0.52);
+  background: linear-gradient(130deg, rgba(8, 145, 178, 0.78), rgba(37, 99, 235, 0.72));
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+  transition: transform 0.26s ease, box-shadow 0.26s ease, filter 0.26s ease;
 }
 
 .industryCard:hover .industryIcon {
-  transform: scale(1.2) rotate(5deg);
-  color: var(--logo-secondary);
-  text-shadow: 0 0 15px rgba(66, 153, 225, 0.6);
+  transform: translateY(-2px) scale(1.06);
+  filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.35));
+  box-shadow: 0 12px 22px rgba(37, 99, 235, 0.28);
 }
 
 /* ================= TEXT ================= */
 
 .industryName {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+  font-family: "Sora", "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--fx-ink);
 }
 
 .industryDescription {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.62;
+  color: var(--fx-muted);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ambientDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-2%, 1.5%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
   .sectionTitle {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 8vw, 2.3rem);
+  }
+
+  .industriesGrid {
+    grid-template-columns: 1fr;
   }
 
   .industryCard {
-    padding: 30px 20px;
+    padding: 1.25rem 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .industries::after,
+  .sectionHeader,
+  .industryCard {
+    animation: none !important;
+  }
+
+  .industryCard,
+  .industryIcon {
+    transition: none !important;
+  }
+
+  .sectionHeader,
+  .industryCard {
+    opacity: 1;
+    transform: none;
   }
 }

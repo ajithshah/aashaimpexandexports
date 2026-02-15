@@ -24,7 +24,6 @@ const Meta = ({
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
       {/* Language and Locale */}
       <meta httpEquiv="content-language" content="en-IN" />
       <meta name="language" content="English" />

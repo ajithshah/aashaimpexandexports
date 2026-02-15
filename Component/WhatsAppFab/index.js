@@ -9,13 +9,13 @@ const WhatsAppFab = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    if (typeof window === 'undefined') return;
-    
+    if (typeof window === "undefined") return;
+
     // Replace with your WhatsApp business number (include country code without + symbol)
     const phoneNumber = "919444184855"; // Updated to match footer number
     const message = "Hello! I'm interested in your import-export services.";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
+
     window.open(whatsappURL, "_blank", "noopener,noreferrer");
   };
 
@@ -30,9 +30,7 @@ const WhatsAppFab = () => {
         <i className="bi bi-whatsapp"></i>
         <div className={styles.ripple}></div>
       </div>
-      <div className={styles.tooltip}>
-        Chat with us on WhatsApp
-      </div>
+      <div className={styles.tooltip}>Chat with us on WhatsApp</div>
     </div>
   );
 };

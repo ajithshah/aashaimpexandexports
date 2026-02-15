@@ -80,24 +80,16 @@ const Footer = () => {
             <h4 className={styles.sectionTitle}>Services</h4>
             <ul className={styles.footerLinks}>
               <li>
-                <span className={styles.serviceItem}>
-                  Import Services
-                </span>
+                <span className={styles.serviceItem}>Import Services</span>
               </li>
               <li>
-                <span className={styles.serviceItem}>
-                  Export Services
-                </span>
+                <span className={styles.serviceItem}>Export Services</span>
               </li>
               <li>
-                <span className={styles.serviceItem}>
-                  Logistics
-                </span>
+                <span className={styles.serviceItem}>Logistics</span>
               </li>
               <li>
-                <span className={styles.serviceItem}>
-                  Trade Consulting
-                </span>
+                <span className={styles.serviceItem}>Trade Consulting</span>
               </li>
             </ul>
           </div>
@@ -116,15 +108,22 @@ const Footer = () => {
               <p className={styles.contactItem}>
                 <i className="bi bi-telephone-fill"></i>
                 <span>
-                  <a href="tel:+919444184855" className={styles.phoneLink}>+91 9444184855</a>
+                  <a href="tel:+919444184855" className={styles.phoneLink}>
+                    +91 9444184855
+                  </a>
                   <br />
-                  <a href="tel:+918122816789" className={styles.phoneLink}>+91 8122816789</a>
+                  <a href="tel:+918122816789" className={styles.phoneLink}>
+                    +91 8122816789
+                  </a>
                 </span>
               </p>
               <p className={styles.contactItem}>
                 <i className="bi bi-envelope-fill"></i>
                 <span>
-                  <a href="mailto:aashaimpexandexports@gmail.com" className={styles.emailLink}>
+                  <a
+                    href="mailto:aashaimpexandexports@gmail.com"
+                    className={styles.emailLink}
+                  >
                     aashaimpexandexports@gmail.com
                   </a>
                 </span>
@@ -136,8 +135,8 @@ const Footer = () => {
         <div className={styles.footerBottom}>
           <div className={styles.copyright}>
             <p>
-              &copy; {isClient ? currentYear : '2025'} A A Sha Impex and Exports. All rights
-              reserved.
+              &copy; {isClient ? currentYear : "2025"} A A Sha Impex and
+              Exports. All rights reserved.
             </p>
           </div>
           <div className={styles.bottomLinks}>
