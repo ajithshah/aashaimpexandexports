@@ -1,31 +1,44 @@
+/* =====================================================
+   GLOBAL FUTURISTIC AI THEME – LIGHT VERSION
+   ===================================================== */
+
+/* ================= ROOT VARIABLES ================= */
+
 :root {
+
+  /* === BRAND COLORS === */
   --logo-white: #ffffff;
-  --logo-dark: #2d3748;
-  --logo-gray: #718096;
-  --logo-accent: #4299e1;
-  --logo-secondary: #0b7edc;
+  --logo-dark: #0f172a;
+  --logo-gray: #64748b;
 
-  --bg-primary: #fafafa;
-  --bg-secondary: #f7fafc;
-  --bg-tertiary: #edf2f7;
+  --logo-accent: #00cfe8;
+  --logo-secondary: #6c63ff;
 
-  --text-primary: #2d3748;
-  --text-secondary: #4a5568;
-  --text-muted: #718096;
+  /* === BACKGROUNDS === */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
 
-  --glass-bg: rgba(255, 255, 255, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.6);
+  /* === TEXT === */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
 
+  /* === GLASS EFFECT === */
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(15, 23, 42, 0.08);
+
+  /* === ANIMATED BACKGROUND === */
   --gradient-animated: linear-gradient(
     -45deg,
+    #f8fafc,
     #ffffff,
-    #f7fafc,
-    #edf2f7,
-    #4299e1
+    #e2e8f0,
+    #c7f9ff
   );
 }
 
-/* ---------------- GLOBAL RESET ---------------- */
+/* ================= GLOBAL RESET ================= */
 
 * {
   box-sizing: border-box;
@@ -40,7 +53,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* ---------------- ANIMATED BACKGROUND ---------------- */
+/* ================= BODY ================= */
 
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
@@ -49,53 +62,55 @@ body {
   padding-top: 80px;
 
   background: var(--gradient-animated);
-  background-size: 300% 300%;
-  animation: gradientFlow 18s ease infinite;
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
 }
 
-/* Smooth animated gradient */
+/* Animated gradient */
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* ---------------- FLOATING GLOW EFFECT ---------------- */
+/* ================= FLOATING AI GLOW ================= */
 
 body::before {
   content: "";
   position: fixed;
-  top: -100px;
-  left: -100px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(66,153,225,0.2), transparent 70%);
-  animation: floatGlow 12s ease-in-out infinite alternate;
+  top: -150px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 207, 232, 0.2), transparent 70%);
+  animation: floatGlow 14s ease-in-out infinite alternate;
   z-index: -1;
 }
 
 @keyframes floatGlow {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(200px, 150px); }
+  100% { transform: translate(250px, 180px); }
 }
 
-/* ---------------- SCROLLBAR ---------------- */
+/* ================= TYPOGRAPHY ================= */
 
-::-webkit-scrollbar {
-  width: 8px;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
 }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #4299e1, #0b7edc);
-  border-radius: 4px;
+p {
+  color: var(--text-secondary);
 }
 
-/* ---------------- LINK ANIMATION ---------------- */
+/* ================= LINKS ================= */
 
 a {
   text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
+  color: var(--logo-accent);
 }
 
 a::after {
@@ -113,26 +128,27 @@ a:hover::after {
   width: 100%;
 }
 
-/* ---------------- BUTTON HOVER EFFECT ---------------- */
+/* ================= BUTTONS ================= */
 
 button,
 .primaryBtn,
 .secondaryBtn {
   transition: all 0.35s ease;
+  cursor: pointer;
 }
 
 button:hover,
 .primaryBtn:hover,
 .secondaryBtn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(66, 153, 225, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 207, 232, 0.25);
 }
 
-/* ---------------- GLASS CARD EFFECT ---------------- */
+/* ================= GLASS CARD ================= */
 
 .glass-card {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -140,10 +156,10 @@ button:hover,
 
 .glass-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
 }
 
-/* ---------------- FADE IN ANIMATION ---------------- */
+/* ================= FADE ANIMATION ================= */
 
 .fade-in {
   opacity: 0;
@@ -158,14 +174,32 @@ button:hover,
   }
 }
 
-/* ---------------- TYPOGRAPHY ---------------- */
+/* ================= CUSTOM SCROLLBAR ================= */
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: 1.3;
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* ---------------- ACCESSIBILITY ---------------- */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--logo-accent), var(--logo-secondary));
+  border-radius: 4px;
+}
+
+/* ================= RESPONSIVE TYPOGRAPHY ================= */
+
+@media (max-width: 992px) {
+  body {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 65px;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
 
 @media (prefers-reduced-motion: reduce) {
   * {

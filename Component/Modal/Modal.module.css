@@ -1,89 +1,193 @@
-/* Modal Styles */
+/* =====================================================
+   MODAL - FUTURISTIC GLASS POPUP
+===================================================== */
+
 .modalBackdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
+  inset: 0;
+  z-index: 10000;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10000;
-  animation: fadeIn 0.3s ease-out;
+  padding: 1.2rem;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(56, 189, 248, 0.24), transparent 34%),
+    radial-gradient(circle at 88% 82%, rgba(20, 184, 166, 0.2), transparent 36%),
+    rgba(2, 6, 23, 0.68);
+  backdrop-filter: blur(10px) saturate(1.08);
+  animation: modalFade 0.28s ease-out;
+}
+
+.modalBackdrop::before,
+.modalBackdrop::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.modalBackdrop::before {
+  inset: 0;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.42) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.42) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 88%);
+}
+
+.modalBackdrop::after {
+  width: 580px;
+  height: 580px;
+  top: -220px;
+  right: -180px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 90deg,
+    rgba(6, 182, 212, 0.08),
+    rgba(37, 99, 235, 0.14),
+    rgba(20, 184, 166, 0.08),
+    rgba(6, 182, 212, 0.08)
+  );
+  filter: blur(14px);
+  animation: auraSpin 20s linear infinite;
 }
 
 .modalContent {
-  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-  border-radius: 20px;
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-  max-width: 800px;
-  width: 90%;
-  max-height: 80vh;
+  position: relative;
+  width: min(92vw, 860px);
+  max-height: min(86vh, 880px);
   overflow: hidden;
-  animation: slideIn 0.3s ease-out;
+  border-radius: 22px;
+  border: 1px solid rgba(125, 211, 252, 0.44);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(240, 248, 255, 0.95)),
+    linear-gradient(180deg, rgba(56, 189, 248, 0.08), transparent 50%);
+  box-shadow:
+    0 30px 60px rgba(2, 6, 23, 0.42),
+    0 0 0 1px rgba(56, 189, 248, 0.14) inset;
+  animation: modalIn 0.3s cubic-bezier(0.2, 0.9, 0.35, 1) forwards;
+}
+
+.modalContent::before,
+.modalContent::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.modalContent::before {
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(6, 182, 212, 0.9) 24%,
+    rgba(37, 99, 235, 0.86) 52%,
+    rgba(20, 184, 166, 0.9) 78%,
+    transparent 100%
+  );
+  background-size: 220% 100%;
+  animation: topBeam 7s linear infinite;
+}
+
+.modalContent::after {
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent 0%, rgba(56, 189, 248, 0.12) 45%, transparent 100%);
+  transform: translateX(-120%);
+  animation: shineSweep 6s linear infinite;
 }
 
 .modalHeader {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
-  border-bottom: 1px solid var(--glass-border);
+  gap: 1rem;
+  padding: 1.5rem 1.6rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(248, 252, 255, 0.5));
 }
 
 .modalTitle {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--text-primary);
   margin: 0;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
-  background-clip: text;
+  font-family: "Sora", "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  background: linear-gradient(95deg, #0891b2, #2563eb 52%, #0f766e);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .closeButton {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--text-muted);
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  display: flex;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.36);
+  background: rgba(255, 255, 255, 0.74);
+  color: #334155;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
 }
 
 .closeButton:hover {
-  background: rgba(66, 153, 225, 0.1);
-  color: var(--logo-accent);
-  transform: scale(1.1);
+  transform: translateY(-1px);
+  color: #0f172a;
+  border-color: rgba(14, 165, 233, 0.56);
+  background: rgba(240, 249, 255, 0.95);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.22);
 }
 
 .modalBody {
-  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  padding: 1.45rem 1.6rem 1.6rem;
   overflow-y: auto;
-  max-height: calc(80vh - 120px);
+  max-height: calc(min(86vh, 880px) - 96px);
+}
+
+.modalBody::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modalBody::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(14, 165, 233, 0.72), rgba(37, 99, 235, 0.72));
+  border-radius: 999px;
 }
 
 .policyContent {
-  color: var(--text-secondary);
-  line-height: 1.7;
+  color: #475569;
+  line-height: 1.72;
+  font-size: 0.98rem;
 }
 
 .policyContent h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--logo-accent);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 1.45rem 0 0.7rem;
+  font-family: "Sora", "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 1.16rem;
+  font-weight: 700;
+  color: #0f172a;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.48rem;
+}
+
+.policyContent h3::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #06b6d4, #2563eb);
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
 }
 
 .policyContent h3:first-child {
@@ -91,22 +195,23 @@
 }
 
 .policyContent p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  margin: 0 0 0.95rem;
 }
 
 .policyContent ul {
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 1.15rem;
+  padding-left: 0.7rem;
 }
 
 .policyContent li {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
+  margin-bottom: 0.45rem;
 }
 
-/* Animations */
-@keyframes fadeIn {
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes modalFade {
   from {
     opacity: 0;
   }
@@ -115,64 +220,115 @@
   }
 }
 
-@keyframes slideIn {
+@keyframes modalIn {
   from {
     opacity: 0;
-    transform: scale(0.9) translateY(-20px);
+    transform: translateY(14px) scale(0.96);
   }
   to {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
+@keyframes auraSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-/* Responsive Design */
+@keyframes topBeam {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 220% 50%;
+  }
+}
+
+@keyframes shineSweep {
+  0%,
+  80%,
+  100% {
+    transform: translateX(-120%);
+  }
+  35%,
+  55% {
+    transform: translateX(120%);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 768px) {
+  .modalBackdrop {
+    padding: 0.72rem;
+  }
+
   .modalContent {
-    width: 95%;
+    width: 96%;
     max-height: 90vh;
   }
 
   .modalHeader {
-    padding: 1.5rem;
+    padding: 1.1rem 1.05rem;
   }
 
   .modalTitle {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   .modalBody {
-    padding: 1.5rem;
-    max-height: calc(90vh - 100px);
+    padding: 1rem 1.05rem 1.15rem;
+    max-height: calc(90vh - 86px);
   }
 
   .policyContent h3 {
-    font-size: 1.2rem;
+    font-size: 1.04rem;
   }
 }
 
 @media (max-width: 480px) {
   .modalContent {
     width: 98%;
-    margin: 1rem;
+    border-radius: 16px;
   }
 
   .modalHeader {
-    padding: 1rem;
+    padding: 0.95rem 0.92rem;
   }
 
   .modalTitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .modalBody {
-    padding: 1rem;
+    padding: 0.9rem 0.92rem 1rem;
   }
 
   .closeButton {
-    width: 35px;
-    height: 35px;
-    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modalBackdrop,
+  .modalBackdrop::after,
+  .modalContent,
+  .modalContent::before,
+  .modalContent::after {
+    animation: none !important;
+  }
+
+  .closeButton {
+    transition: none !important;
   }
 }

@@ -14,12 +14,41 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [router.pathname]);
+
+  useEffect(() => {
+    if (typeof document === "undefined") return undefined;
+
+    const originalOverflow = document.body.style.overflow;
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleEscape);
+    } else {
+      document.body.style.overflow = originalOverflow;
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
 
   const isActive = (href) => {
@@ -38,11 +67,15 @@ const Header = () => {
   ];
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+    <header
+      className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${
+        isMenuOpen ? styles.menuOpen : ""
+      }`}
+    >
       <nav className={styles.navbar}>
         {/* Logo */}
         <div className={styles.logo}>
-          <Link href="/">
+          <Link href="/" className={styles.logoLink}>
             <div className={styles.logoContainer}>
               <div className={styles.logoImage}>
                 <Image
@@ -64,7 +97,11 @@ const Header = () => {
         {/* Desktop Navigation */}
         <ul className={styles.navMenu}>
           {navItems.map((item, index) => (
-            <li key={index} className={styles.navItem}>
+            <li
+              key={item.href}
+              className={styles.navItem}
+              style={{ "--item-index": index }}
+            >
               <Link
                 href={item.href}
                 className={`${styles.navLink} ${
@@ -72,26 +109,31 @@ const Header = () => {
                 }`}
               >
                 <span className={styles.navText}>{item.name}</span>
+                <span className={styles.navGlow}></span>
               </Link>
             </li>
           ))}
         </ul>
 
         {/* Mobile Menu Toggle */}
-        <div
+        <button
+          type="button"
           className={`${styles.hamburger} ${
             isMenuOpen ? styles.hamburgerActive : ""
           }`}
           onClick={toggleMenu}
           aria-label="Toggle mobile menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
         >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+          <span className={styles.hamburgerBar}></span>
+          <span className={styles.hamburgerBar}></span>
+          <span className={styles.hamburgerBar}></span>
+        </button>
 
         {/* Mobile Menu */}
         <div
+          id="mobile-menu"
           className={`${styles.mobileMenu} ${
             isMenuOpen ? styles.mobileMenuOpen : ""
           }`}
@@ -99,11 +141,12 @@ const Header = () => {
           <div className={styles.mobileMenuContent}>
             {navItems.map((item, index) => (
               <Link
-                key={index}
+                key={item.href}
                 href={item.href}
                 className={`${styles.mobileNavLink} ${
                   isActive(item.href) ? styles.mobileNavLinkActive : ""
                 }`}
+                style={{ "--item-index": index }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span>{item.name}</span>

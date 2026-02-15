@@ -1,3 +1,8 @@
+/* =====================================================
+   CONTACT SECTION – AI FUTURISTIC THEME
+   Uses ONLY global color variables
+===================================================== */
+
 .contact {
   padding: 100px 0;
 }
@@ -8,7 +13,9 @@
   margin: 0 auto;
 }
 
-/* ================= HEADER ================= */
+/* =====================================================
+   HEADER
+===================================================== */
 
 .contactHeader {
   text-align: center;
@@ -19,7 +26,11 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, #2d3748, #4299e1);
+  background: linear-gradient(
+    135deg,
+    var(--logo-accent),
+    var(--logo-secondary)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -29,7 +40,9 @@
   color: var(--text-secondary);
 }
 
-/* ================= CONTENT LAYOUT ================= */
+/* =====================================================
+   CONTENT GRID
+===================================================== */
 
 .contactContent {
   display: grid;
@@ -37,16 +50,30 @@
   gap: 50px;
 }
 
-/* ================= FORM ================= */
+/* =====================================================
+   GLASS CARDS
+===================================================== */
 
-.contactForm {
-  background: rgba(255, 255, 255, 0.85);
+.contactForm,
+.infoCard,
+.quickLinks {
+  background: var(--glass-bg);
   backdrop-filter: blur(14px);
   padding: 40px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--glass-border);
+  transition: all 0.4s ease;
 }
+
+.contactForm:hover,
+.infoCard:hover,
+.quickLinks:hover {
+  box-shadow: 0 20px 40px rgba(0, 240, 255, 0.1);
+}
+
+/* =====================================================
+   FORM
+===================================================== */
 
 .formRow {
   display: flex;
@@ -65,25 +92,34 @@
   font-weight: 600;
   margin-bottom: 8px;
   font-size: 0.9rem;
+  color: var(--text-primary);
 }
 
-/* ================= INPUTS ================= */
+/* =====================================================
+   INPUTS
+===================================================== */
 
 .input,
 .textarea {
   padding: 14px 16px;
   border-radius: 10px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--glass-border);
   font-size: 0.95rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
   transition: all 0.3s ease;
-  background: #ffffff;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-muted);
 }
 
 .input:focus,
 .textarea:focus {
   outline: none;
   border-color: var(--logo-accent);
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.15);
   transform: translateY(-2px);
 }
 
@@ -91,15 +127,21 @@
   resize: none;
 }
 
-/* ================= BUTTON ================= */
+/* =====================================================
+   BUTTON
+===================================================== */
 
 .submitBtn {
   width: 100%;
   padding: 14px;
   border-radius: 40px;
   border: none;
-  background: linear-gradient(135deg, #4299e1, #0b7edc);
-  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    var(--logo-accent),
+    var(--logo-secondary)
+  );
+  color: var(--logo-dark);
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
@@ -108,10 +150,12 @@
 
 .submitBtn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(66, 153, 225, 0.35);
+  box-shadow: 0 15px 40px rgba(0, 240, 255, 0.35);
 }
 
-/* ================= CONTACT INFO ================= */
+/* =====================================================
+   CONTACT INFO
+===================================================== */
 
 .contactInfo {
   display: flex;
@@ -119,21 +163,11 @@
   gap: 30px;
 }
 
-/* Info Card */
-
-.infoCard {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(14px);
-  padding: 35px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-}
-
 .infoTitle {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 25px;
+  color: var(--text-primary);
 }
 
 .infoItem {
@@ -154,19 +188,14 @@
   color: var(--logo-secondary);
 }
 
-/* ================= QUICK LINKS ================= */
-
-.quickLinks {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(14px);
-  padding: 30px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-}
+/* =====================================================
+   QUICK LINKS
+===================================================== */
 
 .linksTitle {
   font-weight: 700;
   margin-bottom: 20px;
+  color: var(--text-primary);
 }
 
 .linksGrid {
@@ -186,19 +215,24 @@
   transform: translateX(5px);
 }
 
-/* ================= MAP ================= */
+/* =====================================================
+   MAP
+===================================================== */
 
 .mapContainer iframe {
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  width: 100%;
   border-radius: 20px;
+  border: 1px solid var(--glass-border);
   transition: 0.4s ease;
 }
 
 .mapContainer iframe:hover {
-  transform: scale(1.01);
+  box-shadow: 0 15px 40px rgba(0, 240, 255, 0.2);
 }
 
-/* ================= RESPONSIVE ================= */
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
 @media (max-width: 992px) {
   .contactContent {
@@ -215,7 +249,9 @@
     font-size: 2rem;
   }
 
-  .contactForm {
+  .contactForm,
+  .infoCard,
+  .quickLinks {
     padding: 30px 20px;
   }
 }
