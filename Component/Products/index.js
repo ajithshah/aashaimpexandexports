@@ -9,42 +9,42 @@ const Products = () => {
       title: "Electronics & Technology",
       description:
         "Advanced electronic components, devices, and technology solutions for global industries.",
-      image: "/images/electronics.jpg",
+      image: "/product/electronics-tech.png",
       link: "/contact",
     },
     {
       title: "Industrial Machinery",
       description:
         "Heavy-duty industrial equipment and precision machinery for manufacturing excellence.",
-      image: "/images/machinery.jpg",
+      image: "/product/industrial-machinery.png",
       link: "/contact",
     },
     {
       title: "Textiles & Fabrics",
       description:
         "Premium textiles, fabrics, and garment materials supplied to international markets.",
-      image: "/images/textiles.jpg",
+      image: "/product/textile-products.png",
       link: "/contact",
     },
     {
       title: "Agricultural Products",
       description:
         "Fresh produce and high-quality agricultural commodities sourced globally.",
-      image: "/images/agriculture.jpg",
+      image: "/product/pet-2.jpg",
       link: "/contact",
     },
     {
       title: "Chemicals & Raw Materials",
       description:
         "Industrial-grade chemicals and essential raw materials for diverse sectors.",
-      image: "/images/chemicals.jpg",
+      image: "/product/bopp-secs.jpg",
       link: "/contact",
     },
     {
       title: "Consumer Goods",
       description:
         "Reliable sourcing and export of everyday consumer merchandise worldwide.",
-      image: "/images/consumer-goods.jpg",
+      image: "/product/pet-1.webp",
       link: "/contact",
     },
   ];
@@ -54,19 +54,19 @@ const Products = () => {
       title: "Electronic Components",
       description:
         "Certified electronic components meeting international quality standards.",
-      image: "/images/electronic-components.jpg",
+      image: "/product/electronics-tech.png",
     },
     {
       title: "Industrial Machinery",
       description:
         "High-performance machinery engineered for durability and efficiency.",
-      image: "/images/industrial-machinery.jpg",
+      image: "/product/industrial-machinery.png",
     },
     {
       title: "Textile Products",
       description:
         "Export-quality fabrics and textile solutions for global buyers.",
-      image: "/images/textile-products.jpg",
+      image: "/product/textile-products.png",
     },
   ];
 

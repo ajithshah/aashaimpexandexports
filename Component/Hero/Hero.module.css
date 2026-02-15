@@ -197,14 +197,14 @@
   text-transform: uppercase;
   font-weight: 700;
   color: #0f172a;
-  background: rgba(255, 255, 255, 0.74);
+  background: #ffffffbd;
   border: 1px solid rgba(148, 163, 184, 0.3);
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
   animation-delay: 0.05s;
 }
 
 .heroTitle {
-  font-size: clamp(2.35rem, 6.6vw, 5.2rem);
+  font-size: 50px;
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.04;
@@ -229,7 +229,7 @@
 }
 
 .heroSubtitle {
-  font-size: clamp(1.3rem, 3.4vw, 2.2rem);
+  font-size: 30px;
   font-weight: 600;
   color: #334155;
   margin-bottom: 1.2rem;
@@ -237,7 +237,7 @@
 }
 
 .heroDescription {
-  font-size: clamp(1.02rem, 2.4vw, 1.2rem);
+  font-size: 20px;
   line-height: 1.72;
   max-width: 640px;
   color: #475569;
