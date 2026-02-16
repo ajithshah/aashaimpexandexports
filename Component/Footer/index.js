@@ -153,7 +153,7 @@ const Footer = () => {
           <p>
             Crafted with excellence by{" "}
             <a
-              href="https://techbrothers.co.in/"
+              href="https://techbrothers.com/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.developerLink}
