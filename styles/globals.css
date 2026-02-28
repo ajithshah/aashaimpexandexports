@@ -233,10 +233,10 @@ button:hover,
 
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(0, 207, 232, 0.15);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.15);
   }
   50% {
-    box-shadow: 0 0 25px rgba(0, 207, 232, 0.3);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
   }
 }
 
