@@ -4,7 +4,7 @@
 
 .footer {
   position: relative;
-  background: radial-gradient(circle at top left, #0f172a, #050810 70%);
+  background: radial-gradient(circle at top left, #1e293b, #0f172a 70%);
   color: #e2e8f0;
   padding: 80px 20px 30px;
   overflow: hidden;
@@ -16,7 +16,7 @@
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(0,240,255,0.1), transparent 70%);
+  background: radial-gradient(circle, rgba(37,99,235,0.08), transparent 70%);
   bottom: -200px;
   left: -200px;
   animation: floatGlow 10s infinite alternate ease-in-out;
@@ -61,7 +61,7 @@
 }
 
 .logoAccent {
-  background: linear-gradient(90deg, #00f0ff, #a855f7);
+  background: linear-gradient(90deg, #2563eb, #0891b2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -91,7 +91,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #00f0ff, #a855f7);
+  background: linear-gradient(90deg, #2563eb, #0891b2);
 }
 
 /* =========================
@@ -115,7 +115,7 @@
 }
 
 .footerLink:hover {
-  color: #00f0ff;
+  color: #2563eb;
   transform: translateX(5px);
 }
 
@@ -138,7 +138,7 @@
 }
 
 .contactItem i {
-  color: #00f0ff;
+  color: #2563eb;
   margin-top: 4px;
 }
 
@@ -151,7 +151,7 @@
 
 .phoneLink:hover,
 .emailLink:hover {
-  color: #00f0ff;
+  color: #2563eb;
 }
 
 /* =========================
@@ -188,7 +188,7 @@
 }
 
 .bottomLink:hover {
-  color: #00f0ff;
+  color: #2563eb;
 }
 
 /* =========================
@@ -203,13 +203,13 @@
 }
 
 .developerLink {
-  color: #00f0ff;
+  color: #2563eb;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .developerLink:hover {
-  text-shadow: 0 0 10px rgba(0,240,255,0.6);
+  text-shadow: 0 0 10px rgba(37,99,235,0.4);
 }
 
 /* =========================
@@ -233,8 +233,8 @@
 }
 
 .socialLink:hover {
-  border-color: #00f0ff;
-  box-shadow: 0 0 15px rgba(0,240,255,0.3);
+  border-color: #2563eb;
+  box-shadow: 0 0 15px rgba(37,99,235,0.2);
 }
 
 /* =========================

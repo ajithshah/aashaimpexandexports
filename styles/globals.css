@@ -1,5 +1,5 @@
 /* =====================================================
-   GLOBAL FUTURISTIC AI THEME – DARK VERSION
+   GLOBAL CLEAN PROFESSIONAL LIGHT THEME
    ===================================================== */
 
 /* ================= ROOT VARIABLES ================= */
@@ -11,33 +11,33 @@
   --logo-dark: #0f172a;
   --logo-gray: #94a3b8;
 
-  --logo-accent: #00f0ff;
-  --logo-secondary: #a855f7;
+  --logo-accent: #2563eb;
+  --logo-secondary: #0891b2;
 
   /* === BACKGROUNDS === */
-  --bg-primary: #0a0e1a;
-  --bg-secondary: #111827;
-  --bg-tertiary: #1e293b;
-  --bg-card: rgba(15, 23, 42, 0.8);
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.95);
 
   /* === TEXT === */
-  --text-primary: #f1f5f9;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
 
   /* === GLASS EFFECT === */
-  --glass-bg: rgba(15, 23, 42, 0.7);
-  --glass-border: rgba(0, 240, 255, 0.12);
-  --glass-shadow: rgba(0, 0, 0, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --glass-shadow: rgba(0, 0, 0, 0.08);
   --white-pure: #ffffff;
 
   /* === ANIMATED BACKGROUND === */
   --gradient-animated: linear-gradient(
     -45deg,
-    #0a0e1a,
-    #111827,
-    #0d1117,
-    #0a1628
+    #ffffff,
+    #f8fafc,
+    #f1f5f9,
+    #e2e8f0
   );
 }
 
@@ -62,21 +62,11 @@ body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   color: var(--text-primary);
   line-height: 1.7;
-  padding-top: 80px;
 
-  background: var(--gradient-animated);
-  background-size: 400% 400%;
-  animation: gradientFlow 20s ease infinite;
+  background: #ffffff;
 }
 
-/* Animated gradient */
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ================= FLOATING AI GLOW ================= */
+/* ================= FLOATING SUBTLE GLOW ================= */
 
 body::before {
   content: "";
@@ -85,7 +75,7 @@ body::before {
   left: -150px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(0, 240, 255, 0.15), transparent 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.04), transparent 70%);
   animation: floatGlow 14s ease-in-out infinite alternate;
   z-index: -1;
 }
@@ -100,11 +90,11 @@ body::before {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.3;
-  color: var(--text-primary);
+  color: #1e293b;
 }
 
 p {
-  color: var(--text-secondary);
+  color: #475569;
 }
 
 /* ================= LINKS ================= */
@@ -113,7 +103,7 @@ a {
   text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
-  color: var(--logo-accent);
+  color: #2563eb;
 }
 
 a::after {
@@ -123,7 +113,7 @@ a::after {
   height: 2px;
   left: 0;
   bottom: -4px;
-  background: var(--logo-accent);
+  background: #2563eb;
   transition: width 0.3s ease;
 }
 
@@ -144,7 +134,7 @@ button:hover,
 .primaryBtn:hover,
 .secondaryBtn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 207, 232, 0.25);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
 }
 
 /* ================= GLASS CARD ================= */
@@ -159,7 +149,7 @@ button:hover,
 
 .glass-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 240, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= FADE ANIMATION ================= */
@@ -189,18 +179,6 @@ button:hover,
 }
 
 /* ================= RESPONSIVE TYPOGRAPHY ================= */
-
-@media (max-width: 992px) {
-  body {
-    padding-top: 70px;
-  }
-}
-
-@media (max-width: 576px) {
-  body {
-    padding-top: 65px;
-  }
-}
 
 /* ================= PAGE TRANSITIONS ================= */
 
@@ -233,10 +211,10 @@ button:hover,
 
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(0, 240, 255, 0.15);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.1);
   }
   50% {
-    box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.15);
   }
 }
 

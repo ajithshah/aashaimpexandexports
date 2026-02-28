@@ -1,18 +1,16 @@
 .industries {
-  --fx-cyan: #00f0ff;
-  --fx-blue: #06b6d4;
+  --fx-cyan: #2563eb;
+  --fx-blue: #0891b2;
   --fx-teal: #14b8a6;
-  --fx-ink: #f1f5f9;
-  --fx-muted: #94a3b8;
-  --fx-border: rgba(0, 240, 255, 0.15);
+  --fx-ink: #1e293b;
+  --fx-muted: #64748b;
+  --fx-border: rgba(0, 0, 0, 0.08);
 
   position: relative;
   overflow: hidden;
   padding: clamp(5rem, 10vw, 7rem) 0;
-  background:
-    radial-gradient(circle at 10% -8%, rgba(0, 240, 255, 0.06), transparent 34%),
-    radial-gradient(circle at 88% 4%, rgba(168, 85, 247, 0.05), transparent 30%),
-    linear-gradient(160deg, #0a0e1a 0%, #0d1117 50%, #0a0e1a 100%);
+  padding-top: calc(clamp(5rem, 10vw, 7rem) + 80px);
+  background: #ffffff;
 }
 
 .industries::before,
@@ -24,18 +22,18 @@
 }
 
 .industries::before {
-  opacity: 0.12;
+  opacity: 0.03;
   background-image:
-    linear-gradient(rgba(0, 240, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 240, 255, 0.12) 1px, transparent 1px);
+    linear-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(circle at 50% 32%, black 24%, transparent 78%);
 }
 
 .industries::after {
   background:
-    radial-gradient(circle at 24% 24%, rgba(0, 240, 255, 0.04), transparent 40%),
-    radial-gradient(circle at 78% 74%, rgba(168, 85, 247, 0.04), transparent 42%);
+    radial-gradient(circle at 24% 24%, rgba(37, 99, 235, 0.02), transparent 40%),
+    radial-gradient(circle at 78% 74%, rgba(8, 145, 178, 0.02), transparent 42%);
   animation: ambientDrift 18s linear infinite;
 }
 
@@ -60,7 +58,7 @@
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  background: linear-gradient(95deg, #00f0ff 0%, #a855f7 48%, #06b6d4 100%);
+  background: linear-gradient(95deg, #2563eb 0%, #0891b2 48%, #0ea5e9 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -91,12 +89,10 @@
   border-radius: 18px;
   text-align: center;
   border: 1px solid var(--fx-border);
-  background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(17, 24, 39, 0.85)),
-    linear-gradient(180deg, rgba(0, 240, 255, 0.03), transparent 48%);
+  background: #ffffff;
   box-shadow:
-    0 14px 28px rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(0, 240, 255, 0.05) inset;
+    0 4px 16px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(0, 0, 0, 0.02) inset;
   transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease;
 }
 
@@ -109,7 +105,7 @@
 
 .industryCard::before {
   inset: 0;
-  background: linear-gradient(120deg, transparent 0%, rgba(0, 240, 255, 0.08) 48%, transparent 100%);
+  background: linear-gradient(120deg, transparent 0%, rgba(37, 99, 235, 0.04) 48%, transparent 100%);
   transform: translateX(-120%);
   transition: transform 0.6s ease;
 }
@@ -123,10 +119,10 @@
 
 .industryCard:hover {
   transform: translateY(-5px);
-  border-color: rgba(0, 240, 255, 0.3);
+  border-color: rgba(37, 99, 235, 0.15);
   box-shadow:
-    0 22px 36px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(0, 240, 255, 0.1) inset;
+    0 12px 30px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(37, 99, 235, 0.06) inset;
 }
 
 .industryCard:hover::before {
@@ -134,7 +130,7 @@
 }
 
 .industryCard:hover::after {
-  box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.25) inset;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.1) inset;
 }
 
 /* ================= ICON ================= */
@@ -148,16 +144,16 @@
   place-items: center;
   font-size: 1.35rem;
   color: #ffffff;
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  background: linear-gradient(130deg, rgba(0, 240, 255, 0.3), rgba(168, 85, 247, 0.25));
-  box-shadow: 0 8px 18px rgba(0, 240, 255, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  background: linear-gradient(130deg, #2563eb, #0891b2);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
   transition: transform 0.26s ease, box-shadow 0.26s ease, filter 0.26s ease;
 }
 
 .industryCard:hover .industryIcon {
   transform: translateY(-2px) scale(1.06);
-  filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.3));
-  box-shadow: 0 12px 22px rgba(0, 240, 255, 0.2);
+  filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.2));
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
 }
 
 /* ================= TEXT ================= */

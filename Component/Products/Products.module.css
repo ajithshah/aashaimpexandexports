@@ -1,8 +1,9 @@
 .products {
   padding: 100px 0;
+  padding-top: calc(100px + 80px);
   position: relative;
-  background: linear-gradient(165deg, #0a0e1a 0%, #0d1117 52%, #0a0e1a 100%);
-  color: #f1f5f9;
+  background: #ffffff;
+  color: #1e293b;
 }
 
 .container {
@@ -22,7 +23,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, #00f0ff, #a855f7);
+  background: linear-gradient(135deg, #2563eb, #0891b2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -47,12 +48,8 @@
   justify-content: center;
   padding: 0.78rem 1.4rem;
   border-radius: 999px;
-  border: 1px solid rgba(0, 240, 255, 0.25);
-  background: linear-gradient(
-    135deg,
-    rgba(0, 240, 255, 0.1),
-    rgba(15, 23, 42, 0.8)
-  );
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  background: rgba(37, 99, 235, 0.06);
   color: var(--text-primary);
   font-weight: 600;
   text-decoration: none;
@@ -65,13 +62,9 @@
 
 .downloadBtn:hover {
   transform: translateY(-2px);
-  border-color: rgba(0, 240, 255, 0.45);
-  background: linear-gradient(
-    135deg,
-    rgba(0, 240, 255, 0.15),
-    rgba(15, 23, 42, 0.9)
-  );
-  box-shadow: 0 12px 24px rgba(0, 240, 255, 0.15);
+  border-color: rgba(37, 99, 235, 0.4);
+  background: rgba(37, 99, 235, 0.1);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
 }
 
 /* ================= CATEGORY GRID ================= */
@@ -85,18 +78,18 @@
 /* ================= CATEGORY CARD ================= */
 
 .categoryCard {
-  background: rgba(15, 23, 42, 0.8);
+  background: #ffffff;
   backdrop-filter: blur(14px);
   border-radius: 18px;
   overflow: hidden;
   transition: all 0.4s ease;
-  border: 1px solid rgba(0, 240, 255, 0.12);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .categoryCard:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0, 240, 255, 0.1);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
 }
 
 /* Image */
@@ -170,18 +163,18 @@
 /* ================= PRODUCT CARD ================= */
 
 .productCard {
-  background: rgba(15, 23, 42, 0.85);
+  background: #ffffff;
   backdrop-filter: blur(14px);
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.4s ease;
-  border: 1px solid rgba(0, 240, 255, 0.12);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .productCard:hover {
   transform: translateY(-12px);
-  box-shadow: 0 25px 60px rgba(0, 240, 255, 0.12);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.1);
 }
 
 /* Product Image */
@@ -237,19 +230,15 @@
   text-align: center;
   padding: 60px 30px;
   border-radius: 20px;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 240, 255, 0.06),
-    rgba(15, 23, 42, 0.8)
-  );
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .productsCta h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;
-  color: #f1f5f9;
+  color: #1e293b;
 }
 
 .productsCta p {
@@ -261,7 +250,7 @@
   display: inline-block;
   padding: 14px 28px;
   border-radius: 40px;
-  background: linear-gradient(135deg, #00f0ff, #a855f7);
+  background: linear-gradient(135deg, #2563eb, #0891b2);
   color: #fff;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -269,7 +258,7 @@
 
 .ctaButton:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 40px rgba(0, 240, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
 }
 
 /* ================= RESPONSIVE ================= */
@@ -277,6 +266,7 @@
 @media (max-width: 768px) {
   .products {
     padding: 60px 0;
+    padding-top: calc(60px + 70px);
   }
 
   .sectionTitle {
@@ -309,6 +299,7 @@
 @media (max-width: 480px) {
   .products {
     padding: 40px 0;
+    padding-top: calc(40px + 60px);
   }
 
   .container {

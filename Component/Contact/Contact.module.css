@@ -1,11 +1,12 @@
 /* =====================================================
-   CONTACT SECTION – AI FUTURISTIC THEME
+   CONTACT SECTION – CLEAN PROFESSIONAL LIGHT THEME
    Uses ONLY global color variables
 ===================================================== */
 
 .contact {
   padding: 100px 0;
-  background: linear-gradient(165deg, #0a0e1a 0%, #0d1117 52%, #0a0e1a 100%);
+  padding-top: calc(100px + 80px);
+  background: #f8fafc;
 }
 
 .container {
@@ -69,7 +70,7 @@
 .contactForm:hover,
 .infoCard:hover,
 .quickLinks:hover {
-  box-shadow: 0 20px 40px rgba(0, 240, 255, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* =====================================================
@@ -120,7 +121,7 @@
 .textarea:focus {
   outline: none;
   border-color: var(--logo-accent);
-  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
   transform: translateY(-2px);
 }
 
@@ -151,7 +152,7 @@
 
 .submitBtn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(0, 240, 255, 0.35);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
 }
 
 /* =====================================================
@@ -228,7 +229,7 @@
 }
 
 .mapContainer iframe:hover {
-  box-shadow: 0 15px 40px rgba(0, 240, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* =====================================================
@@ -248,6 +249,7 @@
 @media (max-width: 768px) {
   .contact {
     padding: 60px 0;
+    padding-top: calc(60px + 70px);
   }
 
   .sectionTitle {
@@ -268,6 +270,7 @@
 @media (max-width: 480px) {
   .contact {
     padding: 40px 0;
+    padding-top: calc(40px + 60px);
   }
 
   .container {
