@@ -3,6 +3,7 @@
   background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 50%, var(--bg-secondary) 100%);
   position: relative;
   overflow: hidden;
+  color: var(--text-primary);
 }
 
 .cta::before {
@@ -13,8 +14,8 @@
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(circle at 30% 30%, rgba(66, 153, 225, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(237, 137, 54, 0.06) 0%, transparent 50%);
+    radial-gradient(circle at 30% 30%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.04) 0%, transparent 50%);
 }
 
 .container {
@@ -62,7 +63,7 @@
 
 .primaryBtn {
   padding: 1.25rem 2.5rem;
-  background: linear-gradient(135deg, var(--logo-accent), #3182ce);
+  background: linear-gradient(135deg, var(--logo-accent), #a855f7);
   border: none;
   border-radius: 50px;
   color: var(--white-pure);
@@ -72,7 +73,7 @@
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(66, 153, 225, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 240, 255, 0.2);
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
@@ -81,7 +82,7 @@
 
 .primaryBtn:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 15px 40px rgba(66, 153, 225, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 240, 255, 0.3);
 }
 
 .btnIcon {
@@ -96,7 +97,7 @@
 .secondaryBtn {
   padding: 1.25rem 2.5rem;
   background: transparent;
-  border: 2px solid rgba(66, 153, 225, 0.5);
+  border: 2px solid rgba(0, 240, 255, 0.35);
   border-radius: 50px;
   color: var(--logo-accent);
   font-weight: 600;
@@ -112,9 +113,9 @@
 
 .secondaryBtn:hover {
   border-color: var(--logo-accent);
-  background: rgba(66, 153, 225, 0.1);
+  background: rgba(0, 240, 255, 0.08);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(66, 153, 225, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 240, 255, 0.15);
 }
 
 .ctaFeatures {
@@ -153,7 +154,7 @@
 .bgShape3 {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(66, 153, 225, 0.1), rgba(237, 137, 54, 0.1));
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.06), rgba(168, 85, 247, 0.06));
   animation: float 20s ease-in-out infinite;
 }
 

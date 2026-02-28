@@ -3,6 +3,7 @@ import Header from "@/Component/Header";
 import Hero from "@/Component/Hero";
 import Footer from "@/Component/Footer";
 import Meta from "@/Component/Meta";
+import AnimateOnScroll from "@/Component/AnimateOnScroll";
 import styles from "@/styles/Home.module.css";
 
 export default function Home() {
@@ -43,7 +44,7 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.container}>
             <div className={styles.gridTwo}>
-              <div className={styles.fadeLeft}>
+              <AnimateOnScroll animation="fadeLeft" className={styles.gridCol}>
                 <h2 className={styles.sectionTitle}>
                   25+ Years of Global Trade Excellence
                 </h2>
@@ -65,11 +66,13 @@ export default function Home() {
                     Get In Touch
                   </a>
                 </div>
-              </div>
+              </AnimateOnScroll>
 
-              <div className={styles.aiVisual}>
-                <div className={styles.orb}></div>
-              </div>
+              <AnimateOnScroll animation="scaleUp" delay={200} className={styles.gridCol}>
+                <div className={styles.aiVisual}>
+                  <div className={styles.orb}></div>
+                </div>
+              </AnimateOnScroll>
             </div>
           </div>
         </section>
@@ -77,9 +80,11 @@ export default function Home() {
         {/* ================= SERVICES ================= */}
         <section className={styles.sectionDark}>
           <div className={styles.container}>
-            <h2 className={styles.centerTitle}>
-              Our Intelligent Trade Services
-            </h2>
+            <AnimateOnScroll animation="fadeUp">
+              <h2 className={styles.centerTitle}>
+                Our Intelligent Trade Services
+              </h2>
+            </AnimateOnScroll>
 
             <div className={styles.cardGrid}>
               {[
@@ -88,14 +93,20 @@ export default function Home() {
                 "AI Logistics Optimization",
                 "Global Trade Consulting",
               ].map((item, index) => (
-                <div key={index} className={styles.card}>
-                  <div className={styles.cardGlow}></div>
-                  <h3>{item}</h3>
-                  <p>
-                    Smart, automated, and optimized global trade operations
-                    powered by experience and technology.
-                  </p>
-                </div>
+                <AnimateOnScroll
+                  key={index}
+                  animation="fadeUp"
+                  delay={index * 100}
+                >
+                  <div className={styles.card}>
+                    <div className={styles.cardGlow}></div>
+                    <h3>{item}</h3>
+                    <p>
+                      Smart, automated, and optimized global trade operations
+                      powered by experience and technology.
+                    </p>
+                  </div>
+                </AnimateOnScroll>
               ))}
             </div>
           </div>
@@ -104,7 +115,9 @@ export default function Home() {
         {/* ================= INDUSTRIES ================= */}
         <section className={styles.section}>
           <div className={styles.container}>
-            <h2 className={styles.centerTitle}>Industries We Empower</h2>
+            <AnimateOnScroll animation="fadeUp">
+              <h2 className={styles.centerTitle}>Industries We Empower</h2>
+            </AnimateOnScroll>
 
             <div className={styles.industryGrid}>
               {[
@@ -115,9 +128,13 @@ export default function Home() {
                 "Automotive",
                 "Industrial Equipment",
               ].map((industry, index) => (
-                <div key={index} className={styles.industryItem}>
-                  {industry}
-                </div>
+                <AnimateOnScroll
+                  key={index}
+                  animation="fadeUp"
+                  delay={index * 80}
+                >
+                  <div className={styles.industryItem}>{industry}</div>
+                </AnimateOnScroll>
               ))}
             </div>
           </div>
@@ -126,14 +143,16 @@ export default function Home() {
         {/* ================= CTA ================= */}
         <section className={styles.ctaSection}>
           <div className={styles.container}>
-            <h2 className={styles.ctaTitle}>Ready to Expand Globally?</h2>
-            <p className={styles.ctaText}>
-              Join the future of AI-powered global trade and accelerate your
-              growth.
-            </p>
-            <a href="/contact" className={styles.ctaButton}>
-              Start Your Journey →
-            </a>
+            <AnimateOnScroll animation="fadeUp">
+              <h2 className={styles.ctaTitle}>Ready to Expand Globally?</h2>
+              <p className={styles.ctaText}>
+                Join the future of AI-powered global trade and accelerate your
+                growth.
+              </p>
+              <a href="/contact" className={styles.ctaButton}>
+                Start Your Journey →
+              </a>
+            </AnimateOnScroll>
           </div>
         </section>
       </main>

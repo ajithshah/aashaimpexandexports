@@ -4,7 +4,7 @@
 
 .footer {
   position: relative;
-  background: radial-gradient(circle at top left, #0f172a, #020617 70%);
+  background: radial-gradient(circle at top left, #1e293b, #0f172a 70%);
   color: #e2e8f0;
   padding: 80px 20px 30px;
   overflow: hidden;
@@ -16,7 +16,7 @@
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(0,255,255,0.15), transparent 70%);
+  background: radial-gradient(circle, rgba(37,99,235,0.08), transparent 70%);
   bottom: -200px;
   left: -200px;
   animation: floatGlow 10s infinite alternate ease-in-out;
@@ -61,7 +61,7 @@
 }
 
 .logoAccent {
-  background: linear-gradient(90deg, #00f5ff, #7c3aed);
+  background: linear-gradient(90deg, #2563eb, #0891b2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -91,7 +91,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #00f5ff, #7c3aed);
+  background: linear-gradient(90deg, #2563eb, #0891b2);
 }
 
 /* =========================
@@ -115,7 +115,7 @@
 }
 
 .footerLink:hover {
-  color: #00f5ff;
+  color: #2563eb;
   transform: translateX(5px);
 }
 
@@ -138,7 +138,7 @@
 }
 
 .contactItem i {
-  color: #00f5ff;
+  color: #2563eb;
   margin-top: 4px;
 }
 
@@ -151,7 +151,7 @@
 
 .phoneLink:hover,
 .emailLink:hover {
-  color: #00f5ff;
+  color: #2563eb;
 }
 
 /* =========================
@@ -188,7 +188,7 @@
 }
 
 .bottomLink:hover {
-  color: #00f5ff;
+  color: #2563eb;
 }
 
 /* =========================
@@ -203,13 +203,13 @@
 }
 
 .developerLink {
-  color: #00f5ff;
+  color: #2563eb;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .developerLink:hover {
-  text-shadow: 0 0 10px rgba(0,255,255,0.6);
+  text-shadow: 0 0 10px rgba(37,99,235,0.4);
 }
 
 /* =========================
@@ -233,8 +233,8 @@
 }
 
 .socialLink:hover {
-  border-color: #00f5ff;
-  box-shadow: 0 0 15px rgba(0,255,255,0.4);
+  border-color: #2563eb;
+  box-shadow: 0 0 15px rgba(37,99,235,0.2);
 }
 
 /* =========================
@@ -242,6 +242,16 @@
 ========================= */
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 60px 16px 24px;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
   .footerBottom {
     flex-direction: column;
     align-items: center;
@@ -250,5 +260,27 @@
 
   .bottomLinks {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 12px 20px;
+  }
+
+  .logoText {
+    font-size: 1.2rem;
+  }
+
+  .footerContent {
+    gap: 24px;
+  }
+
+  .contactItem {
+    font-size: 0.88rem;
+  }
+
+  .developerCredit {
+    font-size: 0.8rem;
   }
 }

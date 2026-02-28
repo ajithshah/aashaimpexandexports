@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import AnimateOnScroll from "@/Component/AnimateOnScroll";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
@@ -35,14 +36,17 @@ const Contact = () => {
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.container}>
-        <div className={styles.contactHeader}>
-          <h2 className={styles.sectionTitle}>Let's Work Together</h2>
-          <p className={styles.sectionDescription}>
-            Reach out for tailored import-export solutions that fit your needs.
-          </p>
-        </div>
+        <AnimateOnScroll animation="fadeUp">
+          <div className={styles.contactHeader}>
+            <h2 className={styles.sectionTitle}>Let's Work Together</h2>
+            <p className={styles.sectionDescription}>
+              Reach out for tailored import-export solutions that fit your needs.
+            </p>
+          </div>
+        </AnimateOnScroll>
 
-        <div className={styles.contactContent}>
+        <AnimateOnScroll animation="fadeUp" delay={100}>
+          <div className={styles.contactContent}>
           <div className={styles.contactForm}>
             <form onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.formRow}>
@@ -198,20 +202,23 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
+          </div>
+        </AnimateOnScroll>
         {/* Google Map */}
-        <div className={styles.mapContainer} style={{ marginTop: "2rem" }}>
-          <iframe
-            title="A A Sha Impex and Exports Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0756735748723!2d80.28444877532364!3d13.094390512173847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526f8c9f69363f%3A0x434d86e1f9007946!2sA%20A%20Sha%20Impex%20and%20Exports!5e0!3m2!1sen!2sin!4v1757837550725!5m2!1sen!2sin"
-            width="100%"
-            height="350"
-            style={{ border: 0, borderRadius: "8px", width: "100%" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+        <AnimateOnScroll animation="fadeUp" delay={200}>
+          <div className={styles.mapContainer} style={{ marginTop: "2rem" }}>
+            <iframe
+              title="A A Sha Impex and Exports Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0756735748723!2d80.28444877532364!3d13.094390512173847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526f8c9f69363f%3A0x434d86e1f9007946!2sA%20A%20Sha%20Impex%20and%20Exports!5e0!3m2!1sen!2sin!4v1757837550725!5m2!1sen!2sin"
+              width="100%"
+              height="350"
+              style={{ border: 0, borderRadius: "8px", width: "100%" }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );

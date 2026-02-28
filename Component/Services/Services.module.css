@@ -2,6 +2,7 @@
   padding: 5rem 2rem;
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
   position: relative;
+  color: var(--text-primary);
 }
 
 .services::before {
@@ -12,8 +13,8 @@
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(circle at 30% 30%, rgba(66, 153, 225, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(237, 137, 54, 0.06) 0%, transparent 50%);
+    radial-gradient(circle at 30% 30%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.04) 0%, transparent 50%);
 }
 
 .container {
@@ -67,14 +68,14 @@
 
 .serviceCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(66, 153, 225, 0.2);
-  border-color: rgba(66, 153, 225, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 240, 255, 0.1);
+  border-color: rgba(0, 240, 255, 0.25);
 }
 
 .serviceIcon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--logo-accent), #3182ce);
+  background: linear-gradient(135deg, var(--logo-accent), #a855f7);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -142,16 +143,16 @@
 }
 
 .serviceLink:hover {
-  color: #3182ce;
+  color: #a855f7;
   text-decoration: underline;
   transform: translateX(5px);
 }
 
 .servicesCTA {
-  background: linear-gradient(135deg, rgba(66, 153, 225, 0.1), rgba(237, 137, 54, 0.08));
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.06), rgba(168, 85, 247, 0.04));
   border-radius: 20px;
   padding: 3rem;
-  border: 1px solid rgba(66, 153, 225, 0.2);
+  border: 1px solid rgba(0, 240, 255, 0.15);
   backdrop-filter: blur(10px);
   text-align: center;
 }
@@ -184,7 +185,7 @@
 
 .primaryBtn {
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, var(--logo-accent), #3182ce);
+  background: linear-gradient(135deg, var(--logo-accent), #a855f7);
   border: none;
   border-radius: 50px;
   color: var(--white-pure);
@@ -194,12 +195,12 @@
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(66, 153, 225, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 240, 255, 0.2);
 }
 
 .primaryBtn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(66, 153, 225, 0.4);
+  box-shadow: 0 12px 35px rgba(0, 240, 255, 0.3);
 }
 
 .secondaryBtn {
@@ -219,7 +220,7 @@
 
 .secondaryBtn:hover {
   border-color: var(--logo-accent);
-  background: rgba(66, 153, 225, 0.1);
+  background: rgba(0, 240, 255, 0.08);
   transform: translateY(-3px);
 }
 

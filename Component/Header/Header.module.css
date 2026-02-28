@@ -1,13 +1,12 @@
 /* =========================================
-   CLEAN FUTURISTIC PURPLE HEADER – FIXED
+   CLEAN PROFESSIONAL LIGHT HEADER – FIXED
 ========================================= */
 
 .header {
-  --fx-violet: #a78bfa;
-  --fx-indigo: #6366f1;
-  --fx-pink: #f472b6;
-  --fx-text: #f3e8ff;
-  --fx-muted: #c4b5fd;
+  --fx-blue: #2563eb;
+  --fx-teal: #0891b2;
+  --fx-text: #1e293b;
+  --fx-muted: #475569;
 
   position: fixed;
   inset: 0 0 auto 0;
@@ -15,17 +14,19 @@
   z-index: 1500;
 
   backdrop-filter: blur(14px);
-  background: linear-gradient(
-    135deg,
-    #1a1438 0%,
-    #221c45 40%,
-    #2a2155 100%
-  );
+  background: transparent;
 
-  border-bottom: 1px solid rgba(167,139,250,0.25);
+  border-bottom: 1px solid transparent;
 
-  /* REMOVE heavy gray shadow */
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  box-shadow: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Scrolled state - white bg with shadow */
+.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 /* =========================================
@@ -89,7 +90,7 @@
   letter-spacing: 0.08em;
   line-height: 1; /* prevent overlap */
   white-space: nowrap;
-  color: #f3e8ff;
+  color: #1e293b;
 }
 
 /* Accent text */
@@ -113,14 +114,14 @@
   padding: 0.6rem 1rem;
   border-radius: 12px;
   font-weight: 600;
-  color: var(--fx-muted);
+  color: #475569;
   text-decoration: none;
   transition: all .25s ease;
 }
 
 /* Subtle hover */
 .navLink:hover {
-  color: #ffffff;
+  color: #2563eb;
 }
 
 /* Soft underline instead of heavy glow */
@@ -133,8 +134,8 @@
   height: 2px;
   background: linear-gradient(
     90deg,
-    var(--fx-pink),
-    var(--fx-violet)
+    #2563eb,
+    #0891b2
   );
   transform: scaleX(0);
   transition: transform .3s ease;
@@ -146,13 +147,9 @@
 
 /* Active state (clean pill, no over-glow) */
 .navLinkActive {
-  color: #ffffff;
-  background: linear-gradient(
-    120deg,
-    rgba(167,139,250,0.25),
-    rgba(99,102,241,0.25)
-  );
-  box-shadow: 0 0 14px rgba(167,139,250,0.35);
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.15);
 }
 
 /* =========================================
@@ -164,26 +161,26 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  border: 1px solid rgba(167,139,250,0.45); /* Stronger border for visibility */
-  background: rgba(167,139,250,0.15); /* Slightly stronger bg */
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(241, 245, 249, 0.8);
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  z-index: 1600; /* Ensure it's on top */
+  z-index: 1600;
 }
 
 .hamburger:hover {
-  box-shadow: 0 0 12px rgba(167,139,250,0.5); /* Subtle glow on hover */
-  background: rgba(167,139,250,0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: rgba(241, 245, 249, 1);
 }
 
 .hamburgerBar {
   width: 22px;
-  height: 3px; /* Thicker bars for better visibility */
-  background: #ffffff; /* White for high contrast */
+  height: 3px;
+  background: #1e293b;
   border-radius: 2px;
   transition: .3s ease;
 }
@@ -212,14 +209,10 @@
   width: min(90vw, 380px);
   height: 100vh;
   padding: 6rem 1.2rem;
-  background: linear-gradient(
-    180deg,
-    #1a1438,
-    #221c45
-  );
+  background: #ffffff;
   transform: translateX(100%);
   transition: transform .35s ease;
-  box-shadow: -20px 0 40px rgba(0,0,0,0.5);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
   z-index: 1400;
 }
 
@@ -232,15 +225,16 @@
   padding: 1rem;
   border-radius: 12px;
   margin-bottom: .6rem;
-  color: var(--fx-text);
+  color: #1e293b;
   text-decoration: none;
-  background: rgba(167,139,250,0.08);
-  border: 1px solid rgba(167,139,250,0.25);
+  background: rgba(241, 245, 249, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   transition: .25s ease;
 }
 
 .mobileNavLink:hover {
-  background: rgba(167,139,250,0.2);
+  background: rgba(37, 99, 235, 0.06);
+  color: #2563eb;
 }
 
 /* =========================================
@@ -250,7 +244,7 @@
 .menuOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.2);
   backdrop-filter: blur(4px);
   z-index: 1300;
 }

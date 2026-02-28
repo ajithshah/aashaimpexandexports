@@ -1,0 +1,75 @@
+/* =====================================================
+   SCROLL-TRIGGERED ANIMATION COMPONENT
+   ===================================================== */
+
+.base {
+  opacity: 0;
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* ================= INITIAL STATES PER ANIMATION TYPE ================= */
+
+.baseFadeUp {
+  composes: base;
+  transform: translateY(32px);
+}
+
+.baseFadeDown {
+  composes: base;
+  transform: translateY(-32px);
+}
+
+.baseFadeLeft {
+  composes: base;
+  transform: translateX(-40px);
+}
+
+.baseFadeRight {
+  composes: base;
+  transform: translateX(40px);
+}
+
+.baseScaleUp {
+  composes: base;
+  transform: scale(0.92);
+}
+
+.baseZoomIn {
+  composes: base;
+  transform: scale(0.85);
+}
+
+/* ================= ANIMATION VARIANTS (visible state) ================= */
+
+.fadeUp,
+.fadeDown,
+.fadeLeft,
+.fadeRight {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.scaleUp,
+.zoomIn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .base,
+  .baseFadeUp,
+  .baseFadeDown,
+  .baseFadeLeft,
+  .baseFadeRight,
+  .baseScaleUp,
+  .baseZoomIn {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
