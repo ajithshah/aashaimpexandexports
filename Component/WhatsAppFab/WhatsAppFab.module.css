@@ -1,8 +1,8 @@
 /* WhatsApp Floating Action Button */
 .whatsappFab {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: clamp(12px, 3vw, 20px);
+  right: clamp(12px, 3vw, 20px);
   z-index: 9999;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -10,21 +10,23 @@
 
 .fabContainer {
   position: relative;
-  width: 60px;
-  height: 60px;
-  background: #25d366;
+  width: clamp(48px, 10vw, 60px);
+  height: clamp(48px, 10vw, 60px);
+  background: linear-gradient(135deg, #25d366 0%, #00cfe8 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  box-shadow:
+    0 4px 20px rgba(37, 211, 102, 0.4),
+    0 0 15px rgba(0, 207, 232, 0.2);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
 
 .fabContainer i {
   color: white;
-  font-size: 28px;
+  font-size: clamp(22px, 5vw, 28px);
   z-index: 2;
   position: relative;
   transition: transform 0.3s ease;
@@ -33,7 +35,9 @@
 /* Hover Effects */
 .whatsappFab:hover .fabContainer {
   transform: scale(1.1);
-  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+  box-shadow:
+    0 6px 30px rgba(37, 211, 102, 0.6),
+    0 0 25px rgba(0, 207, 232, 0.4);
 }
 
 .whatsappFab:hover .fabContainer i {
@@ -116,20 +120,6 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .whatsappFab {
-    bottom: 15px;
-    right: 15px;
-  }
-  
-  .fabContainer {
-    width: 55px;
-    height: 55px;
-  }
-  
-  .fabContainer i {
-    font-size: 26px;
-  }
-  
   .tooltip {
     display: none; /* Hide tooltip on mobile */
   }
@@ -139,15 +129,6 @@
   .whatsappFab {
     bottom: 10px;
     right: 10px;
-  }
-  
-  .fabContainer {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .fabContainer i {
-    font-size: 24px;
   }
 }
 

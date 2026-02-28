@@ -1,5 +1,6 @@
 /* =====================================================
    GLOBAL FUTURISTIC AI THEME – LIGHT VERSION
+   Enhanced for 2026 with Neon Cyber Aesthetics
    ===================================================== */
 
 /* ================= ROOT VARIABLES ================= */
@@ -13,20 +14,32 @@
 
   --logo-accent: #00cfe8;
   --logo-secondary: #6c63ff;
+  
+  /* === FUTURISTIC NEON PALETTE === */
+  --neon-cyan: #00f0ff;
+  --neon-purple: #a855f7;
+  --neon-pink: #ec4899;
+  --neon-blue: #3b82f6;
+  --neon-green: #22d3ee;
+  --hologram-glow: rgba(0, 240, 255, 0.15);
+  --cyber-gradient: linear-gradient(135deg, #00cfe8 0%, #6c63ff 50%, #ec4899 100%);
 
   /* === BACKGROUNDS === */
   --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
   --bg-tertiary: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.85);
 
   /* === TEXT === */
   --text-primary: #0f172a;
   --text-secondary: #334155;
   --text-muted: #64748b;
+  --white-pure: #ffffff;
 
   /* === GLASS EFFECT === */
   --glass-bg: rgba(255, 255, 255, 0.65);
   --glass-border: rgba(15, 23, 42, 0.08);
+  --glass-shadow: rgba(15, 23, 42, 0.08);
 
   /* === ANIMATED BACKGROUND === */
   --gradient-animated: linear-gradient(
@@ -36,6 +49,13 @@
     #e2e8f0,
     #c7f9ff
   );
+  
+  /* === RESPONSIVE BREAKPOINTS === */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
 }
 
 /* ================= GLOBAL RESET ================= */
@@ -206,4 +226,112 @@ button:hover,
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* ================= FUTURISTIC UTILITY CLASSES ================= */
+
+.neon-text {
+  background: var(--cyber-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(0, 207, 232, 0.3);
+}
+
+.hologram-border {
+  position: relative;
+  border: 1px solid transparent;
+  background: linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
+              var(--cyber-gradient) border-box;
+  border-radius: 16px;
+}
+
+.cyber-glow {
+  box-shadow: 
+    0 0 20px rgba(0, 207, 232, 0.15),
+    0 0 40px rgba(108, 99, 255, 0.1),
+    0 0 60px rgba(0, 207, 232, 0.05);
+}
+
+.scan-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: scanLine 3s ease-in-out infinite;
+}
+
+@keyframes scanLine {
+  0%, 100% { transform: translateY(0); opacity: 0; }
+  50% { transform: translateY(100vh); opacity: 1; }
+}
+
+/* ================= RESPONSIVE CONTAINER ================= */
+
+.responsive-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+/* ================= RESPONSIVE GRID UTILITIES ================= */
+
+.responsive-grid {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+/* ================= MOBILE OPTIMIZATIONS ================= */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* ================= TOUCH DEVICE OPTIMIZATIONS ================= */
+
+@media (hover: none) and (pointer: coarse) {
+  button,
+  .primaryBtn,
+  .secondaryBtn,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* ================= ENHANCED SCROLLBAR ================= */
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+/* ================= SELECTION STYLE ================= */
+
+::selection {
+  background: rgba(0, 207, 232, 0.2);
+  color: var(--text-primary);
+}
+
+/* ================= FOCUS STYLES ================= */
+
+:focus-visible {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 2px;
 }

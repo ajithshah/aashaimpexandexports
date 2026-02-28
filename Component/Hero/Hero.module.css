@@ -204,7 +204,7 @@
 }
 
 .heroTitle {
-  font-size: 50px;
+  font-size: clamp(2rem, 6vw, 3.125rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.04;
@@ -226,10 +226,11 @@
   animation-timing-function: cubic-bezier(0.21, 0.88, 0.32, 1), linear;
   animation-fill-mode: forwards, both;
   animation-iteration-count: 1, infinite;
+  text-shadow: 0 0 40px rgba(37, 99, 235, 0.2);
 }
 
 .heroSubtitle {
-  font-size: 30px;
+  font-size: clamp(1.25rem, 3.5vw, 1.875rem);
   font-weight: 600;
   color: #334155;
   margin-bottom: 1.2rem;
@@ -237,7 +238,7 @@
 }
 
 .heroDescription {
-  font-size: 20px;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
   line-height: 1.72;
   max-width: 640px;
   color: #475569;
@@ -328,15 +329,38 @@
 
 .visualCard {
   width: min(100%, 430px);
-  padding: 1.55rem;
+  padding: clamp(1.2rem, 3vw, 1.55rem);
   border-radius: 22px;
   border: 1px solid rgba(148, 163, 184, 0.38);
   background: linear-gradient(140deg, rgba(255, 255, 255, 0.87), rgba(244, 248, 255, 0.66));
-  box-shadow: 0 34px 64px rgba(30, 64, 175, 0.16);
+  box-shadow: 
+    0 34px 64px rgba(30, 64, 175, 0.16),
+    0 0 60px rgba(59, 130, 246, 0.1);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transform: perspective(1200px) rotateX(var(--rotate-x-inverse)) rotateY(var(--rotate-y-inverse));
   transition: transform 180ms ease-out;
   animation: cardFloat 6s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Holographic border effect */
+.visualCard::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4, #3b82f6);
+  background-size: 300% 300%;
+  animation: hologramBorder 4s ease infinite;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+@keyframes hologramBorder {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .cardPing {
@@ -545,40 +569,123 @@
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    min-height: min(85vh, 700px);
+  }
+  
+  .heroContainer {
+    padding: clamp(3rem, 6vw, 5rem) 1rem;
+  }
+  
+  .orbOne, .orbTwo, .orbThree {
+    opacity: 0.5;
+  }
+}
+
 @media (max-width: 640px) {
   .hero {
     min-height: auto;
   }
 
   .heroContainer {
-    padding: 4.6rem 1rem;
+    padding: 3.5rem 1rem;
+    gap: 1.5rem;
+  }
+  
+  .heroEyebrow {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
   }
 
   .heroActions {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.75rem;
   }
 
   .primaryBtn,
   .secondaryBtn {
     width: 100%;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
   }
 
   .heroVisual {
-    min-height: 270px;
+    min-height: 250px;
   }
 
   .visualCard {
-    padding: 1.3rem;
+    padding: 1.1rem;
+  }
+  
+  .visualCard h3 {
+    font-size: 1.15rem;
+  }
+  
+  .visualCard p {
+    font-size: 0.9rem;
   }
 
   .metricRow {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .metricRow strong {
+    font-size: 0.95rem;
+  }
+  
+  .metricRow span {
+    font-size: 0.7rem;
   }
 
   .ring {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
+  }
+  
+  .orbOne {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .orbTwo {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .orbThree {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContainer {
+    padding: 2.5rem 0.75rem;
+  }
+  
+  .metricRow {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+  
+  .metricRow div {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .metricRow strong {
+    order: 2;
+  }
+  
+  .metricRow span {
+    order: 1;
+    margin-top: 0;
   }
 }
 

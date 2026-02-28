@@ -8,10 +8,10 @@
 
   position: relative;
   overflow: hidden;
-  padding: clamp(5rem, 10vw, 7rem) 0;
+  padding: clamp(3rem, 8vw, 4.375rem) clamp(1rem, 4vw, 2rem);
   background:
-    radial-gradient(circle at 10% -8%, rgba(56, 189, 248, 0.18), transparent 34%),
-    radial-gradient(circle at 88% 4%, rgba(37, 99, 235, 0.14), transparent 30%),
+    radial-gradient(circle at 10% -8%, rgba(0, 207, 232, 0.15), transparent 34%),
+    radial-gradient(circle at 88% 4%, rgba(108, 99, 255, 0.12), transparent 30%),
     linear-gradient(160deg, rgba(248, 252, 255, 0.96), rgba(241, 248, 255, 0.94));
 }
 
@@ -24,18 +24,18 @@
 }
 
 .industries::before {
-  opacity: 0.22;
+  opacity: 0.18;
   background-image:
-    linear-gradient(rgba(148, 163, 184, 0.38) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.38) 1px, transparent 1px);
+    linear-gradient(rgba(0, 207, 232, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 207, 232, 0.4) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(circle at 50% 32%, black 24%, transparent 78%);
 }
 
 .industries::after {
   background:
-    radial-gradient(circle at 24% 24%, rgba(6, 182, 212, 0.09), transparent 40%),
-    radial-gradient(circle at 78% 74%, rgba(37, 99, 235, 0.08), transparent 42%);
+    radial-gradient(circle at 24% 24%, rgba(0, 207, 232, 0.08), transparent 40%),
+    radial-gradient(circle at 78% 74%, rgba(108, 99, 255, 0.06), transparent 42%);
   animation: ambientDrift 18s linear infinite;
 }
 
@@ -50,7 +50,7 @@
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: clamp(2.2rem, 5vw, 4rem);
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
   opacity: 0;
   transform: translateY(10px);
   animation: fadeUp 0.55s ease-out forwards;
@@ -59,7 +59,7 @@
 .sectionTitle {
   margin: 0 0 0.7rem;
   font-family: "Sora", "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: clamp(2rem, 4.4vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -72,7 +72,7 @@
 .sectionDescription {
   margin: 0 auto;
   max-width: 700px;
-  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   line-height: 1.72;
   color: var(--fx-muted);
 }
@@ -81,8 +81,8 @@
 
 .industriesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: clamp(0.75rem, 2vw, 1rem);
 }
 
 /* ================= CARD ================= */
@@ -90,127 +90,105 @@
 .industryCard {
   position: relative;
   overflow: hidden;
-  padding: 1.55rem 1.2rem;
-  border-radius: 18px;
+  padding: clamp(1rem, 3vw, 1.55rem) clamp(0.75rem, 2.5vw, 1.2rem);
+  border-radius: clamp(12px, 3vw, 18px);
   text-align: center;
   border: 1px solid var(--fx-border);
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(242, 249, 255, 0.92)),
-    linear-gradient(180deg, rgba(56, 189, 248, 0.08), transparent 48%);
+    linear-gradient(180deg, rgba(0, 207, 232, 0.1), transparent 48%);
   box-shadow:
     0 14px 28px rgba(15, 23, 42, 0.08),
-    0 0 0 1px rgba(125, 211, 252, 0.08) inset;
+    0 0 0 1px rgba(0, 207, 232, 0.1) inset;
   transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease;
   opacity: 0;
   transform: translateY(10px);
   animation: cardIn 0.5s ease-out forwards;
 }
 
-.industryCard:nth-child(1) {
-  animation-delay: 0.05s;
-}
-
-.industryCard:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.industryCard:nth-child(3) {
-  animation-delay: 0.15s;
-}
-
-.industryCard:nth-child(4) {
-  animation-delay: 0.2s;
-}
-
-.industryCard:nth-child(5) {
-  animation-delay: 0.25s;
-}
-
-.industryCard:nth-child(6) {
-  animation-delay: 0.3s;
-}
-
-.industryCard:nth-child(7) {
-  animation-delay: 0.35s;
-}
-
-.industryCard:nth-child(8) {
-  animation-delay: 0.4s;
-}
-
-.industryCard::before,
-.industryCard::after {
+/* Shimmer top border */
+.industryCard::before {
   content: "";
   position: absolute;
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00cfe8, #6c63ff, transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.industryCard::before {
-  inset: 0;
-  background: linear-gradient(120deg, transparent 0%, rgba(56, 189, 248, 0.18) 48%, transparent 100%);
-  transform: translateX(-120%);
-  transition: transform 0.6s ease;
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
-.industryCard::after {
-  inset: 0;
-  border-radius: inherit;
-  box-shadow: 0 0 0 1px rgba(14, 165, 233, 0) inset;
-  transition: box-shadow 0.26s ease;
-}
+.industryCard:nth-child(1) { animation-delay: 0.05s; }
+.industryCard:nth-child(2) { animation-delay: 0.1s; }
+.industryCard:nth-child(3) { animation-delay: 0.15s; }
+.industryCard:nth-child(4) { animation-delay: 0.2s; }
+.industryCard:nth-child(5) { animation-delay: 0.25s; }
+.industryCard:nth-child(6) { animation-delay: 0.3s; }
+.industryCard:nth-child(7) { animation-delay: 0.35s; }
+.industryCard:nth-child(8) { animation-delay: 0.4s; }
 
 .industryCard:hover {
   transform: translateY(-5px);
-  border-color: rgba(14, 165, 233, 0.42);
+  border-color: rgba(0, 207, 232, 0.5);
   box-shadow:
     0 22px 36px rgba(15, 23, 42, 0.12),
-    0 0 0 1px rgba(125, 211, 252, 0.15) inset;
+    0 0 20px rgba(0, 207, 232, 0.15),
+    0 0 0 1px rgba(0, 207, 232, 0.2) inset;
 }
 
 .industryCard:hover::before {
-  transform: translateX(120%);
-}
-
-.industryCard:hover::after {
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.35) inset;
+  opacity: 1;
 }
 
 /* ================= ICON ================= */
 
 .industryIcon {
-  width: 3.2rem;
-  height: 3.2rem;
-  margin: 0 auto 0.82rem;
-  border-radius: 12px;
+  width: clamp(2.5rem, 6vw, 3.2rem);
+  height: clamp(2.5rem, 6vw, 3.2rem);
+  margin: 0 auto clamp(0.5rem, 1.5vw, 0.82rem);
+  border-radius: clamp(8px, 2vw, 12px);
   display: inline-grid;
   place-items: center;
-  font-size: 1.35rem;
+  font-size: clamp(1rem, 3vw, 1.35rem);
   color: #ffffff;
-  border: 1px solid rgba(125, 211, 252, 0.52);
-  background: linear-gradient(130deg, rgba(8, 145, 178, 0.78), rgba(37, 99, 235, 0.72));
-  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+  border: 1px solid rgba(0, 207, 232, 0.52);
+  background: linear-gradient(130deg, rgba(0, 207, 232, 0.8), rgba(108, 99, 255, 0.75));
+  box-shadow: 0 8px 18px rgba(108, 99, 255, 0.22);
   transition: transform 0.26s ease, box-shadow 0.26s ease, filter 0.26s ease;
 }
 
 .industryCard:hover .industryIcon {
   transform: translateY(-2px) scale(1.06);
-  filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.35));
-  box-shadow: 0 12px 22px rgba(37, 99, 235, 0.28);
+  filter: drop-shadow(0 0 12px rgba(0, 207, 232, 0.5));
+  box-shadow: 0 12px 22px rgba(108, 99, 255, 0.32);
 }
 
 /* ================= TEXT ================= */
 
 .industryName {
-  margin: 0 0 0.5rem;
+  margin: 0 0 clamp(0.25rem, 1vw, 0.5rem);
   font-family: "Sora", "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   font-weight: 700;
   color: var(--fx-ink);
+  transition: color 0.25s ease;
+}
+
+.industryCard:hover .industryName {
+  color: #0891b2;
 }
 
 .industryDescription {
   margin: 0;
-  font-size: 0.94rem;
+  font-size: clamp(0.8rem, 2vw, 0.94rem);
   line-height: 1.62;
   color: var(--fx-muted);
 }
@@ -245,29 +223,101 @@
 
 /* ================= RESPONSIVE ================= */
 
+@media (max-width: 992px) {
+  .industriesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 0.875rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .industries {
+    padding: clamp(2.5rem, 6vw, 3.5rem) clamp(0.75rem, 3vw, 1.5rem);
+  }
+
   .sectionTitle {
-    font-size: clamp(1.75rem, 8vw, 2.3rem);
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+
+  .sectionDescription {
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+  }
+
+  .industriesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .industryCard {
+    padding: 1rem 0.75rem;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries {
+    padding: 2rem 0.75rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 1.25rem;
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
   }
 
   .industriesGrid {
     grid-template-columns: 1fr;
+    gap: 0.625rem;
   }
 
   .industryCard {
-    padding: 1.25rem 1rem;
+    padding: 0.875rem 0.625rem;
+    border-radius: 10px;
+  }
+
+  .industryIcon {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    border-radius: 8px;
+  }
+
+  .industryName {
+    font-size: 0.875rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .industryDescription {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .industryCard {
+    transition: transform 0.15s ease;
+  }
+
+  .industryCard:active {
+    transform: scale(0.98);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .industries::after,
   .sectionHeader,
-  .industryCard {
+  .industryCard,
+  .industryCard::before {
     animation: none !important;
   }
 
   .industryCard,
-  .industryIcon {
+  .industryIcon,
+  .industryName {
     transition: none !important;
   }
 

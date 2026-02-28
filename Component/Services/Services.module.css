@@ -1,7 +1,8 @@
 .services {
-  padding: 5rem 2rem;
+  padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 4vw, 2rem);
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
   position: relative;
+  overflow: hidden;
 }
 
 .services::before {
@@ -12,8 +13,22 @@
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(circle at 30% 30%, rgba(66, 153, 225, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(237, 137, 54, 0.06) 0%, transparent 50%);
+    radial-gradient(circle at 30% 30%, rgba(0, 207, 232, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(108, 99, 255, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Futuristic grid pattern */
+.services::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background-image:
+    linear-gradient(rgba(0, 207, 232, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 207, 232, 0.5) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
 }
 
 .container {
@@ -25,22 +40,22 @@
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 
 .sectionTitle {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--logo-accent) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .sectionDescription {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-muted);
   line-height: 1.6;
   max-width: 600px;
@@ -49,50 +64,84 @@
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 
 .serviceCard {
   background: var(--bg-card);
   border-radius: 20px;
-  padding: 2.5rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   box-shadow: 0 4px 20px var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Holographic top border */
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--logo-accent), var(--logo-secondary), var(--logo-accent));
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 200% 0; }
+  50% { background-position: -200% 0; }
 }
 
 .serviceCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(66, 153, 225, 0.2);
-  border-color: rgba(66, 153, 225, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(0, 207, 232, 0.15),
+    0 0 30px rgba(0, 207, 232, 0.1);
+  border-color: rgba(0, 207, 232, 0.3);
 }
 
 .serviceIcon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, var(--logo-accent), #3182ce);
+  width: clamp(60px, 10vw, 80px);
+  height: clamp(60px, 10vw, 80px);
+  background: linear-gradient(135deg, var(--logo-accent), var(--logo-secondary));
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   color: var(--white-pure);
+  box-shadow: 
+    0 8px 20px rgba(0, 207, 232, 0.3),
+    0 0 20px rgba(0, 207, 232, 0.2);
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover .serviceIcon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 
+    0 12px 30px rgba(0, 207, 232, 0.4),
+    0 0 40px rgba(0, 207, 232, 0.3);
 }
 
 .serviceTitle {
-  font-size: 1.4rem;
+  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .serviceDescription {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -103,7 +152,7 @@
 }
 
 .featuresTitle {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 600;
   color: var(--logo-accent);
   margin-bottom: 0.75rem;
@@ -116,7 +165,7 @@
 }
 
 .featureItem {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
   position: relative;
@@ -135,25 +184,50 @@
   color: var(--logo-accent);
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   transition: all 0.3s ease;
-  display: inline-block;
-  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .serviceLink:hover {
-  color: #3182ce;
-  text-decoration: underline;
+  color: var(--logo-secondary);
   transform: translateX(5px);
 }
 
+.serviceLink::after {
+  display: none;
+}
+
 .servicesCTA {
-  background: linear-gradient(135deg, rgba(66, 153, 225, 0.1), rgba(237, 137, 54, 0.08));
+  background: linear-gradient(135deg, rgba(0, 207, 232, 0.08), rgba(108, 99, 255, 0.06));
   border-radius: 20px;
-  padding: 3rem;
-  border: 1px solid rgba(66, 153, 225, 0.2);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgba(0, 207, 232, 0.2);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated border glow */
+.servicesCTA::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  background: linear-gradient(45deg, var(--logo-accent), transparent, var(--logo-secondary), transparent, var(--logo-accent));
+  background-size: 400% 400%;
+  animation: borderGlow 6s ease infinite;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+@keyframes borderGlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .ctaContent {
@@ -162,112 +236,109 @@
 }
 
 .ctaTitle {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(1.25rem, 3vw, 2rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .ctaDescription {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
 }
 
 .ctaActions {
   display: flex;
-  gap: 1.5rem;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .primaryBtn {
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, var(--logo-accent), #3182ce);
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.25rem, 3vw, 2rem);
+  background: linear-gradient(135deg, var(--logo-accent), var(--logo-secondary));
   border: none;
   border-radius: 50px;
   color: var(--white-pure);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 2vw, 1rem);
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(66, 153, 225, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(0, 207, 232, 0.3);
+  text-decoration: none;
+}
+
+.primaryBtn::after {
+  display: none;
 }
 
 .primaryBtn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(66, 153, 225, 0.4);
+  box-shadow: 
+    0 12px 35px rgba(0, 207, 232, 0.4),
+    0 0 20px rgba(0, 207, 232, 0.3);
 }
 
 .secondaryBtn {
-  padding: 1rem 2rem;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.25rem, 3vw, 2rem);
   background: transparent;
   border: 2px solid var(--logo-accent);
   border-radius: 50px;
   color: var(--logo-accent);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 2vw, 1rem);
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
+  text-decoration: none;
+}
+
+.secondaryBtn::after {
+  display: none;
 }
 
 .secondaryBtn:hover {
-  border-color: var(--logo-accent);
-  background: rgba(66, 153, 225, 0.1);
+  border-color: var(--logo-secondary);
+  background: rgba(0, 207, 232, 0.1);
   transform: translateY(-3px);
+  color: var(--logo-secondary);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .services {
-    padding: 3rem 1rem;
-  }
-
   .servicesGrid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .serviceCard {
-    padding: 2rem;
-  }
-
-  .servicesCTA {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .ctaActions {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .primaryBtn,
   .secondaryBtn {
     width: 100%;
-    max-width: 280px;
-  }
-
-  .sectionHeader {
-    margin-bottom: 2rem;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .serviceCard {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .servicesCTA {
-    padding: 1.5rem;
-  }
-
-  .featureItem {
-    font-size: 0.85rem;
+    padding: 1.25rem;
   }
 }
