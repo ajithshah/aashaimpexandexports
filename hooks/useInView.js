@@ -24,7 +24,7 @@ export default function useInView(options = {}) {
     observer.observe(element);
 
     return () => {
-      observer.unobserve(element);
+      observer.disconnect();
     };
   }, [options.threshold, options.rootMargin]);
 
