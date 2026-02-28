@@ -1,6 +1,6 @@
 .products {
   padding: 100px 0;
-  padding-top: calc(100px + 80px);
+  padding-top: calc(100px + var(--header-height, 80px));
   position: relative;
   background: #ffffff;
   color: #1e293b;

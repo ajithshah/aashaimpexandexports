@@ -13,7 +13,7 @@
   position: relative;
   overflow: hidden;
   padding: clamp(5rem, 10vw, 7rem) 1.25rem;
-  padding-top: calc(clamp(5rem, 10vw, 7rem) + 80px);
+  padding-top: calc(clamp(5rem, 10vw, 7rem) + var(--header-height, 80px));
   color: var(--fx-ink);
   background: #ffffff;
 }
