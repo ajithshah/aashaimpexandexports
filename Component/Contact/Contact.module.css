@@ -5,6 +5,7 @@
 
 .contact {
   padding: 100px 0;
+  background: linear-gradient(165deg, #0a0e1a 0%, #0d1117 52%, #0a0e1a 100%);
 }
 
 .container {
@@ -141,7 +142,7 @@
     var(--logo-accent),
     var(--logo-secondary)
   );
-  color: var(--logo-dark);
+  color: #ffffff;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;

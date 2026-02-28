@@ -44,7 +44,7 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.container}>
             <div className={styles.gridTwo}>
-              <AnimateOnScroll animation="fadeLeft">
+              <AnimateOnScroll animation="fadeLeft" className={styles.gridCol}>
                 <h2 className={styles.sectionTitle}>
                   25+ Years of Global Trade Excellence
                 </h2>
@@ -68,7 +68,7 @@ export default function Home() {
                 </div>
               </AnimateOnScroll>
 
-              <AnimateOnScroll animation="scaleUp" delay={200}>
+              <AnimateOnScroll animation="scaleUp" delay={200} className={styles.gridCol}>
                 <div className={styles.aiVisual}>
                   <div className={styles.orb}></div>
                 </div>

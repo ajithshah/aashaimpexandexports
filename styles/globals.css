@@ -1,5 +1,5 @@
 /* =====================================================
-   GLOBAL FUTURISTIC AI THEME – LIGHT VERSION
+   GLOBAL FUTURISTIC AI THEME – DARK VERSION
    ===================================================== */
 
 /* ================= ROOT VARIABLES ================= */
@@ -9,32 +9,35 @@
   /* === BRAND COLORS === */
   --logo-white: #ffffff;
   --logo-dark: #0f172a;
-  --logo-gray: #64748b;
+  --logo-gray: #94a3b8;
 
-  --logo-accent: #00cfe8;
-  --logo-secondary: #6c63ff;
+  --logo-accent: #00f0ff;
+  --logo-secondary: #a855f7;
 
   /* === BACKGROUNDS === */
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #f1f5f9;
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1e293b;
+  --bg-card: rgba(15, 23, 42, 0.8);
 
   /* === TEXT === */
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
 
   /* === GLASS EFFECT === */
-  --glass-bg: rgba(255, 255, 255, 0.65);
-  --glass-border: rgba(15, 23, 42, 0.08);
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(0, 240, 255, 0.12);
+  --glass-shadow: rgba(0, 0, 0, 0.3);
+  --white-pure: #ffffff;
 
   /* === ANIMATED BACKGROUND === */
   --gradient-animated: linear-gradient(
     -45deg,
-    #f8fafc,
-    #ffffff,
-    #e2e8f0,
-    #c7f9ff
+    #0a0e1a,
+    #111827,
+    #0d1117,
+    #0a1628
   );
 }
 
@@ -82,7 +85,7 @@ body::before {
   left: -150px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(0, 207, 232, 0.2), transparent 70%);
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.15), transparent 70%);
   animation: floatGlow 14s ease-in-out infinite alternate;
   z-index: -1;
 }
@@ -156,7 +159,7 @@ button:hover,
 
 .glass-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 240, 255, 0.1);
 }
 
 /* ================= FADE ANIMATION ================= */
