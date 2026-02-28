@@ -6,7 +6,7 @@ export default function useInView(options = {}) {
 
   useEffect(() => {
     const element = ref.current;
-    if (!element) return undefined;
+    if (!element) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
