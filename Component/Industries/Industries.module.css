@@ -51,9 +51,6 @@
 .sectionHeader {
   text-align: center;
   margin-bottom: clamp(2.2rem, 5vw, 4rem);
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeUp 0.55s ease-out forwards;
 }
 
 .sectionTitle {
@@ -101,41 +98,6 @@
     0 14px 28px rgba(15, 23, 42, 0.08),
     0 0 0 1px rgba(125, 211, 252, 0.08) inset;
   transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: cardIn 0.5s ease-out forwards;
-}
-
-.industryCard:nth-child(1) {
-  animation-delay: 0.05s;
-}
-
-.industryCard:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.industryCard:nth-child(3) {
-  animation-delay: 0.15s;
-}
-
-.industryCard:nth-child(4) {
-  animation-delay: 0.2s;
-}
-
-.industryCard:nth-child(5) {
-  animation-delay: 0.25s;
-}
-
-.industryCard:nth-child(6) {
-  animation-delay: 0.3s;
-}
-
-.industryCard:nth-child(7) {
-  animation-delay: 0.35s;
-}
-
-.industryCard:nth-child(8) {
-  animation-delay: 0.4s;
 }
 
 .industryCard::before,
@@ -245,13 +207,20 @@
 
 /* ================= RESPONSIVE ================= */
 
+@media (max-width: 992px) {
+  .industriesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .sectionTitle {
     font-size: clamp(1.75rem, 8vw, 2.3rem);
   }
 
   .industriesGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
   }
 
   .industryCard {
@@ -259,21 +228,37 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .industries::after,
-  .sectionHeader,
+@media (max-width: 480px) {
+  .industriesGrid {
+    grid-template-columns: 1fr;
+  }
+
   .industryCard {
+    padding: 1.1rem 0.9rem;
+  }
+
+  .industryIcon {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.15rem;
+  }
+
+  .industryName {
+    font-size: 1rem;
+  }
+
+  .industryDescription {
+    font-size: 0.88rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .industries::after {
     animation: none !important;
   }
 
   .industryCard,
   .industryIcon {
     transition: none !important;
-  }
-
-  .sectionHeader,
-  .industryCard {
-    opacity: 1;
-    transform: none;
   }
 }

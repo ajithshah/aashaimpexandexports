@@ -242,6 +242,16 @@
 ========================= */
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 60px 16px 24px;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
   .footerBottom {
     flex-direction: column;
     align-items: center;
@@ -250,5 +260,27 @@
 
   .bottomLinks {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 12px 20px;
+  }
+
+  .logoText {
+    font-size: 1.2rem;
+  }
+
+  .footerContent {
+    gap: 24px;
+  }
+
+  .contactItem {
+    font-size: 0.88rem;
+  }
+
+  .developerCredit {
+    font-size: 0.8rem;
   }
 }

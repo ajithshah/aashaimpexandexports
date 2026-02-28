@@ -271,6 +271,10 @@
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
+  .products {
+    padding: 60px 0;
+  }
+
   .sectionTitle {
     font-size: 2rem;
   }
@@ -286,5 +290,56 @@
   .downloadBtn {
     width: 100%;
     max-width: 320px;
+  }
+
+  .topProducts {
+    margin-top: 60px;
+  }
+
+  .productsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    padding: 40px 0;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .categoryContent {
+    padding: 20px;
+  }
+
+  .productContent {
+    padding: 20px;
+  }
+
+  .productsCta {
+    padding: 30px 16px;
+    border-radius: 16px;
+  }
+
+  .productsCta h3 {
+    font-size: 1.4rem;
+  }
+
+  .downloadBtn {
+    max-width: 100%;
+    padding: 0.78rem 1rem;
+    font-size: 0.9rem;
   }
 }
