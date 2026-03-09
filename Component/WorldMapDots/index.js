@@ -10,60 +10,121 @@ const WorldMapDots = () => {
 
     const circles = Array.from(svg.querySelectorAll("circle"));
 
-    const createRipple = (cx, cy) => {
-      const ring = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "circle",
-      );
-      ring.setAttribute("cx", cx);
-      ring.setAttribute("cy", cy);
-      ring.setAttribute("r", "3");
-      ring.setAttribute("fill", "none");
-      ring.setAttribute("stroke", "#38bdf8");
-      ring.setAttribute("stroke-width", "1.2");
-      ring.setAttribute("opacity", "0.9");
-      svg.appendChild(ring);
+    const COLORS = [
+      { dot: "#38bdf8", ripple: "#38bdf8" }, // sky blue
+      { dot: "#818cf8", ripple: "#818cf8" }, // indigo
+      { dot: "#34d399", ripple: "#34d399" }, // emerald
+      { dot: "#f472b6", ripple: "#f472b6" }, // pink
+      { dot: "#fb923c", ripple: "#fb923c" }, // orange
+      { dot: "#a78bfa", ripple: "#a78bfa" }, // violet
+      { dot: "#22d3ee", ripple: "#22d3ee" }, // cyan
+    ];
 
-      let r = 3;
-      let op = 0.9;
-      const step = () => {
-        r += 0.55;
-        op -= 0.022;
-        ring.setAttribute("r", String(r));
-        ring.setAttribute("opacity", String(Math.max(0, op)));
-        if (op > 0) requestAnimationFrame(step);
-        else ring.remove();
+    const createRipple = (cx, cy, color, double = false) => {
+      const makeRing = (delay, scale = 1) => {
+        const ring = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "circle",
+        );
+        ring.setAttribute("cx", cx);
+        ring.setAttribute("cy", cy);
+        ring.setAttribute("r", String(3 * scale));
+        ring.setAttribute("fill", "none");
+        ring.setAttribute("stroke", color);
+        ring.setAttribute("stroke-width", "1.2");
+        ring.setAttribute("opacity", "0.9");
+        svg.appendChild(ring);
+
+        let r = 3 * scale;
+        let op = 0.9;
+        const step = () => {
+          r += 0.7;
+          op -= 0.018;
+          ring.setAttribute("r", String(r));
+          ring.setAttribute("opacity", String(Math.max(0, op)));
+          if (op > 0) requestAnimationFrame(step);
+          else ring.remove();
+        };
+        setTimeout(() => requestAnimationFrame(step), delay);
       };
-      requestAnimationFrame(step);
+
+      makeRing(0);
+      if (double) makeRing(250, 0.7);
     };
 
-    const pulseDot = (circle) => {
+    const createBeam = (fromCircle, toCircle, color) => {
+      const x1 = fromCircle.getAttribute("cx");
+      const y1 = fromCircle.getAttribute("cy");
+      const x2 = toCircle.getAttribute("cx");
+      const y2 = toCircle.getAttribute("cy");
+
+      const line = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "line",
+      );
+      line.setAttribute("x1", x1);
+      line.setAttribute("y1", y1);
+      line.setAttribute("x2", x2);
+      line.setAttribute("y2", y2);
+      line.setAttribute("stroke", color);
+      line.setAttribute("stroke-width", "0.7");
+      line.setAttribute("opacity", "0.6");
+      svg.appendChild(line);
+
+      let op = 0.6;
+      const fade = () => {
+        op -= 0.018;
+        line.setAttribute("opacity", String(Math.max(0, op)));
+        if (op > 0) requestAnimationFrame(fade);
+        else line.remove();
+      };
+      setTimeout(() => requestAnimationFrame(fade), 300);
+    };
+
+    const pulseDot = (circle, colorSet, isDouble = false) => {
       const cx = circle.getAttribute("cx");
       const cy = circle.getAttribute("cy");
-      circle.setAttribute("r", "5");
+      circle.setAttribute("r", "6");
+      circle.setAttribute("fill", colorSet.dot);
       circle.setAttribute("opacity", "1");
-      createRipple(cx, cy);
+      createRipple(cx, cy, colorSet.ripple, isDouble);
       setTimeout(() => {
         circle.setAttribute("r", "1.9");
-        circle.setAttribute("opacity", "0.85");
-      }, 1300);
+        circle.setAttribute("opacity", "0.75");
+        circle.setAttribute("fill", "#38bdf8");
+      }, 1500);
     };
 
     const wave = () => {
-      const count = Math.floor(Math.random() * 3) + 2;
+      const count = Math.floor(Math.random() * 5) + 3;
       const used = new Set();
+      const picked = [];
+
       for (let i = 0; i < count; i++) {
         let idx;
         do {
           idx = Math.floor(Math.random() * circles.length);
         } while (used.has(idx));
         used.add(idx);
-        setTimeout(() => pulseDot(circles[idx]), i * 200);
+        picked.push(idx);
+
+        const colorSet = COLORS[Math.floor(Math.random() * COLORS.length)];
+        const isDouble = Math.random() > 0.6;
+        setTimeout(() => pulseDot(circles[idx], colorSet, isDouble), i * 150);
+      }
+
+      // Draw a beam between 2 random picked dots
+      if (picked.length >= 2 && Math.random() > 0.4) {
+        const a = picked[0],
+          b = picked[Math.floor(picked.length / 2)];
+        const beamColor =
+          COLORS[Math.floor(Math.random() * COLORS.length)].ripple;
+        setTimeout(() => createBeam(circles[a], circles[b], beamColor), 200);
       }
     };
 
     wave();
-    const interval = setInterval(wave, 2000);
+    const interval = setInterval(wave, 1400);
     return () => clearInterval(interval);
   }, []);
 

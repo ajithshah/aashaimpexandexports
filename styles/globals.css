@@ -152,8 +152,8 @@ button:hover,
 /* ================= WORLD MAP DOTS ================= */
 
 @keyframes mapBreath {
-  0%, 100% { opacity: 0.18; }
-  50% { opacity: 0.24; }
+  0%, 100% { opacity: 0.38; }
+  50% { opacity: 0.55; }
 }
 
 .worldMapDots {
@@ -162,21 +162,21 @@ button:hover,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.18;
+  opacity: 0.45;
   pointer-events: none;
   z-index: 1 !important;
   animation: mapBreath 6s ease-in-out infinite;
 }
 
 .worldMapDots circle {
-  fill: #0ea5e9;
-  opacity: 0.7;
-  transition: r 0.4s ease, opacity 0.4s ease;
+  fill: #38bdf8;
+  opacity: 0.75;
+  transition: r 0.35s ease, opacity 0.35s ease, fill 0.35s ease;
   filter: none;
 }
 
-.worldMapDots circle[r="5"] {
-  filter: drop-shadow(0 0 4px rgba(14, 165, 233, 0.8));
+.worldMapDots circle[r="6"] {
+  filter: drop-shadow(0 0 6px currentColor) drop-shadow(0 0 12px currentColor);
 }
 
 /* ================= CUSTOM SCROLLBAR ================= */
