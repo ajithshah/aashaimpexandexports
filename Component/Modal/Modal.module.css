@@ -114,7 +114,7 @@
 
 .modalTitle {
   margin: 0;
-  font-family: "Sora", "Space Grotesk", "Segoe UI", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: clamp(1.3rem, 3vw, 1.8rem);
   font-weight: 800;
   letter-spacing: -0.015em;
@@ -172,7 +172,7 @@
 
 .policyContent h3 {
   margin: 1.45rem 0 0.7rem;
-  font-family: "Sora", "Space Grotesk", "Segoe UI", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.16rem;
   font-weight: 700;
   color: #1e293b;
