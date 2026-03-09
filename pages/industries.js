@@ -1,6 +1,4 @@
-import Header from "@/Component/Header";
 import Industries from "@/Component/Industries";
-import Footer from "@/Component/Footer";
 import Meta from "@/Component/Meta";
 
 export default function IndustriesPage() {
@@ -14,11 +12,9 @@ export default function IndustriesPage() {
         image="/logo.png"
         siteName="A A Sha Impex and Exports"
       />
-      <Header />
       <main className="flex-grow-1">
         <Industries />
       </main>
-      <Footer />
     </div>
   );
 }

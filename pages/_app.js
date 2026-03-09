@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import "@/styles/globals.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Header from "@/Component/Header";
+import Footer from "@/Component/Footer";
 import WhatsAppFab from "@/Component/WhatsAppFab";
 
 export default function App({ Component, pageProps }) {
@@ -28,11 +30,13 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Header />
       <div
         className={`page-transition ${isTransitioning ? "page-exit" : "page-enter"}`}
       >
         <Component {...pageProps} />
       </div>
+      <Footer />
       <WhatsAppFab />
     </>
   );

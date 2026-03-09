@@ -1,6 +1,4 @@
-import Header from "@/Component/Header";
 import About from "@/Component/About";
-import Footer from "@/Component/Footer";
 import Meta from "@/Component/Meta";
 
 export default function AboutPage() {
@@ -14,11 +12,9 @@ export default function AboutPage() {
         image="/logo.png"
         siteName="A A Sha Impex and Exports"
       />
-      <Header />
       <main className="flex-grow-1">
         <About />
       </main>
-      <Footer />
     </div>
   );
 }

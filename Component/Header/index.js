@@ -60,7 +60,9 @@ const Header = () => {
   return (
     <>
       {/* Top Info Bar */}
-      <div className={`${styles.topBar} ${isScrolled ? styles.topBarHidden : ""}`}>
+      <div
+        className={`${styles.topBar} ${isScrolled ? styles.topBarHidden : ""}`}
+      >
         <div className={styles.topBarInner}>
           <div className={styles.topBarLeft}>
             <a href="mailto:aaborewala@gmail.com" className={styles.topBarLink}>
@@ -154,10 +156,17 @@ const Header = () => {
           isMenuOpen ? styles.mobileOverlayOpen : ""
         }`}
       >
-        <div className={styles.mobileOverlayBg} onClick={() => setIsMenuOpen(false)} />
+        <div
+          className={styles.mobileOverlayBg}
+          onClick={() => setIsMenuOpen(false)}
+        />
         <div className={styles.mobilePanel}>
           <div className={styles.mobilePanelHead}>
-            <Link href="/" className={styles.mobileLogoLink} onClick={() => setIsMenuOpen(false)}>
+            <Link
+              href="/"
+              className={styles.mobileLogoLink}
+              onClick={() => setIsMenuOpen(false)}
+            >
               <div className={styles.logoImg}>
                 <Image
                   src="/logo.png"
@@ -187,7 +196,9 @@ const Header = () => {
                 className={`${styles.mobileLink} ${
                   isActive(item.href) ? styles.mobileLinkActive : ""
                 }`}
-                style={{ transitionDelay: isMenuOpen ? `${0.05 * i + 0.1}s` : "0s" }}
+                style={{
+                  transitionDelay: isMenuOpen ? `${0.05 * i + 0.1}s` : "0s",
+                }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span className={styles.mobileLinkText}>{item.name}</span>
@@ -208,7 +219,10 @@ const Header = () => {
           </div>
 
           <div className={styles.mobileContact}>
-            <a href="mailto:aaborewala@gmail.com" className={styles.mobileContactLink}>
+            <a
+              href="mailto:aaborewala@gmail.com"
+              className={styles.mobileContactLink}
+            >
               <i className="bi bi-envelope-fill"></i>
               aaborewala@gmail.com
             </a>

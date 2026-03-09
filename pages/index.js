@@ -1,7 +1,5 @@
 import { useEffect } from "react";
-import Header from "@/Component/Header";
 import Hero from "@/Component/Hero";
-import Footer from "@/Component/Footer";
 import Meta from "@/Component/Meta";
 import AnimateOnScroll from "@/Component/AnimateOnScroll";
 import styles from "@/styles/Home.module.css";
@@ -33,8 +31,6 @@ export default function Home() {
         image="/logo.png"
         siteName="A A Sha Impex and Exports"
       />
-
-      <Header />
 
       <main className={`${styles.mainContent} flex-grow-1`}>
         {/* HERO */}
@@ -156,8 +152,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }

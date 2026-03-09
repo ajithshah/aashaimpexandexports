@@ -1,6 +1,4 @@
-import Header from "@/Component/Header";
 import Contact from "@/Component/Contact";
-import Footer from "@/Component/Footer";
 import Meta from "@/Component/Meta";
 
 export default function ContactPage() {
@@ -14,11 +12,9 @@ export default function ContactPage() {
         image="/logo.png"
         siteName="A A Sha Impex and Exports"
       />
-      <Header />
       <main className="flex-grow-1">
         <Contact />
       </main>
-      <Footer />
     </div>
   );
 }

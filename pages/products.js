@@ -1,6 +1,4 @@
-import Header from "@/Component/Header";
 import Products from "@/Component/Products";
-import Footer from "@/Component/Footer";
 import Meta from "@/Component/Meta";
 
 export default function ProductsPage() {
@@ -14,11 +12,9 @@ export default function ProductsPage() {
         image="/logo.png"
         siteName="A A Sha Impex and Exports"
       />
-      <Header />
       <main className="flex-grow-1">
         <Products />
       </main>
-      <Footer />
     </div>
   );
 }
