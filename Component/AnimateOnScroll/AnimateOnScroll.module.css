@@ -42,6 +42,15 @@
   transform: scale(0.85);
 }
 
+.baseFlipIn {
+  opacity: 0;
+  transform: perspective(600px) rotateY(60deg) scale(0.9);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+
 /* ================= ANIMATION VARIANTS (visible state) ================= */
 
 .fadeUp,
@@ -58,6 +67,11 @@
   transform: scale(1);
 }
 
+.flipIn {
+  opacity: 1;
+  transform: perspective(600px) rotateY(0deg) scale(1);
+}
+
 /* ================= ACCESSIBILITY ================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -67,7 +81,8 @@
   .baseFadeLeft,
   .baseFadeRight,
   .baseScaleUp,
-  .baseZoomIn {
+  .baseZoomIn,
+  .baseFlipIn {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;

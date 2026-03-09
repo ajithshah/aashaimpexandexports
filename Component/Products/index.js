@@ -6,130 +6,43 @@ import styles from "./Products.module.css";
 
 const Products = () => {
   const productCategories = [
-    {
-      title: "Electronics & Technology",
-      description:
-        "Advanced electronic components, devices, and technology solutions for global industries.",
-      image: "/product/electronics-tech.png",
-      link: "/contact",
-    },
-    {
-      title: "Industrial Machinery",
-      description:
-        "Heavy-duty industrial equipment and precision machinery for manufacturing excellence.",
-      image: "/product/industrial-machinery.png",
-      link: "/contact",
-    },
-    {
-      title: "Textiles & Fabrics",
-      description:
-        "Premium textiles, fabrics, and garment materials supplied to international markets.",
-      image: "/product/textile-products.png",
-      link: "/contact",
-    },
-    {
-      title: "Agricultural Products",
-      description:
-        "Fresh produce and high-quality agricultural commodities sourced globally.",
-      image: "/product/pet-2.jpg",
-      link: "/contact",
-    },
-    {
-      title: "Chemicals & Raw Materials",
-      description:
-        "Industrial-grade chemicals and essential raw materials for diverse sectors.",
-      image: "/product/bopp-secs.jpg",
-      link: "/contact",
-    },
-    {
-      title: "Consumer Goods",
-      description:
-        "Reliable sourcing and export of everyday consumer merchandise worldwide.",
-      image: "/product/pet-1.webp",
-      link: "/contact",
-    },
-    {
-      title: "Packaging Solutions",
-      description:
-        "BOPP films, tapes, and innovative packaging materials for industrial applications.",
-      image: "/product/bopp-secs.jpg",
-      link: "/contact",
-    },
-    {
-      title: "PET Products",
-      description:
-        "High-quality PET resins and recycled materials for sustainable manufacturing.",
-      image: "/product/pet-1.webp",
-      link: "/contact",
-    },
-    {
-      title: "Automotive Parts",
-      description:
-        "Precision-engineered automotive components and spare parts for global markets.",
-      image: "/product/industrial-machinery.png",
-      link: "/contact",
-    },
-    {
-      title: "Home Appliances",
-      description:
-        "Quality home electronics and appliances sourced from trusted manufacturers.",
-      image: "/product/electronics-tech.png",
-      link: "/contact",
-    },
-    {
-      title: "Fashion & Apparel",
-      description:
-        "Trendy clothing, accessories, and fashion products for international retailers.",
-      image: "/product/textile-products.png",
-      link: "/contact",
-    },
-    {
-      title: "Food & Beverages",
-      description:
-        "Premium food products, spices, and beverages exported to worldwide markets.",
-      image: "/product/pet-2.jpg",
-      link: "/contact",
-    },
+    { title: "BOPP Films & Tapes", description: "High-performance BOPP security films and adhesive tapes for industrial packaging and sealing applications.", image: "/product/01.jpg", link: "/contact" },
+    { title: "Milky Polyester Films", description: "Premium milky PET films used in electrical insulation, packaging, and lamination industries.", image: "/product/02.jpg", link: "/contact" },
+    { title: "PET Films", description: "High-clarity polyester films for flexible packaging, capacitors, and industrial applications.", image: "/product/03.jpg", link: "/contact" },
+    { title: "Cotton Tape", description: "Durable cotton insulation tapes for electrical coil winding and motor manufacturing.", image: "/product/05.jpg", link: "/contact" },
+    { title: "Epoxy Sheets", description: "Glass-reinforced epoxy laminate sheets for electrical insulation and structural applications.", image: "/product/06.jpg", link: "/contact" },
+    { title: "A-Seal Products", description: "High-quality sealing compounds and encapsulants for electrical and industrial applications.", image: "/product/07.jpg", link: "/contact" },
+    { title: "AAEROTHERM Varnish", description: "High-temperature insulating varnish for motor coils, transformers, and electrical windings.", image: "/product/08.jpg", link: "/contact" },
+    { title: "ELANTAS Resins", description: "World-class ELANTAS impregnating resins and varnishes for electrical insulation systems.", image: "/product/09.jpeg", link: "/contact" },
+    { title: "Polyimide Films", description: "Kapton-grade polyimide films offering exceptional thermal and electrical insulation properties.", image: "/product/10.jpeg", link: "/contact" },
+    { title: "Royan Thread", description: "Synthetic royan threads used in textile and industrial weaving for high-strength applications.", image: "/product/11.jpg", link: "/contact" },
+    { title: "OMEGA Products", description: "Precision OMEGA insulation and electrical components for high-reliability industrial use.", image: "/product/12.jpeg", link: "/contact" },
+    { title: "Slitting Job Work", description: "Precision slitting and rewinding services for films, tapes, and flexible packaging materials.", image: "/product/13.jpeg", link: "/contact" },
+    { title: "Polyester Tapes", description: "Self-adhesive polyester tapes for electrical insulation and transformer winding.", image: "/product/15.png", link: "/contact" },
+    { title: "Pink Rayon Tape", description: "Flexible rayon insulation tape for coil winding and motor assembly applications.", image: "/product/16.jpeg", link: "/contact" },
+    { title: "Insulation Varnish", description: "Specialty impregnating varnish for enhancing dielectric strength of electrical windings.", image: "/product/17.jpg", link: "/contact" },
+    { title: "Glass Cloth Tape", description: "Woven glass fabric tapes with high thermal resistance for transformer and motor insulation.", image: "/product/18.jpeg", link: "/contact" },
+    { title: "Nomex Paper", description: "Aromatic polyamide insulation paper with outstanding thermal and electrical properties.", image: "/product/19.jpeg", link: "/contact" },
+    { title: "Mica Tape", description: "Mica-based fire-resistant tapes for cables and electrical insulation under extreme conditions.", image: "/product/20.jpeg", link: "/contact" },
+    { title: "Silicone Rubber Sheet", description: "High-temperature silicone rubber sheets for gaskets, seals, and electrical insulation.", image: "/product/21.jpeg", link: "/contact" },
+    { title: "Fiberglass Sleeving", description: "Braided fiberglass sleeving for wire and cable protection in high-temperature environments.", image: "/product/22.jpeg", link: "/contact" },
+    { title: "Kraft Paper", description: "High-tensile kraft insulation paper for transformers, capacitors, and cable wrapping.", image: "/product/23.jpeg", link: "/contact" },
+    { title: "Prepreg Materials", description: "Resin-impregnated composite materials for laminated boards and electrical insulation.", image: "/product/24.jpeg", link: "/contact" },
+    { title: "Thermal Interface Materials", description: "Heat-dissipating pads and compounds for power electronics and LED applications.", image: "/product/25.jpeg", link: "/contact" },
+    { title: "Adhesive Films", description: "Specialty adhesive bonding films for lamination, PCB, and industrial assembly processes.", image: "/product/26.jpeg", link: "/contact" },
+    { title: "Shrink Tubing", description: "Polyolefin and PTFE heat shrink tubes for wire insulation and strain relief.", image: "/product/27.jpeg", link: "/contact" },
+    { title: "Crepe Paper Tape", description: "Creped kraft paper tape for transformer coil winding and moisture-resistant insulation.", image: "/product/28.jpeg", link: "/contact" },
+    { title: "Nylon Films", description: "Tough nylon barrier films for food packaging, industrial laminates, and flexible pouches.", image: "/product/29.jpeg", link: "/contact" },
+    { title: "EMI Shielding Materials", description: "Conductive foils and gaskets for electromagnetic interference shielding in electronics.", image: "/product/30.jpeg", link: "/contact" },
+    { title: "Acetate Cloth Tape", description: "Solvent-resistant acetate fabric tape for cable harnessing and electrical bundling.", image: "/product/31.jpeg", link: "/contact" },
+    { title: "Phenolic Laminates", description: "Thermoset phenolic sheets for switchboards, terminal blocks, and electrical panels.", image: "/product/32.jpeg", link: "/contact" },
+    { title: "PTFE Products", description: "Chemically inert PTFE sheets, rods, and tapes for demanding industrial applications.", image: "/product/33.jpeg", link: "/contact" },
+    { title: "Copper Foil", description: "Electro-deposited and rolled copper foils for PCB manufacturing and shielding.", image: "/product/34.png", link: "/contact" },
+    { title: "Aramid Fiber Products", description: "High-strength aramid fiber composites for ballistic, aerospace, and electrical insulation uses.", image: "/product/35.png", link: "/contact" },
+    { title: "Resin Systems", description: "Epoxy and polyester resin systems for casting, potting, and encapsulation of electronic components.", image: "/product/36.png", link: "/contact" },
+    { title: "Industrial Tapes & Films", description: "Comprehensive range of specialty tapes and films for diverse industrial manufacturing requirements.", image: "/product/37.jpg", link: "/contact" },
   ];
 
-  const topProducts = [
-    {
-      title: "Electronic Components",
-      description:
-        "Certified electronic components meeting international quality standards.",
-      image: "/product/electronics-tech.png",
-    },
-    {
-      title: "Industrial Machinery",
-      description:
-        "High-performance machinery engineered for durability and efficiency.",
-      image: "/product/industrial-machinery.png",
-    },
-    {
-      title: "Textile Products",
-      description:
-        "Export-quality fabrics and textile solutions for global buyers.",
-      image: "/product/textile-products.png",
-    },
-    {
-      title: "BOPP Films & Tapes",
-      description:
-        "Premium packaging films and adhesive tapes for industrial use.",
-      image: "/product/bopp-secs.jpg",
-    },
-    {
-      title: "PET Resins",
-      description:
-        "Sustainable PET materials for bottles, containers, and packaging.",
-      image: "/product/pet-1.webp",
-    },
-    {
-      title: "Agricultural Exports",
-      description:
-        "Farm-fresh produce and organic commodities for global distribution.",
-      image: "/product/pet-2.jpg",
-    },
-  ];
 
   return (
     <section id="products" className={styles.products}>
@@ -158,7 +71,7 @@ const Products = () => {
         {/* Product Categories */}
         <div className={styles.categoriesGrid}>
           {productCategories.map((category, index) => (
-            <AnimateOnScroll key={index} animation="fadeUp" delay={index * 100}>
+            <AnimateOnScroll key={index} animation="flipIn" delay={index * 80} className={styles.cardWrapper}>
               <article className={`${styles.categoryCard} glass-card`}>
                 <div className={styles.categoryImage}>
                   <Image
@@ -183,45 +96,6 @@ const Products = () => {
             </AnimateOnScroll>
           ))}
         </div>
-
-        {/* Featured Products */}
-        <AnimateOnScroll animation="fadeUp">
-          <div className={styles.topProducts}>
-            <h3 className={styles.topProductsTitle}>
-              Featured Export Products
-            </h3>
-
-            <div className={styles.productsGrid}>
-              {topProducts.map((product, index) => (
-                <article
-                  key={index}
-                  className={`${styles.productCard} glass-card`}
-                >
-                  <div className={styles.productImage}>
-                    <Image
-                      src={product.image}
-                      alt={product.title}
-                      width={500}
-                      height={300}
-                      className={styles.productImg}
-                    />
-                  </div>
-
-                  <div className={styles.productContent}>
-                    <h4 className={styles.productTitle}>{product.title}</h4>
-                    <p className={styles.productDescription}>
-                      {product.description}
-                    </p>
-
-                    <Link href="/contact" className={styles.productLink}>
-                      Request Quotation →
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </AnimateOnScroll>
 
         {/* CTA Section */}
         <AnimateOnScroll animation="fadeUp">

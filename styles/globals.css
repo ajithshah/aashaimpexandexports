@@ -149,6 +149,24 @@ button:hover,
   }
 }
 
+/* ================= WORLD MAP DOTS ================= */
+
+.worldMapDots {
+  position: absolute !important;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 1 !important;
+}
+
+.worldMapDots circle {
+  fill: #3b82f6;
+  transition: r 0.3s ease;
+}
+
 /* ================= CUSTOM SCROLLBAR ================= */
 
 ::-webkit-scrollbar {

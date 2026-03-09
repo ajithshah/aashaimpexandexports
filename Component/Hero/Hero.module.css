@@ -15,7 +15,7 @@
   color: #1e293b;
 }
 
-.hero * {
+.hero > * {
   position: relative;
   z-index: 2;
 }
@@ -380,9 +380,18 @@
    RESPONSIVE
 ========================================= */
 
+/* Account for fixed header: topBar(38px) + header(72px) = 110px */
+@media (min-width: 1081px) {
+  .heroContainer {
+    padding-top: calc(110px + 3rem);
+  }
+}
+
 @media (max-width: 1080px) {
   .heroContainer {
     padding: clamp(5rem, 8vw, 7rem) 1.5rem;
+    /* topBar(38px) + header(64px) = 102px */
+    padding-top: calc(102px + 2.5rem);
   }
 
   .heroContent {
@@ -390,29 +399,136 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .hero {
     min-height: auto;
   }
 
   .heroContainer {
-    padding: 5rem 1rem;
+    /* topBar(32px) + header(60px) = 92px */
+    padding: calc(92px + 2rem) 1rem 3.5rem;
+  }
+
+  .heroContent {
+    max-width: 100%;
+  }
+
+  .heroEyebrow {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.01em;
+  }
+
+  .heroSubtitle {
+    font-size: clamp(0.95rem, 3.5vw, 1.2rem);
+    margin-bottom: 1rem;
+  }
+
+  .heroDescription {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 100%;
   }
 
   .heroActions {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.75rem;
   }
 
   .primaryBtn,
   .secondaryBtn {
     width: 100%;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .orbOne {
+    width: 200px;
+    height: 200px;
+    opacity: 0.4;
+  }
+
+  .orbTwo {
+    width: 180px;
+    height: 180px;
+    opacity: 0.4;
+  }
+
+  .orbThree {
+    width: 140px;
+    height: 140px;
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContainer {
+    /* No topBar on small phones, header is 56px */
+    padding: calc(56px + 1.5rem) 0.75rem 3rem;
+  }
+
+  .heroEyebrow {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.06em;
+  }
+
+  .heroTitle {
+    font-size: clamp(1.4rem, 6.5vw, 1.9rem);
+    margin-bottom: 0.6rem;
+    line-height: 1.15;
+  }
+
+  .heroSubtitle {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .heroDescription {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
   }
 
   .orbOne,
   .orbTwo,
   .orbThree {
-    opacity: 0.5;
+    opacity: 0.25;
+  }
+}
+
+/* Very small phones (320px-360px) */
+@media (max-width: 360px) {
+  .heroContainer {
+    padding: calc(56px + 1.2rem) 0.6rem 2.5rem;
+  }
+
+  .heroTitle {
+    font-size: 1.3rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.85rem;
+  }
+
+  .heroDescription {
+    font-size: 0.82rem;
   }
 }
 

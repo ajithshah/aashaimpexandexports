@@ -9,6 +9,7 @@ const baseClassMap = {
   fadeRight: styles.baseFadeRight,
   scaleUp: styles.baseScaleUp,
   zoomIn: styles.baseZoomIn,
+  flipIn: styles.baseFlipIn,
 };
 
 const AnimateOnScroll = ({
