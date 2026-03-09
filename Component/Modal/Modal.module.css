@@ -1,5 +1,5 @@
 /* =====================================================
-   MODAL - FUTURISTIC GLASS POPUP
+   MODAL - MODERN GLASS POPUP - LIGHT THEME
 ===================================================== */
 
 .modalBackdrop {
@@ -11,9 +11,9 @@
   justify-content: center;
   padding: 1.2rem;
   background:
-    radial-gradient(circle at 12% 10%, rgba(0, 240, 255, 0.1), transparent 34%),
-    radial-gradient(circle at 88% 82%, rgba(168, 85, 247, 0.08), transparent 36%),
-    rgba(2, 6, 23, 0.85);
+    radial-gradient(circle at 12% 10%, rgba(59, 130, 246, 0.1), transparent 34%),
+    radial-gradient(circle at 88% 82%, rgba(14, 165, 233, 0.08), transparent 36%),
+    rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px) saturate(1.08);
   animation: modalFade 0.28s ease-out;
 }
@@ -29,8 +29,8 @@
   inset: 0;
   opacity: 0.1;
   background-image:
-    linear-gradient(rgba(0, 240, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 240, 255, 0.12) 1px, transparent 1px);
+    linear-gradient(rgba(59, 130, 246, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.12) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 88%);
 }
@@ -43,10 +43,10 @@
   border-radius: 50%;
   background: conic-gradient(
     from 90deg,
-    rgba(0, 240, 255, 0.04),
-    rgba(168, 85, 247, 0.06),
+    rgba(59, 130, 246, 0.04),
+    rgba(14, 165, 233, 0.06),
     rgba(6, 182, 212, 0.04),
-    rgba(0, 240, 255, 0.04)
+    rgba(59, 130, 246, 0.04)
   );
   filter: blur(14px);
   animation: auraSpin 20s linear infinite;
@@ -58,13 +58,13 @@
   max-height: min(86vh, 880px);
   overflow: hidden;
   border-radius: 22px;
-  border: 1px solid rgba(0, 240, 255, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(10, 14, 26, 0.95)),
-    linear-gradient(180deg, rgba(0, 240, 255, 0.04), transparent 50%);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95)),
+    linear-gradient(180deg, rgba(59, 130, 246, 0.04), transparent 50%);
   box-shadow:
-    0 30px 60px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(0, 240, 255, 0.08) inset;
+    0 30px 60px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(59, 130, 246, 0.08) inset;
   animation: modalIn 0.3s cubic-bezier(0.2, 0.9, 0.35, 1) forwards;
 }
 
@@ -83,8 +83,8 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(0, 240, 255, 0.8) 24%,
-    rgba(168, 85, 247, 0.7) 52%,
+    rgba(59, 130, 246, 0.8) 24%,
+    rgba(14, 165, 233, 0.7) 52%,
     rgba(6, 182, 212, 0.8) 78%,
     transparent 100%
   );
@@ -95,7 +95,7 @@
 .modalContent::after {
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(120deg, transparent 0%, rgba(0, 240, 255, 0.06) 45%, transparent 100%);
+  background: linear-gradient(120deg, transparent 0%, rgba(59, 130, 246, 0.06) 45%, transparent 100%);
   transform: translateX(-120%);
   animation: shineSweep 6s linear infinite;
 }
@@ -108,8 +108,8 @@
   align-items: center;
   gap: 1rem;
   padding: 1.5rem 1.6rem;
-  border-bottom: 1px solid rgba(0, 240, 255, 0.12);
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.6), rgba(10, 14, 26, 0.4));
+  border-bottom: 1px solid rgba(59, 130, 246, 0.12);
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.6), rgba(255, 255, 255, 0.4));
 }
 
 .modalTitle {
@@ -118,7 +118,7 @@
   font-size: clamp(1.3rem, 3vw, 1.8rem);
   font-weight: 800;
   letter-spacing: -0.015em;
-  background: linear-gradient(95deg, #00f0ff, #a855f7 52%, #06b6d4);
+  background: linear-gradient(95deg, #3b82f6, #0ea5e9 52%, #06b6d4);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -131,9 +131,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  border: 1px solid rgba(0, 240, 255, 0.15);
-  background: rgba(15, 23, 42, 0.7);
-  color: #cbd5e1;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  background: rgba(255, 255, 255, 0.7);
+  color: #64748b;
   font-size: 1.1rem;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
@@ -141,10 +141,10 @@
 
 .closeButton:hover {
   transform: translateY(-1px);
-  color: #f1f5f9;
-  border-color: rgba(0, 240, 255, 0.35);
-  background: rgba(0, 240, 255, 0.08);
-  box-shadow: 0 8px 16px rgba(0, 240, 255, 0.12);
+  color: #1e293b;
+  border-color: rgba(59, 130, 246, 0.35);
+  background: rgba(59, 130, 246, 0.08);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.12);
 }
 
 .modalBody {
@@ -160,12 +160,12 @@
 }
 
 .modalBody::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(0, 240, 255, 0.6), rgba(168, 85, 247, 0.6));
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.6), rgba(14, 165, 233, 0.6));
   border-radius: 999px;
 }
 
 .policyContent {
-  color: #94a3b8;
+  color: #64748b;
   line-height: 1.72;
   font-size: 0.98rem;
 }
@@ -175,7 +175,7 @@
   font-family: "Sora", "Space Grotesk", "Segoe UI", sans-serif;
   font-size: 1.16rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #1e293b;
   display: inline-flex;
   align-items: center;
   gap: 0.48rem;
@@ -186,8 +186,8 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #00f0ff, #a855f7);
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+  background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
 }
 
 .policyContent h3:first-child {

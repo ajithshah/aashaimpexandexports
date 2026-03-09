@@ -1,16 +1,15 @@
 .industries {
-  --fx-cyan: #2563eb;
-  --fx-blue: #0891b2;
-  --fx-teal: #14b8a6;
+  --fx-primary: #3b82f6;
+  --fx-secondary: #0ea5e9;
   --fx-ink: #1e293b;
   --fx-muted: #64748b;
-  --fx-border: rgba(0, 0, 0, 0.08);
+  --fx-border: rgba(59, 130, 246, 0.08);
 
   position: relative;
   overflow: hidden;
   padding: clamp(5rem, 10vw, 7rem) 0;
   padding-top: calc(clamp(5rem, 10vw, 7rem) + var(--header-height, 80px));
-  background: #ffffff;
+  background: #f8fafc;
 }
 
 .industries::before,
@@ -22,18 +21,18 @@
 }
 
 .industries::before {
-  opacity: 0.03;
+  opacity: 1;
   background-image:
-    linear-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.15) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(circle at 50% 32%, black 24%, transparent 78%);
 }
 
 .industries::after {
   background:
-    radial-gradient(circle at 24% 24%, rgba(37, 99, 235, 0.02), transparent 40%),
-    radial-gradient(circle at 78% 74%, rgba(8, 145, 178, 0.02), transparent 42%);
+    radial-gradient(circle at 24% 24%, rgba(59, 130, 246, 0.06), transparent 40%),
+    radial-gradient(circle at 78% 74%, rgba(14, 165, 233, 0.06), transparent 42%);
   animation: ambientDrift 18s linear infinite;
 }
 
@@ -53,12 +52,13 @@
 
 .sectionTitle {
   margin: 0 0 0.7rem;
-  font-family: "Sora", "Space Grotesk", "Segoe UI", sans-serif;
+  font-family: "Orbitron", "Sora", "Space Grotesk", "Segoe UI", sans-serif;
   font-size: clamp(2rem, 4.4vw, 3rem);
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
   line-height: 1.1;
-  background: linear-gradient(95deg, #2563eb 0%, #0891b2 48%, #0ea5e9 100%);
+  text-transform: uppercase;
+  background: linear-gradient(95deg, #3b82f6 0%, #0ea5e9 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -67,6 +67,7 @@
 .sectionDescription {
   margin: 0 auto;
   max-width: 700px;
+  font-family: "Rajdhani", "Sora", "Segoe UI", sans-serif;
   font-size: clamp(1rem, 2.2vw, 1.1rem);
   line-height: 1.72;
   color: var(--fx-muted);
@@ -89,10 +90,12 @@
   border-radius: 18px;
   text-align: center;
   border: 1px solid var(--fx-border);
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.06),
-    0 0 0 1px rgba(0, 0, 0, 0.02) inset;
+    0 4px 16px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(59, 130, 246, 0.04) inset;
   transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease;
 }
 
@@ -105,7 +108,7 @@
 
 .industryCard::before {
   inset: 0;
-  background: linear-gradient(120deg, transparent 0%, rgba(37, 99, 235, 0.04) 48%, transparent 100%);
+  background: linear-gradient(120deg, transparent 0%, rgba(59, 130, 246, 0.07) 48%, transparent 100%);
   transform: translateX(-120%);
   transition: transform 0.6s ease;
 }
@@ -113,16 +116,17 @@
 .industryCard::after {
   inset: 0;
   border-radius: inherit;
-  box-shadow: 0 0 0 1px rgba(14, 165, 233, 0) inset;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0) inset;
   transition: box-shadow 0.26s ease;
 }
 
 .industryCard:hover {
   transform: translateY(-5px);
-  border-color: rgba(37, 99, 235, 0.15);
+  border-color: rgba(59, 130, 246, 0.25);
   box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.08),
-    0 0 0 1px rgba(37, 99, 235, 0.06) inset;
+    0 12px 30px rgba(59, 130, 246, 0.08),
+    0 0 24px rgba(59, 130, 246, 0.04),
+    0 0 0 1px rgba(59, 130, 246, 0.1) inset;
 }
 
 .industryCard:hover::before {
@@ -130,7 +134,7 @@
 }
 
 .industryCard:hover::after {
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.1) inset;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.15) inset;
 }
 
 /* ================= ICON ================= */
@@ -144,26 +148,26 @@
   place-items: center;
   font-size: 1.35rem;
   color: #ffffff;
-  border: 1px solid rgba(37, 99, 235, 0.2);
-  background: linear-gradient(130deg, #2563eb, #0891b2);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: linear-gradient(130deg, #3b82f6, #0ea5e9);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
   transition: transform 0.26s ease, box-shadow 0.26s ease, filter 0.26s ease;
 }
 
 .industryCard:hover .industryIcon {
   transform: translateY(-2px) scale(1.06);
-  filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.2));
-  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+  filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
+  box-shadow: 0 8px 18px rgba(59, 130, 246, 0.25);
 }
 
 /* ================= TEXT ================= */
 
 .industryName {
   margin: 0 0 0.5rem;
-  font-family: "Sora", "Space Grotesk", "Segoe UI", sans-serif;
+  font-family: "Orbitron", "Sora", "Space Grotesk", "Segoe UI", sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--fx-ink);
+  color: #1e293b;
 }
 
 .industryDescription {

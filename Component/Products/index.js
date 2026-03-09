@@ -48,6 +48,48 @@ const Products = () => {
       image: "/product/pet-1.webp",
       link: "/contact",
     },
+    {
+      title: "Packaging Solutions",
+      description:
+        "BOPP films, tapes, and innovative packaging materials for industrial applications.",
+      image: "/product/bopp-secs.jpg",
+      link: "/contact",
+    },
+    {
+      title: "PET Products",
+      description:
+        "High-quality PET resins and recycled materials for sustainable manufacturing.",
+      image: "/product/pet-1.webp",
+      link: "/contact",
+    },
+    {
+      title: "Automotive Parts",
+      description:
+        "Precision-engineered automotive components and spare parts for global markets.",
+      image: "/product/industrial-machinery.png",
+      link: "/contact",
+    },
+    {
+      title: "Home Appliances",
+      description:
+        "Quality home electronics and appliances sourced from trusted manufacturers.",
+      image: "/product/electronics-tech.png",
+      link: "/contact",
+    },
+    {
+      title: "Fashion & Apparel",
+      description:
+        "Trendy clothing, accessories, and fashion products for international retailers.",
+      image: "/product/textile-products.png",
+      link: "/contact",
+    },
+    {
+      title: "Food & Beverages",
+      description:
+        "Premium food products, spices, and beverages exported to worldwide markets.",
+      image: "/product/pet-2.jpg",
+      link: "/contact",
+    },
   ];
 
   const topProducts = [
@@ -69,6 +111,24 @@ const Products = () => {
         "Export-quality fabrics and textile solutions for global buyers.",
       image: "/product/textile-products.png",
     },
+    {
+      title: "BOPP Films & Tapes",
+      description:
+        "Premium packaging films and adhesive tapes for industrial use.",
+      image: "/product/bopp-secs.jpg",
+    },
+    {
+      title: "PET Resins",
+      description:
+        "Sustainable PET materials for bottles, containers, and packaging.",
+      image: "/product/pet-1.webp",
+    },
+    {
+      title: "Agricultural Exports",
+      description:
+        "Farm-fresh produce and organic commodities for global distribution.",
+      image: "/product/pet-2.jpg",
+    },
   ];
 
   return (
@@ -79,8 +139,8 @@ const Products = () => {
           <header className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Global Product Portfolio</h2>
             <p className={styles.sectionDescription}>
-              Delivering world-class products across industries with 50+ years of
-              expertise in international trade.
+              Delivering world-class products across industries with 50+ years
+              of expertise in international trade.
             </p>
             <div className={styles.headerActions}>
               <a
@@ -98,11 +158,7 @@ const Products = () => {
         {/* Product Categories */}
         <div className={styles.categoriesGrid}>
           {productCategories.map((category, index) => (
-            <AnimateOnScroll
-              key={index}
-              animation="fadeUp"
-              delay={index * 100}
-            >
+            <AnimateOnScroll key={index} animation="fadeUp" delay={index * 100}>
               <article className={`${styles.categoryCard} glass-card`}>
                 <div className={styles.categoryImage}>
                   <Image
@@ -131,7 +187,9 @@ const Products = () => {
         {/* Featured Products */}
         <AnimateOnScroll animation="fadeUp">
           <div className={styles.topProducts}>
-            <h3 className={styles.topProductsTitle}>Featured Export Products</h3>
+            <h3 className={styles.topProductsTitle}>
+              Featured Export Products
+            </h3>
 
             <div className={styles.productsGrid}>
               {topProducts.map((product, index) => (

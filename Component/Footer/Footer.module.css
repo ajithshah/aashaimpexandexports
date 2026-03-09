@@ -1,22 +1,24 @@
 /* =========================
-   FOOTER BASE
+   FOOTER BASE - LIGHT THEME
 ========================= */
 
 .footer {
   position: relative;
-  background: radial-gradient(circle at top left, #1e293b, #0f172a 70%);
-  color: #e2e8f0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  color: #1e293b;
   padding: 80px 20px 30px;
   overflow: hidden;
+  font-family: 'Rajdhani', sans-serif;
+  border-top: 1px solid #e2e8f0;
 }
 
-/* Animated Background Glow */
+/* Subtle Background Decoration */
 .footer::before {
   content: "";
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(37,99,235,0.08), transparent 70%);
+  background: radial-gradient(circle, rgba(59,130,246,0.06), transparent 70%);
   bottom: -200px;
   left: -200px;
   animation: floatGlow 10s infinite alternate ease-in-out;
@@ -55,21 +57,23 @@
 ========================= */
 
 .logoText {
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
-  color: white;
+  color: #1e293b;
 }
 
 .logoAccent {
-  background: linear-gradient(90deg, #2563eb, #0891b2);
+  background: linear-gradient(90deg, #3b82f6, #0ea5e9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .logoDescription {
   margin-top: 15px;
-  color: #94a3b8;
+  color: #64748b;
   line-height: 1.6;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 /* =========================
@@ -77,10 +81,11 @@
 ========================= */
 
 .sectionTitle {
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.1rem;
   margin-bottom: 20px;
   font-weight: 600;
-  color: white;
+  color: #1e293b;
   position: relative;
 }
 
@@ -91,7 +96,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #2563eb, #0891b2);
+  background: linear-gradient(90deg, #3b82f6, #0ea5e9);
 }
 
 /* =========================
@@ -107,15 +112,16 @@
 .footerLink,
 .serviceItem {
   display: inline-block;
-  color: #cbd5e1;
+  color: #475569;
   text-decoration: none;
   margin-bottom: 12px;
   transition: 0.3s ease;
   position: relative;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .footerLink:hover {
-  color: #2563eb;
+  color: #3b82f6;
   transform: translateX(5px);
 }
 
@@ -134,24 +140,25 @@
   align-items: flex-start;
   gap: 10px;
   font-size: 0.95rem;
-  color: #cbd5e1;
+  color: #475569;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .contactItem i {
-  color: #2563eb;
+  color: #3b82f6;
   margin-top: 4px;
 }
 
 .phoneLink,
 .emailLink {
-  color: #cbd5e1;
+  color: #475569;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .phoneLink:hover,
 .emailLink:hover {
-  color: #2563eb;
+  color: #3b82f6;
 }
 
 /* =========================
@@ -159,7 +166,7 @@
 ========================= */
 
 .footerBottom {
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid #e2e8f0;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -169,8 +176,9 @@
 
 .copyright p {
   margin: 0;
-  color: #94a3b8;
+  color: #64748b;
   font-size: 0.9rem;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .bottomLinks {
@@ -181,14 +189,15 @@
 .bottomLink {
   background: none;
   border: none;
-  color: #94a3b8;
+  color: #64748b;
   cursor: pointer;
   font-size: 0.9rem;
   transition: 0.3s;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .bottomLink:hover {
-  color: #2563eb;
+  color: #3b82f6;
 }
 
 /* =========================
@@ -200,16 +209,17 @@
   margin-top: 25px;
   font-size: 0.85rem;
   color: #64748b;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .developerLink {
-  color: #2563eb;
+  color: #3b82f6;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .developerLink:hover {
-  text-shadow: 0 0 10px rgba(37,99,235,0.4);
+  color: #2563eb;
 }
 
 /* =========================
@@ -226,15 +236,18 @@
   gap: 8px;
   padding: 8px 15px;
   border-radius: 30px;
-  border: 1px solid rgba(255,255,255,0.1);
-  color: white;
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
   text-decoration: none;
   transition: 0.3s;
+  font-family: 'Rajdhani', sans-serif;
+  background: #ffffff;
 }
 
 .socialLink:hover {
-  border-color: #2563eb;
-  box-shadow: 0 0 15px rgba(37,99,235,0.2);
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59,130,246,0.15);
+  color: #3b82f6;
 }
 
 /* =========================
