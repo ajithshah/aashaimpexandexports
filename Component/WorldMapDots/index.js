@@ -9,27 +9,61 @@ const WorldMapDots = () => {
     if (!svg) return;
 
     const circles = Array.from(svg.querySelectorAll("circle"));
-    let lastIndex = -1;
 
-    const pulseRandomDot = () => {
-      if (lastIndex !== -1) circles[lastIndex].setAttribute("r", "1.9");
+    const createRipple = (cx, cy) => {
+      const ring = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "circle",
+      );
+      ring.setAttribute("cx", cx);
+      ring.setAttribute("cy", cy);
+      ring.setAttribute("r", "3");
+      ring.setAttribute("fill", "none");
+      ring.setAttribute("stroke", "#38bdf8");
+      ring.setAttribute("stroke-width", "1.2");
+      ring.setAttribute("opacity", "0.9");
+      svg.appendChild(ring);
 
-      let random = Math.floor(Math.random() * circles.length);
-      while (random === lastIndex)
-        random = Math.floor(Math.random() * circles.length);
-
-      const circle = circles[random];
-      const originalR = circle.getAttribute("r") || "1.9";
-
-      circle.setAttribute("r", "5.2");
-      setTimeout(() => circle.setAttribute("r", originalR), 950);
-
-      lastIndex = random;
+      let r = 3;
+      let op = 0.9;
+      const step = () => {
+        r += 0.55;
+        op -= 0.022;
+        ring.setAttribute("r", String(r));
+        ring.setAttribute("opacity", String(Math.max(0, op)));
+        if (op > 0) requestAnimationFrame(step);
+        else ring.remove();
+      };
+      requestAnimationFrame(step);
     };
 
-    pulseRandomDot();
-    const interval = setInterval(pulseRandomDot, 1650);
+    const pulseDot = (circle) => {
+      const cx = circle.getAttribute("cx");
+      const cy = circle.getAttribute("cy");
+      circle.setAttribute("r", "5");
+      circle.setAttribute("opacity", "1");
+      createRipple(cx, cy);
+      setTimeout(() => {
+        circle.setAttribute("r", "1.9");
+        circle.setAttribute("opacity", "0.85");
+      }, 1300);
+    };
 
+    const wave = () => {
+      const count = Math.floor(Math.random() * 3) + 2;
+      const used = new Set();
+      for (let i = 0; i < count; i++) {
+        let idx;
+        do {
+          idx = Math.floor(Math.random() * circles.length);
+        } while (used.has(idx));
+        used.add(idx);
+        setTimeout(() => pulseDot(circles[idx]), i * 200);
+      }
+    };
+
+    wave();
+    const interval = setInterval(wave, 2000);
     return () => clearInterval(interval);
   }, []);
 
