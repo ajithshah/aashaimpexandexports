@@ -5,12 +5,15 @@ export default function IndustriesPage() {
   return (
     <div className="d-flex flex-column min-vh-100">
       <Meta
-        title="Industries We Serve - A A Sha Impex and Exports"
-        description="We provide comprehensive import-export solutions across diverse industries including electronics, textiles, agriculture, chemicals, automotive, and more."
-        keywords="industries served, electronics, textiles, agriculture, chemicals, automotive, construction, consumer goods, industrial equipment"
+        title="Industries We Serve | Electrical, Electronics, Automotive, Aerospace – A A Sha Impex"
+        description="A A Sha Impex and Exports supplies specialty insulation and film materials to 12+ industries: electrical & power, electronics & PCB, automotive & EV, aerospace & defence, packaging, textiles, construction, medical, energy & renewables, and more."
+        keywords="electrical insulation supplier India, PCB materials India, automotive thermal materials, aerospace insulation materials, packaging films supplier, transformer insulation India, motor insulation materials, EV thermal management materials, specialty films industries India, industrial insulation export"
         url="https://aashaimpexandexports.com/industries"
-        image="/logo.png"
         siteName="A A Sha Impex and Exports"
+        breadcrumb={[
+          { name: "Home", path: "/" },
+          { name: "Industries", path: "/industries" },
+        ]}
       />
       <main className="flex-grow-1">
         <Industries />

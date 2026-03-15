@@ -24,11 +24,10 @@ export default function Home() {
   return (
     <div className={`${styles.pageWrapper} d-flex flex-column min-vh-100`}>
       <Meta
-        title="A A Sha Impex and Exports - Empowering Global Trade"
-        description="A A Sha Impex and Exports connects global markets with quality products and reliable import-export solutions."
-        keywords="import export, global trade, India export, logistics, supply chain"
+        title="A A Sha Impex and Exports | Electrical Insulation & Specialty Films Supplier India"
+        description="A A Sha Impex and Exports is a leading supplier and exporter of electrical insulation materials, specialty films, industrial tapes, BOPP films, PET films, polyimide films, and Nomex paper from India. 50+ years of trusted global trade."
+        keywords="electrical insulation materials India, specialty films supplier India, BOPP films exporter, PET films supplier, polyimide films Kapton India, Nomex paper supplier, industrial tapes exporter India, insulation varnish supplier, ELANTAS resins India, mica tape supplier, A A Sha Impex, specialty materials export India"
         url="https://aashaimpexandexports.com"
-        image="/logo.png"
         siteName="A A Sha Impex and Exports"
       />
 

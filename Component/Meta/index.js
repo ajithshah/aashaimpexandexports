@@ -1,43 +1,132 @@
 import React from "react";
 import Head from "next/head";
 
+const BASE_URL = "https://aashaimpexandexports.com";
+
 const Meta = ({
-  title = "A A Sha Impex and Exports - Global Import & Export Solutions | India",
-  description = "A A Sha Impex and Exports connects global markets with quality products and reliable import-export solutions. Based in India, we specialize in sourcing, exporting, and importing a wide range of goods worldwide. Contact us for trusted trade partnerships.",
-  keywords = "import export, export company, import company, global trade, India export, India import, sourcing, international trade, export business, import business, trade solutions, A A Sha Impex, A A Sha Exports, B2B trade, global sourcing, product sourcing, logistics, supply chain, Indian exporter, Indian importer, export-import services",
-  image = "/logo.svg",
-  url = "https://aashaimpexandexports.com",
+  title = "A A Sha Impex and Exports | Electrical Insulation & Specialty Films Supplier India",
+  description = "A A Sha Impex and Exports is a leading supplier and exporter of electrical insulation materials, specialty films, industrial tapes, and specialty chemicals from India. 50+ years of trusted global trade.",
+  keywords = "electrical insulation materials India, BOPP films supplier, PET films exporter, polyimide films India, Nomex paper supplier, Kapton films India, insulation varnish supplier, ELANTAS resins India, specialty films exporter, industrial tapes India, mica tape supplier, glass cloth tape, cotton tape electrical, epoxy sheets India, PTFE products India, fiberglass sleeving, aramid fiber India, thermal interface materials, A A Sha Impex, specialty materials exporter",
+  image = `${BASE_URL}/og-image.png`,
+  url = BASE_URL,
   type = "website",
   article = false,
   noindex = false,
   siteName = "A A Sha Impex and Exports",
+  breadcrumb = null,
 }) => {
+  const absoluteImage = image.startsWith("http") ? image : `${BASE_URL}${image}`;
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${BASE_URL}/#organization`,
+    name: "A A Sha Impex and Exports",
+    url: BASE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/logo.png`,
+      width: 200,
+      height: 60,
+    },
+    description:
+      "Leading supplier and exporter of electrical insulation materials, specialty films, industrial tapes, and specialty chemicals from India with 50+ years of trade expertise.",
+    telephone: "+91-8122816789",
+    email: "info@aashaimpexandexports.com",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "IN",
+      addressRegion: "Tamil Nadu",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-8122816789",
+      contactType: "sales",
+      email: "info@aashaimpexandexports.com",
+      availableLanguage: ["English", "Tamil"],
+    },
+    knowsAbout: [
+      "Electrical Insulation Materials",
+      "BOPP Films",
+      "PET Films",
+      "Polyimide Films",
+      "Nomex Paper",
+      "Industrial Tapes",
+      "Specialty Chemicals",
+      "Import Export Trade",
+    ],
+    sameAs: [
+      "https://www.facebook.com/aashaimpexandexports",
+      "https://www.instagram.com/aashaimpexandexports",
+      "https://www.linkedin.com/company/aashaimpexandexports",
+    ],
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${BASE_URL}/#website`,
+    name: "A A Sha Impex and Exports",
+    url: BASE_URL,
+    publisher: { "@id": `${BASE_URL}/#organization` },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${BASE_URL}/products?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}/#webpage`,
+    url,
+    name: title,
+    description,
+    isPartOf: { "@id": `${BASE_URL}/#website` },
+    about: { "@id": `${BASE_URL}/#organization` },
+    inLanguage: "en-IN",
+  };
+
+  const breadcrumbSchema = breadcrumb
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: breadcrumb.map((item, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: item.name,
+          item: `${BASE_URL}${item.path}`,
+        })),
+      }
+    : null;
+
   return (
     <Head>
-      {/* Basic Meta Tags */}
+      {/* Primary */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="A A Sha Impex and Exports" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      {/* Language and Locale */}
+      {/* Locale */}
       <meta httpEquiv="content-language" content="en-IN" />
       <meta name="language" content="English" />
-      <meta name="geo.region" content="IN" />
+      <meta name="geo.region" content="IN-TN" />
       <meta name="geo.country" content="India" />
+      <meta name="geo.placename" content="Tamil Nadu, India" />
 
-      {/* Open Graph Meta Tags */}
+      {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta
-        property="og:image:alt"
-        content="A A Sha Impex and Exports - Global Import & Export Solutions"
-      />
+      <meta property="og:image" content={absoluteImage} />
+      <meta property="og:image:alt" content={`${siteName} – Specialty Materials Supplier`} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:url" content={url} />
@@ -45,59 +134,42 @@ const Meta = ({
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="en_IN" />
 
-      {/* Twitter Card Meta Tags */}
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta
-        name="twitter:image:alt"
-        content="A A Sha Impex and Exports - Global Import & Export Solutions"
-      />
+      <meta name="twitter:image" content={absoluteImage} />
+      <meta name="twitter:image:alt" content={`${siteName} – Specialty Materials Supplier`} />
 
-      {/* Article specific meta tags */}
       {article && (
         <>
           <meta property="article:author" content="A A Sha Impex and Exports" />
-          <meta
-            property="article:publisher"
-            content="A A Sha Impex and Exports"
-          />
+          <meta property="article:publisher" content="A A Sha Impex and Exports" />
         </>
       )}
 
-      {/* Business/Contact Info */}
+      {/* Business */}
       <meta name="contact" content="info@aashaimpexandexports.com" />
       <meta name="copyright" content="A A Sha Impex and Exports" />
       <meta name="rating" content="general" />
       <meta name="distribution" content="global" />
 
-      {/* Mobile specific */}
+      {/* Mobile / PWA */}
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta
-        name="apple-mobile-web-app-status-bar-style"
-        content="black-translucent"
-      />
-      <meta
-        name="apple-mobile-web-app-title"
-        content="A A Sha Impex and Exports"
-      />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="AASha Impex" />
 
-      {/* Favicon and Icons */}
+      {/* Icons */}
       <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/logo.svg" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
-
-      {/* Manifest */}
+      <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
       <link rel="manifest" href="/manifest.json" />
 
-      {/* Theme Color */}
-      <meta name="theme-color" content="#38bdf8" />
-      <meta name="msapplication-TileColor" content="#38bdf8" />
+      {/* Theme */}
+      <meta name="theme-color" content="#3b82f6" />
+      <meta name="msapplication-TileColor" content="#3b82f6" />
 
-      {/* Canonical URL */}
+      {/* Canonical */}
       <link rel="canonical" href={url} />
 
       {/* Robots */}
@@ -109,110 +181,31 @@ const Meta = ({
             : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         }
       />
-      <meta
-        name="googlebot"
-        content={noindex ? "noindex, nofollow" : "index, follow"}
-      />
+      <meta name="googlebot" content={noindex ? "noindex, nofollow" : "index, follow"} />
 
-      {/* DNS Prefetch for performance */}
+      {/* Performance hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
 
-      {/* Structured Data for Local Business */}
+      {/* Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "A A Sha Impex and Exports",
-            image: image,
-            description: description,
-            url: url,
-            telephone: "+91-8122816789",
-            email: "info@aashaimpexandexports.com",
-            address: {
-              "@type": "PostalAddress",
-              addressCountry: "IN",
-              addressRegion: "India",
-            },
-            geo: {
-              "@type": "GeoCoordinates",
-              latitude: "0.0000",
-              longitude: "0.0000",
-            },
-            openingHours: "Mo-Sa 09:00-18:00",
-            priceRange: "$$$",
-            serviceArea: {
-              "@type": "Place",
-              name: "India",
-            },
-            hasOfferCatalog: {
-              "@type": "OfferCatalog",
-              name: "Import and Export Services",
-              itemListElement: [
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "Product Sourcing",
-                    description: "Global sourcing and procurement services",
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "Export Services",
-                    description: "Export of Indian goods worldwide",
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "Import Services",
-                    description: "Import of global products to India",
-                  },
-                },
-              ],
-            },
-            sameAs: [
-              "https://www.facebook.com/aashaimpexandexports",
-              "https://www.instagram.com/aashaimpexandexports",
-              "https://www.linkedin.com/company/aashaimpexandexports",
-            ],
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
-
-      {/* Website/Organization Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "A A Sha Impex and Exports",
-            url: url,
-            logo: {
-              "@type": "ImageObject",
-              url: "/logo.svg",
-            },
-            description: description,
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+91-8122816789",
-              contactType: "customer service",
-              email: "info@aashaimpexandexports.com",
-            },
-            address: {
-              "@type": "PostalAddress",
-              addressCountry: "IN",
-            },
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
     </Head>
   );
 };
