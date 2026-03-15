@@ -10,6 +10,7 @@ const baseClassMap = {
   scaleUp: styles.baseScaleUp,
   zoomIn: styles.baseZoomIn,
   flipIn: styles.baseFlipIn,
+  riseIn: styles.baseRiseIn,
 };
 
 const AnimateOnScroll = ({

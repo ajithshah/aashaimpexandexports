@@ -51,6 +51,17 @@
   will-change: opacity, transform;
 }
 
+.baseRiseIn {
+  opacity: 0;
+  transform: perspective(800px) translateY(50px) rotateX(12deg) scale(0.92);
+  transform-origin: bottom center;
+  transition:
+    opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.7s ease;
+  will-change: opacity, transform;
+}
+
 /* ================= ANIMATION VARIANTS (visible state) ================= */
 
 .fadeUp,
@@ -72,6 +83,12 @@
   transform: perspective(600px) rotateY(0deg) scale(1);
 }
 
+.riseIn {
+  opacity: 1;
+  transform: perspective(800px) translateY(0) rotateX(0deg) scale(1);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.12);
+}
+
 /* ================= ACCESSIBILITY ================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -82,7 +99,8 @@
   .baseFadeRight,
   .baseScaleUp,
   .baseZoomIn,
-  .baseFlipIn {
+  .baseFlipIn,
+  .baseRiseIn {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;

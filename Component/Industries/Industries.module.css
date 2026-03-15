@@ -1,64 +1,73 @@
-.industries {
-  --fx-primary: #3b82f6;
-  --fx-secondary: #0ea5e9;
-  --fx-ink: #1e293b;
-  --fx-muted: #64748b;
-  --fx-border: rgba(59, 130, 246, 0.08);
+/* ====================================================
+   INDUSTRIES PAGE  –  Light Theme Redesign
+   ==================================================== */
 
+.industries {
   position: relative;
   overflow: hidden;
-  padding: clamp(5rem, 10vw, 7rem) 0;
+  padding: clamp(5rem, 10vw, 7rem) 0 clamp(5rem, 10vw, 8rem);
   padding-top: calc(clamp(5rem, 10vw, 7rem) + var(--header-height, 80px));
   background: #f8fafc;
+  color: #1e293b;
 }
 
-.industries::before,
-.industries::after {
+/* Soft background dot grid */
+.industries::before {
   content: "";
   position: absolute;
   inset: 0;
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.5;
   pointer-events: none;
-}
-
-.industries::before {
-  opacity: 1;
-  background-image:
-    linear-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.15) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: radial-gradient(circle at 50% 32%, black 24%, transparent 78%);
-}
-
-.industries::after {
-  background:
-    radial-gradient(circle at 24% 24%, rgba(59, 130, 246, 0.06), transparent 40%),
-    radial-gradient(circle at 78% 74%, rgba(14, 165, 233, 0.06), transparent 42%);
-  animation: ambientDrift 18s linear infinite;
+  z-index: 0;
 }
 
 .container {
-  width: min(92%, 1240px);
+  width: min(92%, 1280px);
   margin: 0 auto;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
-/* ================= HEADER ================= */
+/* ====================================================
+   SECTION HEADER
+   ==================================================== */
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: clamp(2.2rem, 5vw, 4rem);
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #3b82f6;
+  margin-bottom: 18px;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  width: 32px;
+  height: 1.5px;
+  background: #3b82f6;
+  border-radius: 2px;
 }
 
 .sectionTitle {
-  margin: 0 0 0.7rem;
+  margin: 0 0 18px;
   font-family: 'Orbitron', sans-serif;
   font-size: clamp(2rem, 4.4vw, 3rem);
   font-weight: 800;
-  letter-spacing: 0.04em;
-  line-height: 1.1;
-  text-transform: uppercase;
-  background: linear-gradient(95deg, #3b82f6 0%, #0ea5e9 100%);
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  background: linear-gradient(135deg, #1e293b 30%, #3b82f6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -66,165 +75,289 @@
 
 .sectionDescription {
   margin: 0 auto;
-  max-width: 700px;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: clamp(1rem, 2.2vw, 1.1rem);
-  line-height: 1.72;
-  color: var(--fx-muted);
+  max-width: 620px;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.8;
+  color: #64748b;
 }
 
-/* ================= GRID ================= */
+/* ====================================================
+   STATS STRIP
+   ==================================================== */
+
+.statsStrip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 60px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+}
+
+.stripStat {
+  flex: 1;
+  text-align: center;
+  padding: 26px 16px;
+  border-right: 1px solid #e2e8f0;
+}
+
+.stripStat:last-child {
+  border-right: none;
+}
+
+.stripNum {
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #3b82f6;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.stripLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+/* ====================================================
+   INDUSTRIES GRID
+   ==================================================== */
 
 .industriesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-/* ================= CARD ================= */
+/* ====================================================
+   INDUSTRY CARD
+   ==================================================== */
 
 .industryCard {
   position: relative;
-  overflow: hidden;
-  padding: 1.55rem 1.2rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 18px;
-  text-align: center;
-  border: 1px solid var(--fx-border);
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.04),
-    0 0 0 1px rgba(59, 130, 246, 0.04) inset;
-  transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease;
+  padding: 32px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
 }
 
-.industryCard::before,
-.industryCard::after {
+/* Top accent line */
+.industryCard::before {
   content: "";
   position: absolute;
-  pointer-events: none;
-}
-
-.industryCard::before {
-  inset: 0;
-  background: linear-gradient(120deg, transparent 0%, rgba(59, 130, 246, 0.07) 48%, transparent 100%);
-  transform: translateX(-120%);
-  transition: transform 0.6s ease;
-}
-
-.industryCard::after {
-  inset: 0;
-  border-radius: inherit;
-  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0) inset;
-  transition: box-shadow 0.26s ease;
-}
-
-.industryCard:hover {
-  transform: translateY(-5px);
-  border-color: rgba(59, 130, 246, 0.25);
-  box-shadow:
-    0 12px 30px rgba(59, 130, 246, 0.08),
-    0 0 24px rgba(59, 130, 246, 0.04),
-    0 0 0 1px rgba(59, 130, 246, 0.1) inset;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: var(--card-accent, #3b82f6);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
 }
 
 .industryCard:hover::before {
-  transform: translateX(120%);
+  transform: scaleX(1);
 }
 
-.industryCard:hover::after {
-  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.15) inset;
+.industryCard:hover {
+  transform: translateY(-6px);
+  border-color: #bfdbfe;
+  box-shadow: 0 16px 40px rgba(59, 130, 246, 0.1), 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* ================= ICON ================= */
+/* ====================================================
+   ICON
+   ==================================================== */
 
-.industryIcon {
-  width: 3.2rem;
-  height: 3.2rem;
-  margin: 0 auto 0.82rem;
-  border-radius: 12px;
-  display: inline-grid;
+.iconWrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
   place-items: center;
-  font-size: 1.35rem;
-  color: #ffffff;
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  background: linear-gradient(130deg, #3b82f6, #0ea5e9);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
-  transition: transform 0.26s ease, box-shadow 0.26s ease, filter 0.26s ease;
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+  background: var(--icon-bg, #eff6ff);
+  color: var(--card-accent, #3b82f6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
 }
 
-.industryCard:hover .industryIcon {
-  transform: translateY(-2px) scale(1.06);
-  filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
-  box-shadow: 0 8px 18px rgba(59, 130, 246, 0.25);
+.industryCard:hover .iconWrap {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.18);
 }
 
-/* ================= TEXT ================= */
+/* ====================================================
+   TEXT
+   ==================================================== */
 
 .industryName {
-  margin: 0 0 0.5rem;
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #1e293b;
+  margin: 0 0 10px;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.industryCard:hover .industryName {
+  color: #2563eb;
 }
 
 .industryDescription {
-  margin: 0;
-  font-size: 0.94rem;
-  line-height: 1.62;
-  color: var(--fx-muted);
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0 0 18px;
+  flex: 1;
 }
 
-/* ================= ANIMATIONS ================= */
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Products tag */
+.industryTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--card-accent, #3b82f6);
+  background: var(--icon-bg, #eff6ff);
+  border: 1px solid var(--tag-border, #dbeafe);
+  border-radius: 20px;
+  padding: 4px 12px;
+  align-self: flex-start;
 }
 
-@keyframes cardIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ====================================================
+   CTA BANNER
+   ==================================================== */
+
+.ctaBanner {
+  margin-top: 70px;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border: 1px solid #bfdbfe;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes ambientDrift {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(-2%, 1.5%, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
+.ctaBanner::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12), transparent 70%);
+  pointer-events: none;
 }
 
-/* ================= RESPONSIVE ================= */
+.ctaBanner::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08), transparent 70%);
+  pointer-events: none;
+}
 
-@media (max-width: 992px) {
+.ctaInner {
+  position: relative;
+  z-index: 1;
+}
+
+.ctaBanner h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 12px;
+}
+
+.ctaBanner p {
+  font-size: 1rem;
+  color: #64748b;
+  max-width: 500px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(59, 130, 246, 0.35);
+}
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+
+@media (max-width: 1100px) {
   .industriesGrid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .sectionTitle {
-    font-size: clamp(1.75rem, 8vw, 2.3rem);
+  .industriesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
-  .industriesGrid {
+  .statsStrip {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
+  }
+
+  .stripStat {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .stripStat:nth-child(2) {
+    border-right: none;
+  }
+
+  .ctaBanner {
+    padding: 44px 24px;
   }
 
   .industryCard {
-    padding: 1.25rem 1rem;
+    padding: 24px 18px 22px;
   }
 }
 
@@ -233,32 +366,19 @@
     grid-template-columns: 1fr;
   }
 
-  .industryCard {
-    padding: 1.1rem 0.9rem;
+  .statsStrip {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .industryIcon {
-    width: 2.8rem;
-    height: 2.8rem;
-    font-size: 1.15rem;
-  }
-
-  .industryName {
-    font-size: 1rem;
-  }
-
-  .industryDescription {
-    font-size: 0.88rem;
+  .ctaBanner {
+    padding: 36px 18px;
+    border-radius: 14px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .industries::after {
-    animation: none !important;
-  }
-
   .industryCard,
-  .industryIcon {
+  .iconWrap {
     transition: none !important;
   }
 }
