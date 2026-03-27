@@ -11,248 +11,108 @@ const Products = () => {
 
   const productCategories = [
     {
-      title: "BOPP Films & Tapes",
+      title: "ELANTAS Varnish 900ml",
       description:
-        "High-performance BOPP security films and adhesive tapes for industrial packaging and sealing applications.",
+        "ELANTAS Elmo Luft 1A-GOLDEN fast drying insulating varnish in 900ml bottles. Class F rated for motors, transformers, and electrical windings.",
       image: "/product/01.jpg",
       link: "/contact",
     },
     {
-      title: "Milky Polyester Films",
+      title: "ELANTAS Thinner 234",
       description:
-        "Premium milky PET films used in electrical insulation, packaging, and lamination industries.",
+        "ELANTAS Thinner 234 for diluting and adjusting viscosity of impregnating and finishing varnishes. Ensures smooth, even coating application.",
       image: "/product/02.jpg",
-      link: "/contact",
-    },
-    {
-      title: "PET Films",
-      description:
-        "High-clarity polyester films for flexible packaging, capacitors, and industrial applications.",
-      image: "/product/03.jpg",
-      link: "/contact",
-    },
-    {
-      title: "Cotton Tape",
-      description:
-        "Durable cotton insulation tapes for electrical coil winding and motor manufacturing.",
-      image: "/product/05.jpg",
-      link: "/contact",
-    },
-    {
-      title: "Epoxy Sheets",
-      description:
-        "Glass-reinforced epoxy laminate sheets for electrical insulation and structural applications.",
-      image: "/product/06.jpg",
-      link: "/contact",
-    },
-    {
-      title: "A-Seal Products",
-      description:
-        "High-quality sealing compounds and encapsulants for electrical and industrial applications.",
-      image: "/product/07.jpg",
-      link: "/contact",
-    },
-    {
-      title: "AAEROTHERM Varnish",
-      description:
-        "High-temperature insulating varnish for motor coils, transformers, and electrical windings.",
-      image: "/product/08.jpg",
-      link: "/contact",
-    },
-    {
-      title: "ELANTAS Resins",
-      description:
-        "World-class ELANTAS impregnating resins and varnishes for electrical insulation systems.",
-      image: "/product/09.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Polyimide Films",
-      description:
-        "Kapton-grade polyimide films offering exceptional thermal and electrical insulation properties.",
-      image: "/product/10.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Royan Thread",
-      description:
-        "Synthetic royan threads used in textile and industrial weaving for high-strength applications.",
-      image: "/product/11.jpg",
-      link: "/contact",
-    },
-    {
-      title: "OMEGA Products",
-      description:
-        "Precision OMEGA insulation and electrical components for high-reliability industrial use.",
-      image: "/product/12.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Slitting Job Work",
-      description:
-        "Precision slitting and rewinding services for films, tapes, and flexible packaging materials.",
-      image: "/product/13.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Polyester Tapes",
-      description:
-        "Self-adhesive polyester tapes for electrical insulation and transformer winding.",
-      image: "/product/15.png",
       link: "/contact",
     },
     {
       title: "Pink Rayon Tape",
       description:
-        "Flexible rayon insulation tape for coil winding and motor assembly applications.",
+        "Trinity brand pink rayon fabric insulation tape for coil winding, motor assembly, and transformer insulation applications.",
+      image: "/product/03.jpg",
+      link: "/contact",
+    },
+    {
+      title: "Polyester Tape",
+      description:
+        "High-quality polyester woven tape with centre-line indicator for precise electrical insulation and coil banding applications.",
+      image: "/product/05.jpg",
+      link: "/contact",
+    },
+    {
+      title: "Rayon Thread",
+      description:
+        "Durable synthetic rayon lacing thread for tying and securing electrical coil windings, motor assemblies, and wire harnessing.",
+      image: "/product/06.jpg",
+      link: "/contact",
+    },
+    {
+      title: "Omega Rubber Compound Tape",
+      description:
+        "OMEGA brand self-amalgamating rubber compound tape for shock-proof and water-proof electrical insulation and joint sealing.",
+      image: "/product/07.jpg",
+      link: "/contact",
+    },
+    {
+      title: "Aseal Rubber Compound Tape",
+      description:
+        "A-SEAL No. 1 quality self-adhesive rubber compound tape for reliable electrical insulation, cable jointing, and sealing.",
+      image: "/product/08.jpg",
+      link: "/contact",
+    },
+    {
+      title: "ELANTAS Varnish ISONEL 31J",
+      description:
+        "ELANTAS ISONEL 31J industrial-grade insulating varnish in bulk drums for high-volume motor and transformer manufacturing.",
+      image: "/product/09.jpeg",
+      link: "/contact",
+    },
+    {
+      title: "ELANTAS Varnish 225ml",
+      description:
+        "ELANTAS Elmo Luft 1A-GOLDEN Class F air-drying insulating varnish in convenient 225ml pouch for small-batch and repair applications.",
+      image: "/product/10.jpeg",
+      link: "/contact",
+    },
+    {
+      title: "Aseal Varnish",
+      description:
+        "A-SEAL fast drying insulating varnish available in multiple sizes for motor rewinding, transformer impregnation, and coil protection.",
+      image: "/product/11.jpg",
+      link: "/contact",
+    },
+    {
+      title: "Slitting Service (Non-Adhesive)",
+      description:
+        "Precision slitting and rewinding services for non-adhesive films, tapes, and flexible insulation materials to custom widths.",
+      image: "/product/12.jpeg",
+      link: "/contact",
+    },
+    {
+      title: "Webbing Tape",
+      description:
+        "Woven webbing tape with centre-line marker for electrical insulation wrapping, coil binding, and transformer winding applications.",
+      image: "/product/13.jpeg",
+      link: "/contact",
+    },
+    {
+      title: "PressBoard",
+      description:
+        "High-density electrical pressboard sheets in various grades for transformer insulation, slot liners, and phase barriers.",
+      image: "/product/15.png",
+      link: "/contact",
+    },
+    {
+      title: "Epoxy Sheet",
+      description:
+        "Glass-reinforced epoxy laminate sheets (FR4/G10) for electrical insulation, switchboards, and structural support applications.",
       image: "/product/16.jpeg",
       link: "/contact",
     },
     {
-      title: "Insulation Varnish",
+      title: "Fire Retardant Fiberglass Sleeves",
       description:
-        "Specialty impregnating varnish for enhancing dielectric strength of electrical windings.",
+        "Heat-resistant braided fiberglass sleeving for wire and cable protection in high-temperature electrical and industrial environments.",
       image: "/product/17.jpg",
-      link: "/contact",
-    },
-    {
-      title: "Glass Cloth Tape",
-      description:
-        "Woven glass fabric tapes with high thermal resistance for transformer and motor insulation.",
-      image: "/product/18.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Nomex Paper",
-      description:
-        "Aromatic polyamide insulation paper with outstanding thermal and electrical properties.",
-      image: "/product/19.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Mica Tape",
-      description:
-        "Mica-based fire-resistant tapes for cables and electrical insulation under extreme conditions.",
-      image: "/product/20.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Silicone Rubber Sheet",
-      description:
-        "High-temperature silicone rubber sheets for gaskets, seals, and electrical insulation.",
-      image: "/product/21.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Fiberglass Sleeving",
-      description:
-        "Braided fiberglass sleeving for wire and cable protection in high-temperature environments.",
-      image: "/product/22.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Kraft Paper",
-      description:
-        "High-tensile kraft insulation paper for transformers, capacitors, and cable wrapping.",
-      image: "/product/23.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Prepreg Materials",
-      description:
-        "Resin-impregnated composite materials for laminated boards and electrical insulation.",
-      image: "/product/24.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Thermal Interface Materials",
-      description:
-        "Heat-dissipating pads and compounds for power electronics and LED applications.",
-      image: "/product/25.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Adhesive Films",
-      description:
-        "Specialty adhesive bonding films for lamination, PCB, and industrial assembly processes.",
-      image: "/product/26.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Shrink Tubing",
-      description:
-        "Polyolefin and PTFE heat shrink tubes for wire insulation and strain relief.",
-      image: "/product/27.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Crepe Paper Tape",
-      description:
-        "Creped kraft paper tape for transformer coil winding and moisture-resistant insulation.",
-      image: "/product/28.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Nylon Films",
-      description:
-        "Tough nylon barrier films for food packaging, industrial laminates, and flexible pouches.",
-      image: "/product/29.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "EMI Shielding Materials",
-      description:
-        "Conductive foils and gaskets for electromagnetic interference shielding in electronics.",
-      image: "/product/30.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Acetate Cloth Tape",
-      description:
-        "Solvent-resistant acetate fabric tape for cable harnessing and electrical bundling.",
-      image: "/product/31.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Phenolic Laminates",
-      description:
-        "Thermoset phenolic sheets for switchboards, terminal blocks, and electrical panels.",
-      image: "/product/32.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "PTFE Products",
-      description:
-        "Chemically inert PTFE sheets, rods, and tapes for demanding industrial applications.",
-      image: "/product/33.jpeg",
-      link: "/contact",
-    },
-    {
-      title: "Copper Foil",
-      description:
-        "Electro-deposited and rolled copper foils for PCB manufacturing and shielding.",
-      image: "/product/34.png",
-      link: "/contact",
-    },
-    {
-      title: "Aramid Fiber Products",
-      description:
-        "High-strength aramid fiber composites for ballistic, aerospace, and electrical insulation uses.",
-      image: "/product/35.png",
-      link: "/contact",
-    },
-    {
-      title: "Resin Systems",
-      description:
-        "Epoxy and polyester resin systems for casting, potting, and encapsulation of electronic components.",
-      image: "/product/36.png",
-      link: "/contact",
-    },
-    {
-      title: "Industrial Tapes & Films",
-      description:
-        "Comprehensive range of specialty tapes and films for diverse industrial manufacturing requirements.",
-      image: "/product/37.jpg",
       link: "/contact",
     },
   ];
@@ -301,7 +161,7 @@ const Products = () => {
         <AnimateOnScroll animation="fadeUp">
           <div className={styles.statsBar}>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>35+</span>
+              <span className={styles.statNumber}>15+</span>
               <span className={styles.statLabel}>Product Lines</span>
             </div>
             <div className={styles.statItem}>

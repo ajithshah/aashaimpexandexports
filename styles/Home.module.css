@@ -188,52 +188,79 @@
   box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
 }
 
-/* ================= AI ORB ================= */
+/* ================= STATS SHOWCASE ================= */
 
-.aiVisual {
+.statsShowcase {
   position: relative;
-  min-height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 360px;
 }
 
-.orb {
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   position: relative;
-  width: clamp(230px, 34vw, 360px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 30% 25%, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.08) 34%, rgba(14, 165, 233, 0.08) 58%, rgba(99, 102, 241, 0.04) 76%, transparent 100%),
-    conic-gradient(from 90deg, rgba(59, 130, 246, 0.12), rgba(14, 165, 233, 0.1), rgba(99, 102, 241, 0.12), rgba(59, 130, 246, 0.12));
-  box-shadow:
-    0 0 0 1px rgba(59, 130, 246, 0.15) inset,
-    0 8px 40px rgba(59, 130, 246, 0.15),
-    0 20px 60px rgba(14, 165, 233, 0.1);
-  animation: orbSpin 12s linear infinite;
-  transition: transform 0.22s ease-out;
-  will-change: transform;
+  z-index: 1;
 }
 
-.orb::before,
-.orb::after {
-  content: "";
+.statCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.12);
+}
+
+.statCardAccent {
+  background: rgba(59, 130, 246, 0.06);
+  border-color: rgba(14, 165, 233, 0.2);
+}
+
+.statCardAccent:hover {
+  border-color: rgba(14, 165, 233, 0.45);
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.15);
+}
+
+.statNumber {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: rgba(148, 163, 184, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.showcaseGlow {
   position: absolute;
-  inset: -16%;
+  inset: -20%;
   border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(14, 165, 233, 0.04) 40%, transparent 70%);
   pointer-events: none;
-}
-
-.orb::before {
-  border: 1px dashed rgba(59, 130, 246, 0.2);
-  animation: ringSpin 14s linear infinite;
-}
-
-.orb::after {
-  inset: 14%;
-  border: 1px solid rgba(14, 165, 233, 0.25);
-  box-shadow: 0 0 24px rgba(14, 165, 233, 0.1);
-  animation: ringPulse 4.4s ease-in-out infinite;
+  animation: glowPulse 5s ease-in-out infinite;
 }
 
 /* ================= SERVICE CARDS ================= */
@@ -386,41 +413,14 @@
   }
 }
 
-@keyframes ringSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes orbSpin {
-  0% {
-    background:
-      radial-gradient(circle at 30% 25%, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.08) 34%, rgba(14, 165, 233, 0.08) 58%, rgba(99, 102, 241, 0.04) 76%, transparent 100%),
-      conic-gradient(from 0deg, rgba(59, 130, 246, 0.12), rgba(14, 165, 233, 0.1), rgba(99, 102, 241, 0.12), rgba(59, 130, 246, 0.12));
-  }
-  50% {
-    background:
-      radial-gradient(circle at 30% 25%, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.08) 34%, rgba(14, 165, 233, 0.08) 58%, rgba(99, 102, 241, 0.04) 76%, transparent 100%),
-      conic-gradient(from 180deg, rgba(59, 130, 246, 0.12), rgba(14, 165, 233, 0.1), rgba(99, 102, 241, 0.12), rgba(59, 130, 246, 0.12));
-  }
-  100% {
-    background:
-      radial-gradient(circle at 30% 25%, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.08) 34%, rgba(14, 165, 233, 0.08) 58%, rgba(99, 102, 241, 0.04) 76%, transparent 100%),
-      conic-gradient(from 360deg, rgba(59, 130, 246, 0.12), rgba(14, 165, 233, 0.1), rgba(99, 102, 241, 0.12), rgba(59, 130, 246, 0.12));
-  }
-}
-
-@keyframes ringPulse {
+@keyframes glowPulse {
   0%, 100% {
+    opacity: 0.6;
     transform: scale(1);
-    opacity: 0.84;
   }
   50% {
+    opacity: 1;
     transform: scale(1.05);
-    opacity: 0.5;
   }
 }
 
@@ -450,7 +450,7 @@
     justify-content: center;
   }
 
-  .aiVisual {
+  .statsShowcase {
     min-height: 300px;
   }
 }
@@ -482,9 +482,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .pageWrapper::after,
-  .orb::before,
-  .orb::after,
-  .orb,
+  .showcaseGlow,
   .cardGlow,
   .fadeLeft {
     animation: none !important;
@@ -495,7 +493,7 @@
   .ctaButton,
   .card,
   .industryItem,
-  .orb {
+  .statCard {
     transition: none !important;
   }
 }

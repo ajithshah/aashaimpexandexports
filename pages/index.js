@@ -1,25 +1,9 @@
-import { useEffect } from "react";
 import Hero from "@/Component/Hero";
 import Meta from "@/Component/Meta";
 import AnimateOnScroll from "@/Component/AnimateOnScroll";
 import styles from "@/styles/Home.module.css";
 
 export default function Home() {
-  useEffect(() => {
-    const orb = document.querySelector(`.${styles.orb}`);
-
-    const handleMouseMove = (e) => {
-      const x = (window.innerWidth / 2 - e.clientX) / 40;
-      const y = (window.innerHeight / 2 - e.clientY) / 40;
-      if (orb) {
-        orb.style.transform = `translate(${x}px, ${y}px)`;
-      }
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
 
   return (
     <div className={`${styles.pageWrapper} d-flex flex-column min-vh-100`}>
@@ -64,8 +48,26 @@ export default function Home() {
               </AnimateOnScroll>
 
               <AnimateOnScroll animation="scaleUp" delay={200} className={styles.gridCol}>
-                <div className={styles.aiVisual}>
-                  <div className={styles.orb}></div>
+                <div className={styles.statsShowcase}>
+                  <div className={styles.statsGrid}>
+                    <div className={styles.statCard}>
+                      <span className={styles.statNumber}>25+</span>
+                      <span className={styles.statLabel}>Years Experience</span>
+                    </div>
+                    <div className={`${styles.statCard} ${styles.statCardAccent}`}>
+                      <span className={styles.statNumber}>50+</span>
+                      <span className={styles.statLabel}>Countries Served</span>
+                    </div>
+                    <div className={`${styles.statCard} ${styles.statCardAccent}`}>
+                      <span className={styles.statNumber}>500+</span>
+                      <span className={styles.statLabel}>Products</span>
+                    </div>
+                    <div className={styles.statCard}>
+                      <span className={styles.statNumber}>1000+</span>
+                      <span className={styles.statLabel}>Happy Clients</span>
+                    </div>
+                  </div>
+                  <div className={styles.showcaseGlow}></div>
                 </div>
               </AnimateOnScroll>
             </div>
