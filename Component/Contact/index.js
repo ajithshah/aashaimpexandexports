@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import AnimateOnScroll from "@/Component/AnimateOnScroll";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,6 +13,7 @@ const Contact = () => {
     company: "",
     message: "",
   });
+  const [status, setStatus] = useState(null); // "sending" | "success" | "error"
 
   const handleChange = (e) => {
     setFormData({
@@ -21,16 +24,30 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: "",
-    });
+    setStatus("sending");
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          message: "",
+        });
+        setTimeout(() => setStatus(null), 5000);
+      })
+      .catch(() => {
+        setStatus("error");
+        setTimeout(() => setStatus(null), 5000);
+      });
   };
 
   return (
@@ -48,7 +65,7 @@ const Contact = () => {
         <AnimateOnScroll animation="fadeUp" delay={100}>
           <div className={styles.contactContent}>
           <div className={styles.contactForm}>
-            <form onSubmit={handleSubmit} className={styles.form}>
+            <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label htmlFor="name" className={styles.label}>
@@ -130,8 +147,23 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className={styles.submitBtn}>
-                Send Message
+              {status === "success" && (
+                <p style={{ color: "green", marginBottom: "1rem" }}>
+                  Message sent successfully!
+                </p>
+              )}
+              {status === "error" && (
+                <p style={{ color: "red", marginBottom: "1rem" }}>
+                  Failed to send message. Please try again.
+                </p>
+              )}
+
+              <button
+                type="submit"
+                className={styles.submitBtn}
+                disabled={status === "sending"}
+              >
+                {status === "sending" ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
