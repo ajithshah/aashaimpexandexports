@@ -99,14 +99,9 @@ const About = () => {
               </div>
             </div>
             <div className={styles.aboutImage}>
-              <Image
-                src="/product/Sample01.jpg"
-                alt="A A Sha Impex and Exports – electrical insulation materials and specialty films warehouse in Chennai, India"
-                width={600}
-                height={400}
-                style={{ width: "100%", height: "auto", borderRadius: "12px", objectFit: "cover" }}
-                priority
-              />
+              <div className={styles.imagePlaceholder}>
+                <span>Global Trade Solutions</span>
+              </div>
             </div>
           </div>
         </AnimateOnScroll>
