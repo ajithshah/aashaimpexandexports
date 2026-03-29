@@ -66,16 +66,15 @@ const Header = () => {
         <div className={styles.topBarInner}>
           <div className={styles.topBarLeft}>
             <a
-              href="mailto:
-aashaimpexandexports@gmail.com"
+              href="mailto:aashaimpexandexports@gmail.com"
               className={styles.topBarLink}
             >
               <i className="bi bi-envelope-fill"></i>
               <span>aashaimpexandexports@gmail.com</span>
             </a>
-            <a href="tel:+919820024498" className={styles.topBarLink}>
+            <a href="tel:+918122816789" className={styles.topBarLink}>
               <i className="bi bi-telephone-fill"></i>
-              <span>+91 98200 24498</span>
+              <span>+91 81228 16789</span>
             </a>
           </div>
           <div className={styles.topBarRight}>
