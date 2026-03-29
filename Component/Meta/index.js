@@ -7,15 +7,20 @@ const Meta = ({
   title = "A A Sha Impex and Exports | Electrical Insulation & Specialty Films Supplier India",
   description = "A A Sha Impex and Exports is a leading supplier and exporter of electrical insulation materials, specialty films, industrial tapes, and specialty chemicals from India. 50+ years of trusted global trade.",
   keywords = "electrical insulation materials India, BOPP films supplier, PET films exporter, polyimide films India, Nomex paper supplier, Kapton films India, insulation varnish supplier, ELANTAS resins India, specialty films exporter, industrial tapes India, mica tape supplier, glass cloth tape, cotton tape electrical, epoxy sheets India, PTFE products India, fiberglass sleeving, aramid fiber India, thermal interface materials, A A Sha Impex, specialty materials exporter",
-  image = `${BASE_URL}/og-image.png`,
+  image = `${BASE_URL}/logo.png`,
+  images = [],
   url = BASE_URL,
   type = "website",
   article = false,
   noindex = false,
   siteName = "A A Sha Impex and Exports",
   breadcrumb = null,
+  productSchema = null,
 }) => {
   const absoluteImage = image.startsWith("http") ? image : `${BASE_URL}${image}`;
+  const absoluteImages = images.map((img) =>
+    img.startsWith("http") ? img : `${BASE_URL}${img}`
+  );
 
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -129,6 +134,9 @@ const Meta = ({
       <meta property="og:image:alt" content={`${siteName} – Specialty Materials Supplier`} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      {absoluteImages.map((img, i) => (
+        <meta key={`og-img-${i}`} property="og:image" content={img} />
+      ))}
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content={siteName} />
@@ -204,6 +212,12 @@ const Meta = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
+      {productSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
         />
       )}
     </Head>

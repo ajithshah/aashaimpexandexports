@@ -9,6 +9,8 @@ export default function AboutPage() {
         description="Learn about A A Sha Impex and Exports — a trusted supplier and exporter of electrical insulation materials and specialty films from India for over 50 years. Serving 500+ clients across 20+ countries with BOPP films, PET films, polyimide films, and more."
         keywords="about A A Sha Impex, specialty materials supplier India, electrical insulation company India, trusted exporter India, 50 years trade experience, specialty films company, insulation materials manufacturer India, B2B specialty materials"
         url="https://aashaimpexandexports.com/about"
+        image="/product/Sample01.jpg"
+        images={["/product/01.jpg", "/product/Polyimide.jpg"]}
         siteName="A A Sha Impex and Exports"
         breadcrumb={[
           { name: "Home", path: "/" },

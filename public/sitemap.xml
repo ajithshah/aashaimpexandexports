@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
@@ -9,6 +10,30 @@
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/01.jpg</image:loc>
+      <image:title>ELANTAS Elmo Luft 1A-GOLDEN insulating varnish 900ml</image:title>
+      <image:caption>ELANTAS insulating varnish – Class F rated electrical insulation material from A A Sha Impex India</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/09.jpeg</image:loc>
+      <image:title>ELANTAS ISONEL 31J industrial insulating varnish drum</image:title>
+      <image:caption>Industrial-grade insulating varnish in bulk drums for motor and transformer manufacturing</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/17.jpg</image:loc>
+      <image:title>Fire retardant fiberglass sleeves</image:title>
+      <image:caption>Heat-resistant braided fiberglass sleeving for electrical wire and cable protection</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/15.png</image:loc>
+      <image:title>Electrical pressboard sheets</image:title>
+      <image:caption>High-density electrical pressboard for transformer insulation and phase barriers</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/logo.png</image:loc>
+      <image:title>A A Sha Impex and Exports Logo</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -16,6 +41,15 @@
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/Sample01.jpg</image:loc>
+      <image:title>A A Sha Impex and Exports specialty materials</image:title>
+      <image:caption>Electrical insulation materials and specialty films from A A Sha Impex warehouse in Chennai India</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/logo.png</image:loc>
+      <image:title>A A Sha Impex and Exports Logo</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -23,6 +57,46 @@
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/01.jpg</image:loc>
+      <image:title>ELANTAS Varnish 900ml</image:title>
+      <image:caption>ELANTAS Elmo Luft 1A-GOLDEN fast drying insulating varnish bottle</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/02.jpg</image:loc>
+      <image:title>ELANTAS Thinner 234</image:title>
+      <image:caption>ELANTAS Thinner 234 for insulating varnish dilution</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/03.jpg</image:loc>
+      <image:title>Pink Rayon Insulation Tape</image:title>
+      <image:caption>Trinity brand pink rayon fabric insulation tape for coil winding</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/09.jpeg</image:loc>
+      <image:title>ELANTAS ISONEL 31J Varnish Drum</image:title>
+      <image:caption>Industrial-grade ELANTAS ISONEL 31J insulating varnish in bulk drum</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/15.png</image:loc>
+      <image:title>Electrical PressBoard Sheets</image:title>
+      <image:caption>High-density electrical pressboard sheets for transformer insulation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/16.jpeg</image:loc>
+      <image:title>FR4 G10 Epoxy Laminate Sheets</image:title>
+      <image:caption>Glass-reinforced epoxy laminate sheets for electrical insulation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/17.jpg</image:loc>
+      <image:title>Fire Retardant Fiberglass Sleeves</image:title>
+      <image:caption>Heat-resistant braided fiberglass sleeving for high-temperature wire protection</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/Polyimide.jpg</image:loc>
+      <image:title>Polyimide Kapton Film</image:title>
+      <image:caption>Polyimide Kapton insulation film for high-temperature electrical applications</image:caption>
+    </image:image>
   </url>
 
   <url>
@@ -30,6 +104,11 @@
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/Polyimide.jpg</image:loc>
+      <image:title>Polyimide film for aerospace and electronics industries</image:title>
+      <image:caption>Polyimide Kapton film supplied to aerospace, electronics, and automotive industries from India</image:caption>
+    </image:image>
   </url>
 
   <url>
@@ -37,6 +116,11 @@
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://aashaimpexandexports.com/product/Sample01.jpg</image:loc>
+      <image:title>Contact A A Sha Impex and Exports</image:title>
+      <image:caption>Contact A A Sha Impex for electrical insulation materials and specialty films in Chennai India</image:caption>
+    </image:image>
   </url>
 
 </urlset>

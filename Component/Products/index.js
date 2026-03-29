@@ -15,6 +15,7 @@ const Products = () => {
       description:
         "ELANTAS Elmo Luft 1A-GOLDEN fast drying insulating varnish in 900ml bottles. Class F rated for motors, transformers, and electrical windings.",
       image: "/product/01.jpg",
+      alt: "ELANTAS Elmo Luft 1A-GOLDEN 900ml insulating varnish bottle – Class F electrical insulation varnish supplier India",
       link: "/contact",
     },
     {
@@ -22,6 +23,7 @@ const Products = () => {
       description:
         "ELANTAS Thinner 234 for diluting and adjusting viscosity of impregnating and finishing varnishes. Ensures smooth, even coating application.",
       image: "/product/02.jpg",
+      alt: "ELANTAS Thinner 234 for insulating varnish dilution – varnish thinner supplier India",
       link: "/contact",
     },
     {
@@ -29,6 +31,7 @@ const Products = () => {
       description:
         "Trinity brand pink rayon fabric insulation tape for coil winding, motor assembly, and transformer insulation applications.",
       image: "/product/03.jpg",
+      alt: "Trinity pink rayon fabric insulation tape roll – electrical coil winding tape India",
       link: "/contact",
     },
     {
@@ -36,6 +39,7 @@ const Products = () => {
       description:
         "High-quality polyester woven tape with centre-line indicator for precise electrical insulation and coil banding applications.",
       image: "/product/05.jpg",
+      alt: "Polyester woven insulation tape with centre-line – electrical coil banding tape supplier",
       link: "/contact",
     },
     {
@@ -43,6 +47,7 @@ const Products = () => {
       description:
         "Durable synthetic rayon lacing thread for tying and securing electrical coil windings, motor assemblies, and wire harnessing.",
       image: "/product/06.jpg",
+      alt: "Synthetic rayon lacing thread spools – electrical coil winding thread exporter India",
       link: "/contact",
     },
     {
@@ -50,6 +55,7 @@ const Products = () => {
       description:
         "OMEGA brand self-amalgamating rubber compound tape for shock-proof and water-proof electrical insulation and joint sealing.",
       image: "/product/07.jpg",
+      alt: "OMEGA self-amalgamating rubber compound tape – waterproof electrical insulation tape India",
       link: "/contact",
     },
     {
@@ -57,6 +63,7 @@ const Products = () => {
       description:
         "A-SEAL No. 1 quality self-adhesive rubber compound tape for reliable electrical insulation, cable jointing, and sealing.",
       image: "/product/08.jpg",
+      alt: "A-SEAL No.1 self-adhesive rubber compound tape – cable jointing insulation tape supplier",
       link: "/contact",
     },
     {
@@ -64,6 +71,7 @@ const Products = () => {
       description:
         "ELANTAS ISONEL 31J industrial-grade insulating varnish in bulk drums for high-volume motor and transformer manufacturing.",
       image: "/product/09.jpeg",
+      alt: "ELANTAS ISONEL 31J insulating varnish bulk drum – industrial motor transformer varnish India",
       link: "/contact",
     },
     {
@@ -71,6 +79,7 @@ const Products = () => {
       description:
         "ELANTAS Elmo Luft 1A-GOLDEN Class F air-drying insulating varnish in convenient 225ml pouch for small-batch and repair applications.",
       image: "/product/10.jpeg",
+      alt: "ELANTAS Elmo Luft 1A-GOLDEN 225ml varnish pouch – Class F air-drying insulating varnish India",
       link: "/contact",
     },
     {
@@ -78,6 +87,7 @@ const Products = () => {
       description:
         "A-SEAL fast drying insulating varnish available in multiple sizes for motor rewinding, transformer impregnation, and coil protection.",
       image: "/product/11.jpg",
+      alt: "A-SEAL fast drying insulating varnish bottles – motor rewinding varnish supplier India",
       link: "/contact",
     },
     {
@@ -85,6 +95,7 @@ const Products = () => {
       description:
         "Precision slitting and rewinding services for non-adhesive films, tapes, and flexible insulation materials to custom widths.",
       image: "/product/12.jpeg",
+      alt: "Precision film slitting and rewinding machine – custom width insulation film cutting service India",
       link: "/contact",
     },
     {
@@ -92,6 +103,7 @@ const Products = () => {
       description:
         "Woven webbing tape with centre-line marker for electrical insulation wrapping, coil binding, and transformer winding applications.",
       image: "/product/13.jpeg",
+      alt: "Woven webbing insulation tape with centre-line – transformer coil binding tape supplier India",
       link: "/contact",
     },
     {
@@ -99,6 +111,7 @@ const Products = () => {
       description:
         "High-density electrical pressboard sheets in various grades for transformer insulation, slot liners, and phase barriers.",
       image: "/product/15.png",
+      alt: "High-density electrical pressboard sheets – transformer insulation pressboard supplier India",
       link: "/contact",
     },
     {
@@ -106,6 +119,7 @@ const Products = () => {
       description:
         "Glass-reinforced epoxy laminate sheets (FR4/G10) for electrical insulation, switchboards, and structural support applications.",
       image: "/product/16.jpeg",
+      alt: "FR4 G10 glass-reinforced epoxy laminate sheets – electrical insulation epoxy board India",
       link: "/contact",
     },
     {
@@ -113,6 +127,7 @@ const Products = () => {
       description:
         "Heat-resistant braided fiberglass sleeving for wire and cable protection in high-temperature electrical and industrial environments.",
       image: "/product/17.jpg",
+      alt: "Heat-resistant braided fiberglass sleeving – fire retardant wire protection sleeve India",
       link: "/contact",
     },
   ];
@@ -214,10 +229,11 @@ const Products = () => {
                 <div className={styles.categoryImage}>
                   <Image
                     src={category.image}
-                    alt={category.title}
+                    alt={category.alt}
                     width={400}
                     height={210}
                     className={styles.categoryImg}
+                    loading={index < 4 ? "eager" : "lazy"}
                   />
                   <div className={styles.imageOverlay} />
                   <span className={styles.cardIndex}>

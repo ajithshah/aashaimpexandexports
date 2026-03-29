@@ -1,5 +1,6 @@
 import Hero from "@/Component/Hero";
 import Meta from "@/Component/Meta";
+import Image from "next/image";
 import AnimateOnScroll from "@/Component/AnimateOnScroll";
 import styles from "@/styles/Home.module.css";
 
