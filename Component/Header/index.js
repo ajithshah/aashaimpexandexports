@@ -65,9 +65,13 @@ const Header = () => {
       >
         <div className={styles.topBarInner}>
           <div className={styles.topBarLeft}>
-            <a href="mailto:aaborewala@gmail.com" className={styles.topBarLink}>
+            <a
+              href="mailto:
+aashaimpexandexports@gmail.com"
+              className={styles.topBarLink}
+            >
               <i className="bi bi-envelope-fill"></i>
-              <span>aaborewala@gmail.com</span>
+              <span>aashaimpexandexports@gmail.com</span>
             </a>
             <a href="tel:+919820024498" className={styles.topBarLink}>
               <i className="bi bi-telephone-fill"></i>
