@@ -1,0 +1,201 @@
+/* ===== MAINTENANCE PAGE ===== */
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  font-family: var(--font-body);
+}
+
+/* Animated blobs */
+.blob1,
+.blob2,
+.blob3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.18;
+  animation: drift 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.blob1 {
+  width: 420px;
+  height: 420px;
+  background: var(--primary-blue);
+  top: -120px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.blob2 {
+  width: 320px;
+  height: 320px;
+  background: var(--primary-sky);
+  bottom: -80px;
+  right: -80px;
+  animation-delay: 3s;
+}
+
+.blob3 {
+  width: 240px;
+  height: 240px;
+  background: var(--primary-indigo);
+  top: 40%;
+  right: 10%;
+  animation-delay: 5s;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(20px, 20px) scale(1.06); }
+}
+
+/* Card */
+.card {
+  position: relative;
+  z-index: 1;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 16px 48px var(--glass-shadow), var(--shadow-lg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 3rem 2.5rem;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Brand */
+.brand {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  margin-bottom: 2rem;
+}
+
+.brandPrimary {
+  color: var(--primary-blue);
+}
+
+.brandSecondary {
+  color: var(--text-primary);
+}
+
+/* Gear icon */
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.75rem;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(14,165,233,0.08));
+  border: 1.5px solid rgba(59,130,246,0.2);
+}
+
+.gearIcon {
+  width: 36px;
+  height: 36px;
+  color: var(--primary-blue);
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Text */
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.subheading {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--primary-blue), transparent);
+  opacity: 0.3;
+  margin: 1.75rem 0;
+}
+
+/* Contact */
+.contact {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 10px;
+  border: 1.5px solid rgba(59,130,246,0.25);
+  background: rgba(59,130,246,0.06);
+  color: var(--primary-blue);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.contactBtn:hover {
+  background: rgba(59,130,246,0.12);
+  border-color: var(--primary-blue);
+  transform: translateY(-1px);
+}
+
+.contactBtn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Footer note */
+.footer {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.5rem;
+  }
+
+  .contactBtn {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+}

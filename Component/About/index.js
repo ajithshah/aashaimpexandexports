@@ -6,44 +6,44 @@ import styles from "./About.module.css";
 
 const About = () => {
   const stats = [
-    { number: "50+", label: "Years of Excellence", icon: "bi-award" },
-    { number: "500+", label: "Happy Clients", icon: "bi-people" },
-    { number: "50+", label: "Countries Served", icon: "bi-globe" },
-    { number: "100%", label: "Satisfaction Rate", icon: "bi-star-fill" },
+    { number: "50+", label: "Years in Business", icon: "bi-award" },
+    { number: "500+", label: "Loyal Customers", icon: "bi-people" },
+    { number: "15+", label: "Product Lines", icon: "bi-box-seam" },
+    { number: "100%", label: "Quality Commitment", icon: "bi-shield-check" },
   ];
 
   const values = [
     {
-      title: "Quality Assurance",
+      title: "Uncompromising Quality",
       description:
-        "We maintain the highest standards of quality in all our products and services, ensuring customer satisfaction and building long-term relationships.",
+        "Every insulation material we supply — from Polyester Film to Aramid Paper — is chosen with one clear goal: QUALITY. We source only the best from trusted global manufacturers.",
       icon: "bi-shield-check",
     },
     {
-      title: "Global Reach",
+      title: "Decades of Trust",
       description:
-        "Our extensive network spans across 50+ countries, enabling us to provide seamless import-export solutions worldwide.",
-      icon: "bi-globe2",
+        "Many of our customers have been with us for decades, because they know we stand behind what we supply. Their continued trust is the biggest reflection of our commitment.",
+      icon: "bi-heart",
     },
     {
-      title: "Innovation",
+      title: "Strong Supply Network",
       description:
-        "We continuously innovate our processes and adopt cutting-edge technology to stay ahead in the dynamic global trade landscape.",
-      icon: "bi-lightbulb",
+        "We maintain a strong and efficient supply network across the states, ensuring that even bulk requirements are fulfilled quickly and smoothly.",
+      icon: "bi-truck",
     },
     {
-      title: "Reliability",
+      title: "Industry Partnerships",
       description:
-        "Our clients trust us for our consistent delivery, transparent communication, and commitment to meeting deadlines.",
-      icon: "bi-clock",
+        "Proud to be associated with leading global brands including M/s. JBF RAK LLC (UAE), M/s. Elantas Beck India Ltd., M/s. Gujarat Polymers, and M/s. Mithra Fiber Glass Sleeve.",
+      icon: "bi-handshake",
     },
   ];
 
   const certifications = [
-    "ISO 9001:2015 Certified",
-    "Export-Import License",
-    "Chamber of Commerce Member",
-    "Trade Association Certified",
+    "Authorised Importer & Stockist",
+    "JBF RAK LLC (UAE) Partner",
+    "Elantas Beck India Ltd. Dealer",
+    "Gujarat Polymers Authorised",
   ];
 
   return (
@@ -70,24 +70,26 @@ const About = () => {
           <div className={styles.aboutContent}>
             <div className={styles.aboutText}>
               <h2 className={styles.sectionTitle}>
-                Your Partner for Global Trade Excellence
+                Trusted Insulation Partners Since 1972
               </h2>
               <h3 className={styles.subtitle}>
-                We are into this business since 1972 - over 50 years of excellence
+                House of Electrical Insulation — Based in Chennai, India
               </h3>
               <p className={styles.description}>
-                Powering international commerce with quality, reliability, and
-                innovation. A A Sha Impex and Exports is a leading import-export
-                company with a heritage spanning over 50 years since 1972. We have
-                been at the forefront of providing cutting-edge trade solutions to
-                businesses worldwide.
+                At A A SHA IMPEX AND EXPORTS, quality isn&apos;t just a promise — it&apos;s
+                the foundation we&apos;ve built our business on since 1972. We work as
+                Importers, Distributors, and Stockists of electrical insulation
+                materials, carefully sourcing only the best products from trusted
+                global manufacturers.
               </p>
               <p className={styles.description}>
-                Our expertise lies in sourcing, exporting, and importing a wide
-                range of products, ensuring seamless global trade operations for
-                our clients. With a commitment to excellence and customer
-                satisfaction, we continue to be the preferred partner for
-                international business ventures.
+                For us, insulation materials are not just commodities. They
+                protect motors, transformers, and machines that power industries
+                — and we take that responsibility seriously. Whether it&apos;s
+                Polyester Film, Class F &amp; H insulation, Kraft Paper, Aramid
+                fire-retardant paper, FPF/DMD laminates, Silicon-coated films,
+                or PU Coated Fiber Glass Sleeves — every product is chosen with
+                one clear goal: QUALITY.
               </p>
               <div className={styles.aboutActions}>
                 <Link href="/products" className={styles.primaryBtn}>
@@ -100,7 +102,7 @@ const About = () => {
             </div>
             <div className={styles.aboutImage}>
               <div className={styles.imagePlaceholder}>
-                <span>Global Trade Solutions</span>
+                <span>House of Electrical Insulation</span>
               </div>
             </div>
           </div>
@@ -115,10 +117,10 @@ const About = () => {
               </div>
               <h3 className={styles.cardTitle}>Our Mission</h3>
               <p className={styles.cardDescription}>
-                To facilitate seamless global trade by providing exceptional
-                import-export services, fostering international business
-                relationships, and delivering value-driven solutions that empower
-                our clients to succeed in the global marketplace.
+                To supply the finest-quality electrical insulation materials that
+                protect motors, transformers, and machines powering industries
+                across India — ensuring the right material reaches our customers
+                at the right time, without compromise.
               </p>
             </div>
             <div className={styles.visionCard}>
@@ -127,10 +129,11 @@ const About = () => {
               </div>
               <h3 className={styles.cardTitle}>Our Vision</h3>
               <p className={styles.cardDescription}>
-                To be the world&apos;s most trusted import-export partner, known for
-                our integrity, innovation, and commitment to excellence. We
-                envision a future where global trade barriers are minimized
-                through our comprehensive solutions and expertise.
+                To be India&apos;s most trusted name in electrical insulation
+                materials — known for our attention to detail, insistence on
+                quality, and genuine focus on customer satisfaction. We envision
+                building lasting partnerships through honesty, performance, and
+                trust.
               </p>
             </div>
           </div>
@@ -187,33 +190,33 @@ const About = () => {
                 <div className={styles.whyItem}>
                   <i className="bi-check-circle-fill"></i>
                   <span>
-                    Extensive experience in international trade regulations
+                    Authorised importer and stockist of leading insulation brands
                   </span>
                 </div>
                 <div className={styles.whyItem}>
                   <i className="bi-check-circle-fill"></i>
-                  <span>Comprehensive logistics and supply chain management</span>
+                  <span>Over 50 years of industry experience since 1972</span>
                 </div>
                 <div className={styles.whyItem}>
                   <i className="bi-check-circle-fill"></i>
-                  <span>Competitive pricing and transparent cost structure</span>
-                </div>
-                <div className={styles.whyItem}>
-                  <i className="bi-check-circle-fill"></i>
-                  <span>
-                    24/7 customer support and dedicated account managers
-                  </span>
+                  <span>Complete range of Class B, F, and H insulation materials</span>
                 </div>
                 <div className={styles.whyItem}>
                   <i className="bi-check-circle-fill"></i>
                   <span>
-                    Advanced tracking systems for complete shipment visibility
+                    Strong supply network ensuring timely bulk deliveries across states
                   </span>
                 </div>
                 <div className={styles.whyItem}>
                   <i className="bi-check-circle-fill"></i>
                   <span>
-                    Strong relationships with global suppliers and distributors
+                    Precision slitting services with German technology
+                  </span>
+                </div>
+                <div className={styles.whyItem}>
+                  <i className="bi-check-circle-fill"></i>
+                  <span>
+                    Customers who have trusted us for decades stand as proof of our quality
                   </span>
                 </div>
               </div>
@@ -242,12 +245,12 @@ const About = () => {
         <AnimateOnScroll animation="fadeUp">
           <div className={styles.aboutCta}>
             <h3 className={styles.ctaTitle}>
-              Ready to Start Your Global Trade Journey?
+              Need Quality Insulation Materials?
             </h3>
             <p className={styles.ctaDescription}>
-              Join hundreds of successful businesses that trust us for their
-              international trade needs. Let&apos;s discuss how we can help you expand
-              your business globally.
+              Join hundreds of satisfied customers who trust us for their
+              electrical insulation needs. Let&apos;s discuss how we can supply the
+              right materials for your motors, transformers, and generators.
             </p>
             <div className={styles.ctaActions}>
               <Link href="/contact" className={styles.ctaPrimary}>

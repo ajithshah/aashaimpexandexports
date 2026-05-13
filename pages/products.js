@@ -55,9 +55,9 @@ export default function ProductsPage() {
   return (
     <div className="d-flex flex-column min-vh-100">
       <Meta
-        title="Products | BOPP Films, PET Films, Insulation Materials & More – A A Sha Impex"
-        description="Browse our full product range: BOPP films, PET films, polyimide films, Nomex paper, mica tape, glass cloth tape, cotton tape, insulation varnish, ELANTAS resins, PTFE products, copper foil, aramid fiber, silicone sheets, and 35+ more specialty materials. Export from India."
-        keywords="BOPP films India, PET films supplier, polyimide Kapton films, Nomex paper India, mica tape supplier, glass cloth tape, cotton insulation tape, AAEROTHERM varnish, ELANTAS resins India, PTFE products supplier, copper foil PCB, aramid fiber India, silicone rubber sheet, fiberglass sleeving, prepreg materials, thermal interface materials, shrink tubing supplier, epoxy sheets India, phenolic laminates, insulation materials export India"
+        title="Products | Electrical Insulation Materials & Supplies – A A Sha Impex"
+        description="Browse our full range of electrical insulation materials: Polyester Films, Aramid Papers, ELANTAS Varnishes, DMD/FPF Laminates, Fibre Glass Sleeves, Epoxy Sheets, Rubber Compound Tapes, Kraft Paper, and more. Authorised stockist in Chennai, India."
+        keywords="polyester film supplier Chennai, ELANTAS varnish dealer India, aramid paper stockist, Nomex paper India, DMD laminates supplier, fibre glass sleeve dealer, epoxy sheet India, rubber compound tape, Kraft paper insulation, motor insulation materials, transformer insulation supplier, insulation materials store Chennai"
         url="https://aashaimpexandexports.com/products"
         image="/product/01.jpg"
         images={["/product/09.jpeg", "/product/17.jpg", "/product/Polyimide.jpg", "/product/15.png"]}

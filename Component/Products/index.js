@@ -148,16 +148,16 @@ const Products = () => {
         {/* Hero Header */}
         <AnimateOnScroll animation="fadeUp">
           <header className={styles.heroHeader}>
-            <div className={styles.eyebrow}>Global Product Portfolio</div>
+            <div className={styles.eyebrow}>Our Product Range</div>
             <h2 className={styles.sectionTitle}>
-              World-Class Industrial
+              Electrical Insulation
               <br />
-              Materials & Specialty Films
+              Materials &amp; Supplies
             </h2>
             <p className={styles.sectionDescription}>
-              50+ years of expertise in international trade. Delivering premium
-              insulation, packaging, and specialty materials to industries
-              worldwide.
+              Authorised importer and stockist of a wide range of electrical
+              insulation materials — from Polyester Films and Aramid Papers to
+              Insulating Varnishes and Fibre Glass Sleeves.
             </p>
             <div className={styles.headerActions}>
               <a
@@ -181,15 +181,15 @@ const Products = () => {
             </div>
             <div className={styles.statItem}>
               <span className={styles.statNumber}>50+</span>
-              <span className={styles.statLabel}>Years of Trade</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>20+</span>
-              <span className={styles.statLabel}>Countries Served</span>
+              <span className={styles.statLabel}>Years of Trust</span>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statNumber}>500+</span>
-              <span className={styles.statLabel}>Happy Clients</span>
+              <span className={styles.statLabel}>Loyal Customers</span>
+            </div>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>Pan India</span>
+              <span className={styles.statLabel}>Supply Network</span>
             </div>
           </div>
         </AnimateOnScroll>
@@ -264,13 +264,14 @@ const Products = () => {
         <AnimateOnScroll animation="fadeUp">
           <div className={styles.productsCta}>
             <div className={styles.ctaContent}>
-              <h3>Need a Custom Solution?</h3>
+              <h3>Need a Specific Insulation Material?</h3>
               <p>
-                Our global sourcing network ensures we can supply customized
-                products tailored precisely to your industry requirements.
+                We stock a wide range of electrical insulation materials and can
+                source specialty items on request. Contact us for custom
+                slitting, punching, and shaping services.
               </p>
               <Link href="/contact" className={styles.ctaButton}>
-                Contact Our Trade Experts →
+                Request a Quote →
               </Link>
             </div>
           </div>

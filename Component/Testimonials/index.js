@@ -5,39 +5,39 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Rajesh Kumar",
-      position: "CEO, Tech Solutions India",
-      company: "Tech Solutions India",
+      position: "Motor Manufacturer",
+      company: "Kumar Motors, Chennai",
       content:
-        "A A Sha Impex has been our trusted partner for international procurement. Their expertise in electronics imports and customs clearance has helped us scale our operations significantly.",
+        "We have been buying insulation materials from A A Sha Impex for over 15 years. Their polyester films and DMD laminates are consistently high quality. Reliable supply and fair pricing.",
       rating: 5,
       image: "👨‍💼",
     },
     {
-      name: "Priya Sharma",
-      position: "Export Manager, Global Textiles",
-      company: "Global Textiles Ltd",
+      name: "Suresh Babu",
+      position: "Transformer Division Head",
+      company: "Power Transformers Ltd",
       content:
-        "Outstanding export services! They handled our textile shipments to multiple countries with exceptional professionalism and ensured timely delivery every time.",
-      rating: 5,
-      image: "👩‍💼",
-    },
-    {
-      name: "Michael Chen",
-      position: "Operations Director, Asia Pacific Corp",
-      company: "Asia Pacific Corporation",
-      content:
-        "Their logistics expertise and supply chain management have streamlined our import operations. Highly recommended for any international business needs.",
+        "Excellent Kraft paper and Presspahn quality. A A Sha Impex has been our trusted supplier for transformer insulation materials. Their stock availability saves us critical production time.",
       rating: 5,
       image: "👨‍💼",
     },
     {
-      name: "Sarah Johnson",
-      position: "Founder, Johnson Enterprises",
-      company: "Johnson Enterprises",
+      name: "Venkatesh R",
+      position: "Owner, Motor Rewinding Shop",
+      company: "Sri Vinayaga Electricals",
       content:
-        "From market research to final delivery, A A Sha Impex provided end-to-end solutions that exceeded our expectations. Their team is knowledgeable and reliable.",
+        "Best place for motor rewinding materials in Chennai. ELANTAS varnish, rayon tape, slot liners — everything under one roof. They understand what we need and deliver promptly.",
       rating: 5,
-      image: "👩‍💻",
+      image: "👨‍💼",
+    },
+    {
+      name: "Anand Prakash",
+      position: "Purchase Manager",
+      company: "National Electricals",
+      content:
+        "We’ve been sourcing fibre glass sleeves, epoxy sheets, and rubber compound tapes from A A Sha for decades. Their commitment to quality and timely delivery is unmatched.",
+      rating: 5,
+      image: "👨‍💼",
     },
   ];
 
@@ -56,9 +56,10 @@ const Testimonials = () => {
     <section className={styles.testimonials}>
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>What Our Clients Say</h2>
+          <h2 className={styles.sectionTitle}>What Our Customers Say</h2>
           <p className={styles.sectionDescription}>
-            Trusted by businesses worldwide for reliable import-export solutions
+            Trusted by motor manufacturers, transformer makers, and rewinding
+            shops across India for quality insulation materials
           </p>
         </div>
 
@@ -94,19 +95,19 @@ const Testimonials = () => {
         <div className={styles.testimonialsStats}>
           <div className={styles.stat}>
             <div className={styles.statNumber}>500+</div>
-            <div className={styles.statLabel}>Happy Clients</div>
-          </div>
-          <div className={styles.stat}>
-            <div className={styles.statNumber}>25+</div>
-            <div className={styles.statLabel}>Years Experience</div>
+            <div className={styles.statLabel}>Loyal Customers</div>
           </div>
           <div className={styles.stat}>
             <div className={styles.statNumber}>50+</div>
-            <div className={styles.statLabel}>Countries Served</div>
+            <div className={styles.statLabel}>Years of Trust</div>
+          </div>
+          <div className={styles.stat}>
+            <div className={styles.statNumber}>15+</div>
+            <div className={styles.statLabel}>Product Lines</div>
           </div>
           <div className={styles.stat}>
             <div className={styles.statNumber}>100%</div>
-            <div className={styles.statLabel}>Satisfaction Rate</div>
+            <div className={styles.statLabel}>Quality Focus</div>
           </div>
         </div>
       </div>

@@ -10,13 +10,13 @@ const Launching = () => {
             alt="A A Sha Impex and Exports Logo"
             className={styles.logoGlow}
           />
-          <h1 className={styles.launchingTitle}>Empowering Global Trade</h1>
+          <h1 className={styles.launchingTitle}>House of Electrical Insulation</h1>
           <p className={styles.companyName}>A A Sha Impex and Exports</p>
           <p className={styles.description}>
-            Connecting global markets with quality products and reliable
-            export-import solutions.
+            Authorised Importer and Stockist of Electrical Insulation Materials
+            since 1972.
             <br />
-            Our futuristic website is coming soon!
+            Our new website is coming soon!
           </p>
           <nav className={styles.socialNav}>
             <a

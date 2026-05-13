@@ -5,112 +5,112 @@ import styles from "./Industries.module.css";
 
 const industries = [
   {
-    name: "Electrical & Power",
+    name: "Electric Motors",
     icon: "bi-lightning-charge-fill",
     accent: "#3b82f6",
     iconBg: "#eff6ff",
     tagBorder: "#dbeafe",
-    description: "Insulation films, varnishes, and tapes for motors, transformers, and switchgear manufacturing.",
-    tag: "Insulation · Varnish · Tapes",
+    description: "Slot liners, slot closures, phase insulation, DMD/FPF laminates, and impregnating varnishes for F.H.P. and H.P. motors.",
+    tag: "Slot Liner · DMD · Varnish",
   },
   {
-    name: "Electronics & PCB",
-    icon: "bi-cpu-fill",
+    name: "Transformers",
+    icon: "bi-plugin",
     accent: "#8b5cf6",
     iconBg: "#f5f3ff",
     tagBorder: "#ede9fe",
-    description: "Copper foils, adhesive films, and EMI shielding materials for PCB and semiconductor assembly.",
-    tag: "Copper Foil · EMI · Films",
+    description: "Kraft paper, crepe paper, Presspahn, layer insulation, core insulation, and conductor insulation materials for all transformer types.",
+    tag: "Kraft Paper · Presspahn · Crepe",
   },
   {
-    name: "Automotive & EV",
-    icon: "bi-car-front-fill",
+    name: "Generators",
+    icon: "bi-gear-fill",
     accent: "#10b981",
     iconBg: "#ecfdf5",
     tagBorder: "#d1fae5",
-    description: "Thermal interface materials, silicone sheets, and PTFE products for automotive systems.",
-    tag: "Thermal · PTFE · Silicone",
+    description: "Polyester films, Aramid papers, epoxy slot wedges, and fibre glass sleeves for generator winding and slot insulation.",
+    tag: "Polyester · Aramid · Wedges",
   },
   {
-    name: "Aerospace & Defence",
-    icon: "bi-send-fill",
+    name: "Fans & Blowers",
+    icon: "bi-fan",
     accent: "#f59e0b",
     iconBg: "#fffbeb",
     tagBorder: "#fef3c7",
-    description: "Aramid fiber composites, Nomex paper, and polyimide films for high-reliability applications.",
-    tag: "Aramid · Nomex · Polyimide",
+    description: "Class B and F insulation materials, GARLAM/GAR-FLEX composites, and winding tapes for ceiling and industrial fan manufacturing.",
+    tag: "GARLAM · Class B · Class F",
   },
   {
-    name: "Packaging & Printing",
-    icon: "bi-box-seam-fill",
+    name: "Choke Coils & Reactors",
+    icon: "bi-cpu-fill",
     accent: "#06b6d4",
     iconBg: "#ecfeff",
     tagBorder: "#cffafe",
-    description: "BOPP films, PET films, and nylon laminates for flexible packaging and label printing.",
-    tag: "BOPP · PET · Nylon Films",
+    description: "Conductor insulation, formed insulating components, Aramid paper, and polyester film for choke coils and inductors.",
+    tag: "Aramid · Polyester · Coils",
   },
   {
-    name: "Textiles & Apparel",
-    icon: "bi-scissors",
+    name: "Switchgear & Panels",
+    icon: "bi-toggles",
     accent: "#ec4899",
     iconBg: "#fdf2f8",
     tagBorder: "#fce7f3",
-    description: "Royan threads, acetate tapes, and specialty fibers for textile and apparel manufacturing.",
-    tag: "Royan · Acetate · Fibers",
+    description: "Epoxy sheets, phenolic laminates, and fibre glass sleeving for switchgear, control panels, and bus bar insulation.",
+    tag: "Epoxy · Laminates · Sleeves",
   },
   {
-    name: "Construction & Infrastructure",
-    icon: "bi-building-fill",
+    name: "Pumps & Compressors",
+    icon: "bi-water",
     accent: "#64748b",
     iconBg: "#f1f5f9",
     tagBorder: "#e2e8f0",
-    description: "Epoxy sheets, phenolic laminates, and fiberglass sleeving for structural and electrical use.",
-    tag: "Epoxy · Phenolic · Laminates",
+    description: "Insulation materials for submersible pump motors, compressor motors, and water pump winding applications.",
+    tag: "Submersible · Winding · Tapes",
   },
   {
-    name: "Medical & Healthcare",
-    icon: "bi-heart-pulse-fill",
+    name: "Railways & Traction",
+    icon: "bi-train-front-fill",
     accent: "#ef4444",
     iconBg: "#fef2f2",
     tagBorder: "#fecaca",
-    description: "PTFE products, silicone rubbers, and specialty adhesives for medical device manufacturing.",
-    tag: "PTFE · Silicone · Adhesives",
+    description: "High-performance Nomex paper, polyimide films, and Class H insulation for traction motors and railway electrical systems.",
+    tag: "Nomex · Polyimide · Class H",
   },
   {
-    name: "Energy & Renewables",
+    name: "Renewable Energy",
     icon: "bi-sun-fill",
     accent: "#f97316",
     iconBg: "#fff7ed",
     tagBorder: "#fed7aa",
-    description: "Mica tape, glass cloth, and prepreg materials for wind, solar, and battery applications.",
-    tag: "Mica · Glass Cloth · Prepreg",
+    description: "Insulation materials for wind turbine generators, solar inverter transformers, and battery management system applications.",
+    tag: "Wind · Solar · Inverters",
   },
   {
-    name: "Chemicals & Pharma",
-    icon: "bi-flask-fill",
+    name: "Automotive & EV",
+    icon: "bi-car-front-fill",
     accent: "#14b8a6",
     iconBg: "#f0fdfa",
     tagBorder: "#ccfbf1",
-    description: "Chemical-resistant PTFE, nylon films, and resin systems for process and pharmaceutical industry.",
-    tag: "PTFE · Nylon · Resins",
+    description: "Thermal insulation, fire-retardant sleeves, and high-temperature materials for EV motors and automotive electrical systems.",
+    tag: "EV Motors · Thermal · FR Sleeve",
   },
   {
-    name: "Industrial Manufacturing",
-    icon: "bi-gear-fill",
+    name: "Motor Rewinding Shops",
+    icon: "bi-wrench-adjustable",
     accent: "#6366f1",
     iconBg: "#eef2ff",
     tagBorder: "#e0e7ff",
-    description: "Comprehensive range of insulation, films, and slitting job work for all manufacturing sectors.",
-    tag: "Tapes · Films · Job Work",
+    description: "Complete rewinding materials — varnish, slot liners, lacing thread, rayon tape, cotton tape, and fibre glass wire for service workshops.",
+    tag: "Varnish · Thread · Tapes",
   },
   {
-    name: "Transformers & Coils",
-    icon: "bi-plugin",
+    name: "Heavy Engineering",
+    icon: "bi-building-fill",
     accent: "#0ea5e9",
     iconBg: "#f0f9ff",
     tagBorder: "#bae6fd",
-    description: "Kraft paper, crepe tape, cotton tape, and impregnating varnish for transformer winding.",
-    tag: "Kraft · Varnish · Cotton Tape",
+    description: "Bulk insulation materials for heavy-duty motor and transformer manufacturing in steel, cement, and process industries.",
+    tag: "Bulk Supply · Industrial · OEM",
   },
 ];
 
@@ -122,11 +122,12 @@ const Industries = () => {
         {/* Header */}
         <AnimateOnScroll animation="fadeUp">
           <div className={styles.sectionHeader}>
-            <div className={styles.eyebrow}>Sectors We Serve</div>
-            <h2 className={styles.sectionTitle}>Industries We Power</h2>
+            <div className={styles.eyebrow}>Industries We Serve</div>
+            <h2 className={styles.sectionTitle}>Where Our Insulation Materials Are Used</h2>
             <p className={styles.sectionDescription}>
-              From electrical insulation to aerospace composites — our specialty
-              materials reach the world&apos;s most demanding industries.
+              From motor rewinding workshops to heavy engineering OEMs — our
+              electrical insulation materials power industries that keep the
+              world running.
             </p>
           </div>
         </AnimateOnScroll>
@@ -182,10 +183,11 @@ const Industries = () => {
         <AnimateOnScroll animation="fadeUp">
           <div className={styles.ctaBanner}>
             <div className={styles.ctaInner}>
-              <h3>Don&apos;t See Your Industry?</h3>
+              <h3>Don&apos;t See Your Application?</h3>
               <p>
-                We supply specialty materials to virtually every manufacturing
-                sector. Contact us and we&apos;ll find the right solution for you.
+                We supply insulation materials for virtually every electrical
+                and industrial application. Contact us with your requirements
+                and we&apos;ll recommend the right material.
               </p>
               <Link href="/contact" className={styles.ctaBtn}>
                 Talk to Our Experts →

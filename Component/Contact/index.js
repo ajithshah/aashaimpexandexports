@@ -55,9 +55,10 @@ const Contact = () => {
       <div className={styles.container}>
         <AnimateOnScroll animation="fadeUp">
           <div className={styles.contactHeader}>
-            <h2 className={styles.sectionTitle}>Let's Work Together</h2>
+            <h2 className={styles.sectionTitle}>Get in Touch</h2>
             <p className={styles.sectionDescription}>
-              Reach out for tailored import-export solutions that fit your needs.
+              Need insulation materials? Request a quote or ask about our
+              products and services.
             </p>
           </div>
         </AnimateOnScroll>
@@ -142,7 +143,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className={styles.textarea}
-                  placeholder="Tell us about your import-export needs..."
+                  placeholder="Tell us about your insulation material requirements..."
                   rows="5"
                 ></textarea>
               </div>
@@ -181,9 +182,9 @@ const Contact = () => {
                 <div>
                   <strong>Office:</strong>
                   <br />
-                  24, Sembudoss Street, Parry's Corner, George Town,
+                  No.24, Sembudoss Street, Broadway,
                   <br />
-                  Chennai, Tamil Nadu 600001
+                  Chennai - 600 001
                 </div>
               </div>
               <div className={styles.infoItem}>
@@ -196,9 +197,11 @@ const Contact = () => {
                 <div>
                   <strong>Phone:</strong>
                   <br />
-                  +91 9444184855
+                  +91 94444 55626
                   <br />
-                  +91 8122816789
+                  +91 94441 84855
+                  <br />
+                  +91 81228 16789
                 </div>
               </div>
               <div className={styles.infoItem}>

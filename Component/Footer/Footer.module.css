@@ -8,7 +8,7 @@
   color: #1e293b;
   padding: 80px 20px 30px;
   overflow: hidden;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-body);
   border-top: 1px solid #e2e8f0;
 }
 
@@ -57,7 +57,7 @@
 ========================= */
 
 .logoText {
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 700;
   color: #1e293b;
@@ -73,7 +73,7 @@
   margin-top: 15px;
   color: #64748b;
   line-height: 1.6;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-body);
 }
 
 /* =========================
@@ -81,7 +81,7 @@
 ========================= */
 
 .sectionTitle {
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.1rem;
   margin-bottom: 20px;
   font-weight: 600;
@@ -117,7 +117,7 @@
   margin-bottom: 12px;
   transition: 0.3s ease;
   position: relative;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-body);
 }
 
 .footerLink:hover {
@@ -141,7 +141,7 @@
   gap: 10px;
   font-size: 0.95rem;
   color: #475569;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-body);
 }
 
 .contactItem i {
@@ -178,7 +178,7 @@
   margin: 0;
   color: #64748b;
   font-size: 0.9rem;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-body);
 }
 
 .bottomLinks {
@@ -193,7 +193,7 @@
   cursor: pointer;
   font-size: 0.9rem;
   transition: 0.3s;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-body);
 }
 
 .bottomLink:hover {
@@ -209,7 +209,7 @@
   margin-top: 25px;
   font-size: 0.85rem;
   color: #64748b;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-body);
 }
 
 .developerLink {
@@ -240,7 +240,7 @@
   color: #1e293b;
   text-decoration: none;
   transition: 0.3s;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-body);
   background: #ffffff;
 }
 

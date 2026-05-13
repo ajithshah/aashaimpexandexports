@@ -5,6 +5,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Header from "@/Component/Header";
 import Footer from "@/Component/Footer";
 import WhatsAppFab from "@/Component/WhatsAppFab";
+import Maintenance from "@/Component/Maintenance";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -30,14 +31,15 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <Header />
+      {/* <Header />
       <div
         className={`page-transition ${isTransitioning ? "page-exit" : "page-enter"}`}
       >
         <Component {...pageProps} />
       </div>
       <Footer />
-      <WhatsAppFab />
+      <WhatsAppFab /> */}
+<Maintenance/>
     </>
   );
 }

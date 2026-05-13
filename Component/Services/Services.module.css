@@ -36,7 +36,7 @@
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--font-heading);
   text-transform: uppercase;
   letter-spacing: 2px;
   background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
@@ -51,7 +51,7 @@
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-body);
 }
 
 .servicesGrid {
@@ -100,7 +100,7 @@
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 1rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .serviceDescription {
@@ -180,7 +180,7 @@
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 1rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .ctaDescription {

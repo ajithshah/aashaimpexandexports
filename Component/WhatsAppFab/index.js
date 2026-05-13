@@ -12,8 +12,8 @@ const WhatsAppFab = () => {
     if (typeof window === "undefined") return;
 
     // Replace with your WhatsApp business number (include country code without + symbol)
-    const phoneNumber = "919444184855"; // Updated to match footer number
-    const message = "Hello! I'm interested in your import-export services.";
+    const phoneNumber = "919444455626";
+    const message = "Hello! I'm interested in your electrical insulation materials.";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappURL, "_blank", "noopener,noreferrer");

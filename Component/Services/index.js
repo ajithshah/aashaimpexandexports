@@ -5,51 +5,51 @@ import styles from "./Services.module.css";
 const Services = () => {
   const services = [
     {
-      icon: "🚢",
-      title: "Import Services",
+      icon: "�",
+      title: "Insulation Material Supply",
       description:
-        "Comprehensive import solutions with customs clearance, documentation, and logistics support for seamless international procurement.",
+        "Complete range of electrical insulation materials — Polyester Films, Aramid Papers, Kraft Paper, DMD/FPF Laminates, and Presspahn for motors, transformers, and generators.",
       features: [
-        "Customs Clearance",
-        "Documentation",
-        "Quality Inspection",
-        "Warehousing",
+        "Polyester Films (Class F)",
+        "Aramid & Nomex Papers",
+        "DMD/FPF Laminates",
+        "Kraft & Presspahn Paper",
       ],
     },
     {
-      icon: "📦",
-      title: "Export Services",
+      icon: "🧪",
+      title: "Insulating Varnishes & Coatings",
       description:
-        "End-to-end export management including market research, documentation, shipping, and compliance with international trade regulations.",
+        "Authorised stockist of ELANTAS and A-SEAL insulating varnishes for motor rewinding, transformer impregnation, and coil protection applications.",
       features: [
-        "Market Research",
-        "Export Documentation",
-        "Shipping Coordination",
-        "Compliance Support",
+        "ELANTAS Elmo Luft Varnish",
+        "ELANTAS ISONEL 31J",
+        "A-SEAL Fast Drying Varnish",
+        "Thinners & Solvents",
       ],
     },
     {
-      icon: "🚛",
-      title: "Logistics & Supply Chain",
+      icon: "✂️",
+      title: "Precision Slitting Services",
       description:
-        "Integrated logistics solutions with warehousing, transportation, and supply chain management for efficient global distribution.",
+        "Custom slitting, roll-to-sheet cutting, punching, and shaping services using German technology for films, foils, BOPP/LDPE, and all types of papers.",
       features: [
-        "Warehousing",
-        "Transportation",
-        "Supply Chain",
-        "Inventory Management",
+        "Film & Tape Slitting",
+        "Roll-to-Sheet Cutting",
+        "Custom Punching & Shaping",
+        "Width from 5mm onwards",
       ],
     },
     {
-      icon: "💼",
-      title: "Trade Consulting",
+      icon: "🛡️",
+      title: "Tapes & Sleeves Supply",
       description:
-        "Expert trade consulting services including market analysis, regulatory compliance, and strategic business development support.",
+        "Wide range of insulation tapes and protective sleeves — Rubber Compound Tape, Rayon Tape, Polyester Tape, Fibre Glass Sleeves, and Fire Retardant Sleeves.",
       features: [
-        "Market Analysis",
-        "Regulatory Compliance",
-        "Business Development",
-        "Risk Assessment",
+        "Rubber Compound Tapes",
+        "Pink Rayon & Cotton Tapes",
+        "Fibre Glass Sleeves (PU/Silicone)",
+        "Polyimide & Polyester Tapes",
       ],
     },
   ];
@@ -58,10 +58,10 @@ const Services = () => {
     <section id="services" className={styles.services}>
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Our Services</h2>
+          <h2 className={styles.sectionTitle}>What We Offer</h2>
           <p className={styles.sectionDescription}>
-            Comprehensive import-export solutions tailored to meet your global
-            business needs
+            Your one-stop source for electrical insulation materials, varnishes,
+            precision slitting services, and industrial tapes
           </p>
         </div>
 
@@ -95,18 +95,19 @@ const Services = () => {
         <div className={styles.servicesCTA}>
           <div className={styles.ctaContent}>
             <h3 className={styles.ctaTitle}>
-              Ready to Start Your Global Journey?
+              Looking for Quality Insulation Materials?
             </h3>
             <p className={styles.ctaDescription}>
-              Contact us today to discuss your import-export requirements and
-              discover how we can help grow your international business.
+              Contact us today to discuss your insulation material requirements.
+              We maintain ready stock and can fulfil bulk orders quickly across
+              India.
             </p>
             <div className={styles.ctaActions}>
               <Link href="/contact" className={styles.primaryBtn}>
-                Get Started
+                Get a Quote
               </Link>
-              <Link href="/about" className={styles.secondaryBtn}>
-                Learn About Us
+              <Link href="/products" className={styles.secondaryBtn}>
+                View All Products
               </Link>
             </div>
           </div>

@@ -38,7 +38,7 @@
 
 .ctaTitle {
   font-size: clamp(2rem, 4vw, 3rem);
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.5rem;

@@ -34,7 +34,7 @@ const Footer = () => {
                 <span className={styles.logoAccent}> IMPEX & EXPORTS</span>
               </h3>
               <p className={styles.logoDescription}>
-                Empowering Global Trade with Quality and Reliability
+                House of Electrical Insulation — Trusted Since 1972
               </p>
             </div>
             <div className={styles.socialLinks}>
@@ -77,19 +77,19 @@ const Footer = () => {
           </div>
 
           <div className={styles.footerSection}>
-            <h4 className={styles.sectionTitle}>Services</h4>
+            <h4 className={styles.sectionTitle}>Products</h4>
             <ul className={styles.footerLinks}>
               <li>
-                <span className={styles.serviceItem}>Import Services</span>
+                <span className={styles.serviceItem}>Polyester Films</span>
               </li>
               <li>
-                <span className={styles.serviceItem}>Export Services</span>
+                <span className={styles.serviceItem}>Insulating Varnishes</span>
               </li>
               <li>
-                <span className={styles.serviceItem}>Logistics</span>
+                <span className={styles.serviceItem}>Aramid & Nomex Paper</span>
               </li>
               <li>
-                <span className={styles.serviceItem}>Trade Consulting</span>
+                <span className={styles.serviceItem}>Fibre Glass Sleeves</span>
               </li>
             </ul>
           </div>
@@ -100,20 +100,24 @@ const Footer = () => {
               <p className={styles.contactItem}>
                 <i className="bi bi-geo-alt-fill"></i>
                 <span>
-                  24, Sembudoss Street, Parry's Corner, George Town,
+                  No.24, Sembudoss Street, Broadway,
                   <br />
-                  Chennai, Tamil Nadu 600001
+                  Chennai - 600 001
                 </span>
               </p>
               <p className={styles.contactItem}>
                 <i className="bi bi-telephone-fill"></i>
                 <span>
+                  <a href="tel:+919444455626" className={styles.phoneLink}>
+                    +91 94444 55626
+                  </a>
+                  <br />
                   <a href="tel:+919444184855" className={styles.phoneLink}>
-                    +91 9444184855
+                    +91 94441 84855
                   </a>
                   <br />
                   <a href="tel:+918122816789" className={styles.phoneLink}>
-                    +91 8122816789
+                    +91 81228 16789
                   </a>
                 </span>
               </p>
