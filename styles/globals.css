@@ -8,8 +8,8 @@
 /* ================= ROOT VARIABLES ================= */
 
 :root {
-  --font-heading: 'Orbitron', sans-serif;
-  --font-body: 'Rajdhani', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
 
   --primary-blue: #3b82f6;
   --primary-sky: #0ea5e9;
@@ -39,6 +39,32 @@
   --logo-accent: #3b82f6;
   --logo-secondary: #0ea5e9;
   --white-pure: #ffffff;
+
+  /* ---- Redesign tokens ---- */
+  --accent-blue: #3b82f6;
+  --accent-sky: #0ea5e9;
+  --accent-indigo: #6366f1;
+  --accent-amber: #f59e0b;            /* heritage micro-accent only */
+  --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 60%, #6366f1 100%);
+
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --surface-3: #f1f5f9;
+  --hairline: #e2e8f0;
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+
+  --shadow-soft: 0 4px 20px rgba(2, 6, 23, 0.06);
+  --shadow-raise: 0 14px 40px rgba(59, 130, 246, 0.14);
+  --section-pad: clamp(4.5rem, 9vw, 7rem);
+
+  /* ParticleField (light theme) */
+  --pf-bg: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59, 130, 246, 0.10), transparent 70%), linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+  --pf-dot: rgba(59, 130, 246, 0.55);
+  --pf-line: rgba(59, 130, 246, 0.18);
+  --pf-glow: rgba(14, 165, 233, 0.9);
 }
 
 /* ================= GLOBAL RESET ================= */

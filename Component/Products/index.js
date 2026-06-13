@@ -126,7 +126,7 @@ const Products = () => {
       title: "Fire Retardant Fiberglass Sleeves",
       description:
         "Heat-resistant braided fiberglass sleeving for wire and cable protection in high-temperature electrical and industrial environments.",
-      image: "/product/17.jpg",
+      image: "/product/fire-retardant-fiberglass-sleeves.jpeg",
       alt: "Heat-resistant braided fiberglass sleeving – fire retardant wire protection sleeve India",
       link: "/contact",
     },
