@@ -18,7 +18,7 @@ const productItems = [
   { name: "Webbing Tape", image: "/product/13.jpeg", description: "Woven webbing tape for electrical insulation wrapping and coil binding." },
   { name: "PressBoard", image: "/product/15.png", description: "High-density electrical pressboard sheets for transformer insulation." },
   { name: "Epoxy Sheet", image: "/product/16.jpeg", description: "Glass-reinforced epoxy laminate sheets (FR4/G10) for electrical insulation." },
-  { name: "Fire Retardant Fiberglass Sleeves", image: "/product/17.jpg", description: "Heat-resistant braided fiberglass sleeving for wire and cable protection." },
+  { name: "Fire Retardant Fiberglass Sleeves", image: "/product/fire-retardant-fiberglass-sleeves.jpeg", description: "Heat-resistant braided fiberglass sleeving for wire and cable protection." },
 ];
 
 const productListSchema = {

@@ -197,8 +197,6 @@ const Contact = () => {
                 <div>
                   <strong>Phone:</strong>
                   <br />
-                  +91 94444 55626
-                  <br />
                   +91 94441 84855
                   <br />
                   +91 81228 16789

@@ -34,7 +34,7 @@ const Footer = () => {
                 <span className={styles.logoAccent}> IMPEX & EXPORTS</span>
               </h3>
               <p className={styles.logoDescription}>
-                House of Electrical Insulation — Trusted Since 1972
+                House of Best Quality Electrical Insulation — Trusted Since 1972
               </p>
             </div>
             <div className={styles.socialLinks}>
@@ -86,7 +86,7 @@ const Footer = () => {
                 <span className={styles.serviceItem}>Insulating Varnishes</span>
               </li>
               <li>
-                <span className={styles.serviceItem}>Aramid & Nomex Paper</span>
+                <span className={styles.serviceItem}>Aramid & DMD</span>
               </li>
               <li>
                 <span className={styles.serviceItem}>Fibre Glass Sleeves</span>
@@ -108,10 +108,6 @@ const Footer = () => {
               <p className={styles.contactItem}>
                 <i className="bi bi-telephone-fill"></i>
                 <span>
-                  <a href="tel:+919444455626" className={styles.phoneLink}>
-                    +91 94444 55626
-                  </a>
-                  <br />
                   <a href="tel:+919444184855" className={styles.phoneLink}>
                     +91 94441 84855
                   </a>
@@ -143,14 +139,14 @@ const Footer = () => {
               Exports. All rights reserved.
             </p>
           </div>
-          <div className={styles.bottomLinks}>
+          {/* <div className={styles.bottomLinks}>
             <button onClick={openPrivacyModal} className={styles.bottomLink}>
               Privacy Policy
             </button>
             <button onClick={openTermsModal} className={styles.bottomLink}>
               Terms of Service
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className={styles.developerCredit}>

@@ -74,7 +74,7 @@ const Header = () => {
             </a>
             <a href="tel:+919444455626" className={styles.topBarLink}>
               <i className="bi bi-telephone-fill"></i>
-              <span>+91 94444 55626</span>
+              <span>+91 94441 84855</span>
             </a>
           </div>
           <div className={styles.topBarRight}>

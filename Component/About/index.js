@@ -7,8 +7,8 @@ import styles from "./About.module.css";
 const About = () => {
   const stats = [
     { number: "50+", label: "Years in Business", icon: "bi-award" },
-    { number: "500+", label: "Loyal Customers", icon: "bi-people" },
-    { number: "15+", label: "Product Lines", icon: "bi-box-seam" },
+    { number: "1000+", label: "Loyal Customers", icon: "bi-people" },
+    { number: "25+", label: "Product Lines", icon: "bi-box-seam" },
     { number: "100%", label: "Quality Commitment", icon: "bi-shield-check" },
   ];
 
@@ -73,7 +73,7 @@ const About = () => {
                 Trusted Insulation Partners Since 1972
               </h2>
               <h3 className={styles.subtitle}>
-                House of Electrical Insulation — Based in Chennai, India
+                House of Best Quality Electrical Insulation — Based in Chennai, India
               </h3>
               <p className={styles.description}>
                 At A A SHA IMPEX AND EXPORTS, quality isn&apos;t just a promise — it&apos;s

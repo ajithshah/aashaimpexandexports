@@ -1,0 +1,31 @@
+.wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--pf-bg);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Static fallback for reduced motion / no-JS: soft gradient only */
+.fallback {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 22% 30%, rgba(59, 130, 246, 0.10), transparent 45%),
+    radial-gradient(circle at 78% 65%, rgba(14, 165, 233, 0.10), transparent 45%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .canvas {
+    display: none;
+  }
+}
