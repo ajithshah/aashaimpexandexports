@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Contact from "@/Component/Contact";
 import Meta from "@/Component/Meta";
 
@@ -71,21 +70,8 @@ export default function ContactPage() {
           { name: "Home", path: "/" },
           { name: "Contact", path: "/contact" },
         ]}
+        additionalSchemas={[contactPageSchema, localBusinessSchema]}
       />
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(contactPageSchema),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
-          }}
-        />
-      </Head>
       <main className="flex-grow-1">
         <Contact />
       </main>

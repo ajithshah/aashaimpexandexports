@@ -16,6 +16,7 @@ const Meta = ({
   siteName = "A A Sha Impex and Exports",
   breadcrumb = null,
   productSchema = null,
+  additionalSchemas = [],
 }) => {
   const absoluteImage = image.startsWith("http") ? image : `${BASE_URL}${image}`;
   const absoluteImages = images.map((img) =>
@@ -69,7 +70,7 @@ const Meta = ({
     sameAs: [
       "https://www.facebook.com/aashaimpexandexports",
       "https://www.instagram.com/aashaimpexandexports",
-      "https://www.linkedin.com/company/aashaimpexandexports",
+      "https://www.linkedin.com/in/a-a-sha-impex-and-exports-b493293a1/",
     ],
   };
 
@@ -100,6 +101,19 @@ const Meta = ({
     isPartOf: { "@id": `${BASE_URL}/#website` },
     about: { "@id": `${BASE_URL}/#organization` },
     inLanguage: "en-IN",
+  };
+
+  const siteNavigationSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Main Site Navigation",
+    itemListElement: [
+      { "@type": "SiteNavigationElement", position: 1, name: "Home", url: `${BASE_URL}/` },
+      { "@type": "SiteNavigationElement", position: 2, name: "About Us", url: `${BASE_URL}/about` },
+      { "@type": "SiteNavigationElement", position: 3, name: "Products", url: `${BASE_URL}/products` },
+      { "@type": "SiteNavigationElement", position: 4, name: "Industries", url: `${BASE_URL}/industries` },
+      { "@type": "SiteNavigationElement", position: 5, name: "Contact", url: `${BASE_URL}/contact` },
+    ],
   };
 
   const breadcrumbSchema = breadcrumb
@@ -226,6 +240,17 @@ const Meta = ({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
         />
       )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationSchema) }}
+      />
+      {additionalSchemas.map((schema, i) => (
+        <script
+          key={`schema-extra-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </Head>
   );
 };

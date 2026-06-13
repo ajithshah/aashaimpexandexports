@@ -1,13 +1,14 @@
 {
   "name": "A A Sha Impex and Exports",
   "short_name": "AAShaImpex",
-  "description": "A A Sha Impex and Exports connects global markets with quality products and reliable import-export solutions. Based in India, we specialize in sourcing, exporting, and importing a wide range of goods worldwide.",
+  "description": "Authorised Importer and Stockist of Electrical Insulation Materials since 1972. Polyester Films, Aramid Papers, ELANTAS Varnishes, Fibre Glass Sleeves, and more. Based in Chennai, India.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#38bdf8",
-  "theme_color": "#38bdf8",
+  "background_color": "#3b82f6",
+  "theme_color": "#3b82f6",
   "orientation": "portrait",
   "lang": "en-IN",
+  "categories": ["shopping", "business"],
   "icons": [
     {
       "src": "/logo.png",
