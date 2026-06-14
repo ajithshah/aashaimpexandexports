@@ -63,11 +63,11 @@ export default function Maintenance() {
           </p>
 
           <div className={styles.contactLinks}>
-            <a href="tel:+919444455626" className={styles.contactBtn}>
+            <a href="tel:+918122816789" className={styles.contactBtn}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.16 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              +91 94441 84855
+              +91 81228 16789
             </a>
 
             <a href="mailto:aashaimpexandexports@gmail.com" className={styles.contactBtn}>

@@ -72,9 +72,9 @@ const Header = () => {
               <i className="bi bi-envelope-fill"></i>
               <span>aashaimpexandexports@gmail.com</span>
             </a>
-            <a href="tel:+919444455626" className={styles.topBarLink}>
+            <a href="tel:+918122816789" className={styles.topBarLink}>
               <i className="bi bi-telephone-fill"></i>
-              <span>+91 94441 84855</span>
+              <span>+91 81228 16789</span>
             </a>
           </div>
           <div className={styles.topBarRight}>
