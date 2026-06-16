@@ -157,7 +157,7 @@ const Industries = () => {
         {/* Grid */}
         <div className={styles.industriesGrid}>
           {industries.map((industry, index) => (
-            <AnimateOnScroll key={index} animation="fadeUp" delay={index * 60}>
+            <AnimateOnScroll key={index} animation="fadeUp" delay={index * 60} className={styles.gridItem}>
               <div
                 className={styles.industryCard}
                 style={{

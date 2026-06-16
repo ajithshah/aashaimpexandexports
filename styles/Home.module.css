@@ -486,9 +486,15 @@
   margin-top: clamp(2rem, 4vw, 3rem);
 }
 
+.servicesGrid > * {
+  display: flex;
+  flex-direction: column;
+}
+
 .serviceCard {
   display: flex;
   flex-direction: column;
+  flex: 1;
   padding: 2rem 1.5rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--hairline);
