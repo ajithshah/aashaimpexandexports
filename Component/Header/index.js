@@ -80,7 +80,7 @@ const Header = () => {
           <div className={styles.topBarRight}>
             <span className={styles.topBarTag}>
               <i className="bi bi-globe2"></i>
-              House of Electrical Insulation • Since 1972
+              House of Best Quality Electrical Insulation • Since 1972
             </span>
           </div>
         </div>
