@@ -6,7 +6,7 @@ import styles from "@/styles/Home.module.css";
 
 const PRODUCT_CATS = [
   {
-    img: "/product/.jpg",
+    img: "/hemo-product/polyester-tape.jpg",
     name: "Polyester Films",
     sub: "JBF and Garware",
   },
