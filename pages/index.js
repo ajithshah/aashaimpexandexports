@@ -15,11 +15,11 @@ const PRODUCT_CATS = [
   },
   {
     img: "/home-page-image/insulating-varnish-elantas.png",
-    name: "Insulating Varnish",
+    name: "Insulating Varnish (ELANTAS)",
   },
   {
     img: "/home-page-image/aerotherm-nomex-apa.png",
-    name: "Aerotherm Nomex (APA)",
+    name: "AAEROTHERM® Nomex (APA)",
   },
   {
     img: "/home-page-image/dmd-film.png",
@@ -27,15 +27,15 @@ const PRODUCT_CATS = [
   },
   {
     img: "/home-page-image/fiberglass-sleeves.jpg",
-    name: "Fire Retardant Fiberglass Sleeves",
+    name: "Fiberglass Sleeves",
   },
   {
     img: "/home-page-image/h-class-pure-aramid-paper.png",
-    name: "Aramid Papers",
+    name: "H Class pure Aramid Papers",
   },
   {
-    img: "/home-page-image/epoxy-gel-coat-red.png",
-    name: "Epoxy Gel Coat (Red)",
+    img: "/home-page-image/h-class-fiberglass-tape.png",
+    name: "H class Fiberglass Tape",
   }
 
 ];
