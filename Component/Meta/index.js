@@ -35,6 +35,7 @@ const Meta = ({
       width: 200,
       height: 60,
     },
+    image: `${BASE_URL}/logo.png`,
     description:
       "Authorised Importer and Stockist of Electrical Insulation Materials since 1972. Polyester Films, Aramid Papers, Insulating Varnishes, Fibre Glass Sleeves, DMD/FPF Laminates, and more. Based in Chennai, India.",
     telephone: "+91-9444455626",
@@ -100,6 +101,10 @@ const Meta = ({
     description,
     isPartOf: { "@id": `${BASE_URL}/#website` },
     about: { "@id": `${BASE_URL}/#organization` },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: absoluteImage,
+    },
     inLanguage: "en-IN",
   };
 
