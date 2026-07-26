@@ -633,14 +633,14 @@
    CTA — LET'S WORK TOGETHER
    Parallax background + gradient overlay
 ===================================================== */
-
+ 
 .ctaSection {
   position: relative;
   padding: clamp(5.5rem, 10vw, 8rem) 0;
   overflow: hidden;
   background-image:
     linear-gradient(rgba(15, 23, 42, 0.91), rgba(15, 23, 42, 0.91)),
-    url('/product/16.jpeg');
+    url('/hemo-product/16.jpeg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;

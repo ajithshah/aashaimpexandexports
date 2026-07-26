@@ -64,7 +64,7 @@ export default function ContactPage() {
         keywords="contact A A Sha Impex, insulation materials quote Chennai, buy polyester film Chennai, buy varnish ELANTAS India, insulation materials inquiry, fibre glass sleeve supplier contact, motor insulation quote, Chennai insulation supplier, Broadway Chennai"
         url="https://aashaimpexandexports.com/contact"
         image="/product/Sample01.jpg"
-        images={["/product/01.jpg", "/product/09.jpeg"]}
+        images={["/hemo-product/01.jpg", "/product/09.jpeg"]}
         siteName="A A Sha Impex and Exports"
         breadcrumb={[
           { name: "Home", path: "/" },

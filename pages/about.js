@@ -10,7 +10,7 @@ export default function AboutPage() {
         keywords="about A A Sha Impex, electrical insulation company Chennai, insulation materials supplier India, trusted since 1972, motor insulation stockist, transformer insulation dealer, polyester film dealer Chennai"
         url="https://aashaimpexandexports.com/about"
         image="/product/Sample01.jpg"
-        images={["/product/01.jpg", "/product/Polyimide.jpg"]}
+        images={["/hemo-product/01.jpg", "/hemo-product/Polyimide.jpg"]}
         siteName="A A Sha Impex and Exports"
         breadcrumb={[
           { name: "Home", path: "/" },

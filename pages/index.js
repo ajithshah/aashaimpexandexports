@@ -6,6 +6,18 @@ import styles from "@/styles/Home.module.css";
 
 const PRODUCT_CATS = [
   {
+    img: "/home-page/polyester-film-milky-white.png",
+    name: "Polyester Film Milky White",
+  },
+  {
+    img: "/home-page/insulating-kraft-paper.png",
+    name: "Insulating Kraft Paper",
+  },
+  {
+    img: "/home-page/group.png",
+    name: "Insulating Varnish",
+  },
+  {
     img: "/home-page/aerotherm-nomex.png",
     name: "Aerotherm Nomex",
   },
@@ -14,77 +26,20 @@ const PRODUCT_CATS = [
     name: "DMD Film",
   },
   {
-    img: "/home-page/elantas.png",
-    name: "Elantas",
-  },
-  {
-    img: "/home-page/elmo-luft-a1-golden-225ml.png",
-    name: "Elmo Luft A1 Golden 225ml",
-  },
-  {
-    img: "/home-page/elmo-luft-1a-golden-900ml.png",
-    name: "Elmo Luft 1A Golden 900ml",
-  },
-  {
-    img: "/home-page/elmotherm-h71.png",
-    name: "Elmotherm H71",
-  },
-  {
-    img: "/home-page/epoxy-gel-coat-red.png",
-    name: "Epoxy Gel Coat (Red)",
-  },
-  {
-    img: "/home-page/epoxy-slot-wedges.png",
-    name: "Epoxy Slot Wedges",
-  },
-  {
-    img: "/home-page/f93-component-a.png",
-    name: "F93 Component A",
-  },
-  {
-    img: "/home-page/f93-component-b.png",
-    name: "F93 Component B",
-  },
-  {
-    img: "/home-page/garlam-insulation-paper.png",
-    name: "Garlam Insulation Paper",
+    img: "/home-page/thinner-234.png",
+    name: "Thinner 234",
   },
   {
     img: "/home-page/heat-shrink-sleeves.png",
     name: "Heat Shrink Sleeves",
   },
+
+
   {
-    img: "/home-page/isonel-51j.png",
-    name: "Isonel 51J",
-  },
-  {
-    img: "/home-page/insulating-kraft-paper.png",
-    name: "Insulating Kraft Paper",
-  },
-  {
-    img: "/home-page/polyester-film-milky-white.png",
-    name: "Polyester Film Milky White",
-  },
-  {
-    img: "/home-page/polyester-film-slitted.png",
-    name: "Polyester Film Slitted",
-  },
-  {
-    img: "/home-page/polyester-film-transparent-slitted.png",
-    name: "Polyester Film Transparent Slitted",
-  },
-  {
-    img: "/home-page/rayon-winding-thread.png",
-    name: "Rayon Winding Thread",
-  },
-  {
-    img: "/home-page/tinned-copper-fiberglass-cable.png",
-    name: "Tinned Copper Fiberglass Cable",
-  },
-  {
-    img: "/home-page/thinner-234.png",
-    name: "Thinner 234",
-  },
+    img: "/home-page/epoxy-gel-coat-red.png",
+    name: "Epoxy Gel Coat (Red)",
+  }
+
 ];
 
 const INDUSTRIES = [
@@ -145,8 +100,8 @@ export default function Home() {
         description="A A Sha Impex and Exports is a leading supplier and exporter of electrical insulation materials, specialty films, industrial tapes, BOPP films, PET films, polyimide films, and Nomex paper from India. 50+ years of trusted global trade."
         keywords="electrical insulation materials India, specialty films supplier India, BOPP films exporter, PET films supplier, polyimide films Kapton India, Nomex paper supplier, industrial tapes exporter India, insulation varnish supplier, ELANTAS resins India, mica tape supplier, A A Sha Impex, specialty materials export India"
         url="https://aashaimpexandexports.com"
-        image="/product/01.jpg"
-        images={["/product/09.jpeg", "/product/17.jpg", "/product/Polyimide.jpg"]}
+        image="/hemo-product/01.jpg"
+        images={["/product/09.jpeg", "/hemo-product/17.jpg", "/hemo-product/Polyimide.jpg"]}
         siteName="A A Sha Impex and Exports"
         breadcrumb={[{ name: "Home", path: "/" }]}
       />

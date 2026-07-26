@@ -100,6 +100,10 @@
   color: #ffffff;
 }
 
+.t1Accent {
+  color: #fbbf24;
+}
+
 .t2 {
   display: block;
   font-size: clamp(1.6rem, 2.8vw, 2.6rem);

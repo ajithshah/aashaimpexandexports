@@ -10,7 +10,7 @@ const contactDetails = [
     label: "Office Address",
     lines: [
       "No.24, Sembudoss Street, Broadway,",
-      "Chennai – 600 001, Tamil Nadu",
+      "Chennai - 600 001, Tamil Nadu",
     ],
     accent: "#3b82f6",
     glow: "rgba(59,130,246,0.15)",

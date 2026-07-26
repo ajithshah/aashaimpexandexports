@@ -86,7 +86,7 @@ const Hero = () => {
           </div>
 
           <h1 className={styles.title}>
-            <span className={styles.t1}>A.A. SHA IMPEX&amp; EXPORTS</span>
+            <span className={styles.t1}>A.A. SHA <span className={styles.t1Accent}>IMPEX&amp;EXPORTS</span></span>
 
           </h1>
 
