@@ -335,7 +335,7 @@
   overflow: hidden;
   background-image:
     linear-gradient(rgba(2, 6, 23, 0.86), rgba(2, 6, 23, 0.86)),
-    url('/product/Sample01.jpg');
+    url('/hero/hero-3.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -640,7 +640,7 @@
   overflow: hidden;
   background-image:
     linear-gradient(rgba(15, 23, 42, 0.91), rgba(15, 23, 42, 0.91)),
-    url('/hemo-product/16.jpeg');
+    url('/hero/hero-2.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
