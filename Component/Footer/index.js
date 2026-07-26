@@ -135,7 +135,7 @@ const Footer = () => {
         <div className={styles.footerBottom}>
           <div className={styles.copyright}>
             <p>
-              &copy; {isClient ? currentYear : "2025"} A A Sha Impex and
+              &copy; {isClient ? currentYear : "2025"} A A Sha Impex &
               Exports. All rights reserved.
             </p>
           </div>

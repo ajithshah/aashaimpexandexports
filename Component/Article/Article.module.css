@@ -1,0 +1,292 @@
+/* ================================================================
+   ARTICLE — EDITORIAL HOLOGRAPHIC  |  unified design system
+================================================================ */
+
+/* ── TOKENS ── */
+.article {
+  --h1: #6366f1;
+  --h2: #3b82f6;
+  --h3: #06b6d4;
+  --h4: #10b981;
+  --h5: #8b5cf6;
+  --h6: #ec4899;
+
+  --ink:   #0a0f1e;
+  --ink2:  #1e293b;
+  --muted: #64748b;
+  --card:  #ffffff;
+  --page:  #f8f9fc;
+
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(clamp(5rem, 10vw, 7rem) + var(--header-height, 80px));
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background: var(--page);
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+.article :global(a)::after { display: none; }
+
+/* ── KEYFRAMES ── */
+@keyframes holoShift {
+  0%   { background-position: 0%   center; }
+  100% { background-position: 200% center; }
+}
+@keyframes btnShift {
+  0%   { background-position: 0%   center; }
+  100% { background-position: 250% center; }
+}
+@keyframes blobDrift1 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50%     { transform: translate(-26px,16px) scale(1.06); }
+}
+@keyframes blobDrift2 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50%     { transform: translate(20px,-18px) scale(1.04); }
+}
+@keyframes dotPulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50%     { opacity:.4; transform:scale(1.6); }
+}
+@keyframes shimmerLine {
+  0%   { background-position: 0%   center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── AMBIENT BLOBS ── */
+.bgBlob1, .bgBlob2 {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; filter: blur(100px); z-index: 0;
+}
+.bgBlob1 {
+  width: 650px; height: 650px; top: -160px; right: -120px;
+  background: radial-gradient(circle, rgba(99,102,241,.09), transparent 70%);
+  animation: blobDrift1 22s ease-in-out infinite;
+}
+.bgBlob2 {
+  width: 550px; height: 550px; bottom: 10%; left: -140px;
+  background: radial-gradient(circle, rgba(6,182,212,.08), transparent 70%);
+  animation: blobDrift2 26s ease-in-out infinite;
+}
+
+/* ── CONTAINER ── */
+.container {
+  position: relative; z-index: 2;
+  width: 100%; max-width: 860px; margin: 0 auto;
+}
+
+/* ── HOLO TEXT ── */
+.holoText {
+  background: linear-gradient(
+    90deg,
+    var(--h1) 0%, var(--h2) 18%, var(--h3) 36%,
+    var(--h4) 54%, var(--h5) 72%, var(--h6) 90%, var(--h1) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: holoShift 5s linear infinite;
+}
+
+/* ================================================================
+   HEADER
+================================================================ */
+
+.header {
+  text-align: center;
+  padding: clamp(2rem,5vw,4rem) 0 clamp(1.5rem,3vw,2rem);
+  position: relative;
+}
+
+.headerWatermark {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: var(--font-heading);
+  font-size: clamp(6rem,18vw,15rem); font-weight: 900;
+  letter-spacing: .1em; line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(99,102,241,.06);
+  pointer-events: none; user-select: none; white-space: nowrap;
+}
+
+.headerOverline {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .7rem; font-weight: 700;
+  letter-spacing: .24em; text-transform: uppercase;
+  color: var(--h1); margin-bottom: 1.2rem;
+}
+
+.overlineDot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--h1);
+  animation: dotPulse 2.4s ease-in-out infinite;
+}
+
+.headerTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem,6vw,4.4rem); font-weight: 900;
+  letter-spacing: .04em; text-transform: uppercase;
+  color: var(--ink); line-height: 1.08; margin: 0 0 1rem;
+}
+
+.byline {
+  font-size: .92rem; font-weight: 600;
+  color: var(--muted); margin: 0;
+}
+
+/* ================================================================
+   HERO IMAGE
+================================================================ */
+
+.heroImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  border-radius: 24px;
+  overflow: hidden;
+  margin: clamp(1.5rem,4vw,2.5rem) 0 clamp(2.5rem,5vw,3.5rem);
+  box-shadow: 0 24px 60px rgba(10,15,30,.14);
+}
+
+/* ================================================================
+   ARTICLE BODY
+================================================================ */
+
+.body {
+  margin-bottom: clamp(3rem,6vw,4.5rem);
+}
+
+.lede {
+  font-size: clamp(1.1rem,2vw,1.3rem); line-height: 1.75;
+  color: var(--ink2); font-weight: 500;
+  margin: 0 0 clamp(2rem,4vw,2.6rem);
+}
+
+.subheading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem,2.6vw,1.7rem); font-weight: 800;
+  letter-spacing: .02em;
+  color: var(--ink); margin: 0 0 .9rem;
+}
+
+.bodyText {
+  font-size: 1rem; line-height: 1.85;
+  color: var(--ink2);
+  margin: 0 0 clamp(2rem,4vw,2.6rem);
+}
+
+.pullQuote {
+  position: relative;
+  margin: clamp(2rem,4vw,2.8rem) 0;
+  padding: clamp(1.5rem,3vw,2rem) clamp(1.5rem,3vw,2.2rem);
+  border-left: 4px solid var(--h1);
+  background: linear-gradient(90deg, rgba(99,102,241,.06), transparent 70%);
+  border-radius: 0 16px 16px 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem,2.2vw,1.4rem); font-weight: 700;
+  font-style: italic; line-height: 1.55;
+  color: var(--ink);
+}
+
+/* ================================================================
+   BUTTONS
+================================================================ */
+
+.btnPrimary, .btnGhostLight {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: .88rem 1.9rem; border-radius: 12px;
+  font-family: var(--font-body); font-size: .88rem; font-weight: 700;
+  letter-spacing: .04em; text-decoration: none;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.btnPrimary {
+  background: linear-gradient(90deg, var(--h1),var(--h2),var(--h3),var(--h1));
+  background-size: 250% auto; color: #fff;
+  box-shadow: 0 8px 24px rgba(99,102,241,.30);
+  animation: btnShift 4s linear infinite; border: none;
+}
+.btnPrimary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(99,102,241,.42); }
+
+.btnGhostLight {
+  background: rgba(255,255,255,.14); color: #fff;
+  border: 1.5px solid rgba(255,255,255,.28); backdrop-filter: blur(8px);
+}
+.btnGhostLight:hover { transform: translateY(-2px); background: rgba(255,255,255,.22); }
+
+/* ================================================================
+   CTA BAND — identical pattern to About / Home
+================================================================ */
+
+.ctaBand {
+  border-radius: 28px;
+  background: linear-gradient(140deg, #0a0c1e 0%, #111827 50%, #0c1a2e 100%);
+  position: relative; overflow: hidden; text-align: center;
+}
+
+.ctaGlow1, .ctaGlow2 {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; filter: blur(60px);
+}
+.ctaGlow1 {
+  width: 380px; height: 380px; top: -100px; left: -80px;
+  background: radial-gradient(circle, rgba(99,102,241,.22), transparent 70%);
+}
+.ctaGlow2 {
+  width: 320px; height: 320px; bottom: -80px; right: -60px;
+  background: radial-gradient(circle, rgba(6,182,212,.17), transparent 70%);
+}
+
+.ctaBand::before {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black, transparent);
+  pointer-events: none;
+}
+
+.ctaBand::after {
+  content: ""; position: absolute; top:0; left:0; right:0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--h1) 20%, var(--h3) 50%, var(--h5) 80%, transparent);
+  background-size: 200% auto; animation: shimmerLine 3s linear infinite;
+}
+
+.ctaContent {
+  position: relative; z-index: 1;
+  padding: clamp(3rem,6vw,5rem) clamp(1.5rem,4vw,4rem);
+}
+
+.ctaEyebrow {
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .26em; text-transform: uppercase;
+  color: rgba(255,255,255,.4); margin: 0 0 1rem;
+}
+
+.ctaTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem,4.5vw,3.2rem); font-weight: 900;
+  letter-spacing: .05em; text-transform: uppercase;
+  color: #fff; margin: 0 0 1.2rem; line-height: 1.1;
+}
+
+.ctaBodyText {
+  font-size: clamp(.93rem,1.4vw,1.04rem); line-height: 1.8;
+  color: rgba(255,255,255,.62); max-width: 56ch;
+  margin: 0 auto 2.2rem;
+}
+
+.ctaActions {
+  display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap;
+}
+
+/* ================================================================
+   RESPONSIVE
+================================================================ */
+
+@media (max-width: 640px) {
+  .heroImageWrap { aspect-ratio: 4 / 3; border-radius: 18px; }
+  .pullQuote { padding: 1.2rem 1.3rem; }
+}
