@@ -10,7 +10,7 @@ const PRODUCT_CATS = [
     name: "Polyester Film Milky White",
   },
   {
-    img: "/home-page/insulating-kraft-paper.png",
+    img: "/home-page-image/insulating-kraft-paper.png",
     name: "Insulating Kraft Paper",
   },
   {
