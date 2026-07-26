@@ -6,44 +6,84 @@ import styles from "@/styles/Home.module.css";
 
 const PRODUCT_CATS = [
   {
-    img: "/hemo-product/polyester-tape.jpg",
-    name: "Polyester Films",
-    sub: "JBF and Garware",
+    img: "/home-page/aerotherm-nomex.png",
+    name: "Aerotherm Nomex",
   },
   {
-    img: "/product/17.jpg",
-    name: "H Class Aramid Paper",
-    sub: "Metastar",
+    img: "/home-page/dmd-film.png",
+    name: "DMD Film",
   },
   {
-    img: "/product/01.jpg",
-    name: "Insulating Varnishes",
-    sub: "ELANTAS · A-SEAL · Cenvar",
+    img: "/home-page/elantas.png",
+    name: "Elantas",
   },
   {
-    img: "/product/fire-retardant-fiberglass-sleeves.jpeg",
-    name: "Fibre Glass Sleeves",
-    sub: "PU · Silicone · FR grades · PVC",
+    img: "/home-page/elmo-luft-a1-golden-225ml.png",
+    name: "Elmo Luft A1 Golden 225ml",
   },
   {
-    img: "/product/03.jpg",
+    img: "/home-page/elmo-luft-1a-golden-900ml.png",
+    name: "Elmo Luft 1A Golden 900ml",
+  },
+  {
+    img: "/home-page/elmotherm-h71.png",
+    name: "Elmotherm H71",
+  },
+  {
+    img: "/home-page/epoxy-gel-coat-red.png",
+    name: "Epoxy Gel Coat (Red)",
+  },
+  {
+    img: "/home-page/epoxy-slot-wedges.png",
+    name: "Epoxy Slot Wedges",
+  },
+  {
+    img: "/home-page/f93-component-a.png",
+    name: "F93 Component A",
+  },
+  {
+    img: "/home-page/f93-component-b.png",
+    name: "F93 Component B",
+  },
+  {
+    img: "/home-page/garlam-insulation-paper.png",
+    name: "Garlam Insulation Paper",
+  },
+  {
+    img: "/home-page/heat-shrink-sleeves.png",
+    name: "Heat Shrink Sleeves",
+  },
+  {
+    img: "/home-page/isonel-51j.png",
+    name: "Isonel 51J",
+  },
+  {
+    img: "/home-page/insulating-kraft-paper.png",
     name: "Insulating Kraft Paper",
-    sub: "Leatheroid",
   },
   {
-    img: "/product/15.png",
-    name: "Insulation Tapes",
-    sub: "Fiber Glass · Superfine Cotton Tapes",
+    img: "/home-page/polyester-film-milky-white.png",
+    name: "Polyester Film Milky White",
   },
   {
-    img: "/product/16.jpeg",
-    name: "Epoxy Sheets & Wedges",
-    sub: "FR4 · G10 laminate",
+    img: "/home-page/polyester-film-slitted.png",
+    name: "Polyester Film Slitted",
   },
   {
-    img: "/product/08.jpg",
-    name: "Rubber Compound Tape",
-    sub: "Omega · A-Seal",
+    img: "/home-page/polyester-film-transparent-slitted.png",
+    name: "Polyester Film Transparent Slitted",
+  },
+  {
+    img: "/home-page/rayon-winding-thread.png",
+    name: "Rayon Winding Thread",
+  },
+  {
+    img: "/home-page/tinned-copper-fiberglass-cable.png",
+    name: "Tinned Copper Fiberglass Cable",
+  },
+  {
+    img: "/home-page/thinner-234.png",
+    name: "Thinner 234",
   },
 ];
 
@@ -210,7 +250,7 @@ export default function Home() {
                         alt={p.name}
                         fill
                         sizes="(max-width:768px) 50vw, 25vw"
-                        style={{ objectFit: "cover" }}
+                        style={{ objectFit: "contain" }}
                       />
                       <div className={styles.productOverlay}>
                         <span>
@@ -220,7 +260,6 @@ export default function Home() {
                     </div>
                     <div className={styles.productMeta}>
                       <h3>{p.name}</h3>
-                      <p>{p.sub}</p>
                     </div>
                   </a>
                 </AnimateOnScroll>

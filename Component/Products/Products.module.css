@@ -386,12 +386,13 @@
   height: 220px;
   overflow: hidden;
   flex-shrink: 0;
+  background: #f8fafc;
 }
 
 .img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform .7s ease, filter .4s ease;
   display: block;
 }

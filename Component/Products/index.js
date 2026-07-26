@@ -13,139 +13,184 @@ const Products = () => {
 
   const productCategories = [
     {
-      title: "ELANTAS Varnish 900ml",
+      title: "Aerotherm Nomex",
       description:
-        "ELANTAS Elmo Luft 1A-GOLDEN fast drying insulating varnish in 900ml bottles. Class F rated for motors, transformers, and electrical windings.",
-      image: "/product/01.jpg",
-      alt: "ELANTAS Elmo Luft 1A-GOLDEN 900ml insulating varnish bottle",
+        "AEROTHERM Nomex aramid paper for high-temperature Class H electrical insulation in motors, transformers, and generators.",
+      image: "/product-page/aerotherm-nomex.png",
+      alt: "AEROTHERM Nomex aramid insulation paper",
+      link: "/contact",
+      tag: "Paper",
+    },
+    {
+      title: "DMD Film",
+      description:
+        "DMD (Dacron-Mylar-Dacron) composite insulation laminate for Class B slot lining and phase insulation in motor and transformer windings.",
+      image: "/product-page/dmd-film.png",
+      alt: "DMD composite insulation laminate film",
+      link: "/contact",
+      tag: "Film",
+    },
+    {
+      title: "Elantas",
+      description:
+        "ELANTAS insulating varnish range for motor rewinding, impregnation, and coil protection — trusted since 1972.",
+      image: "/product-page/elantas.png",
+      alt: "ELANTAS insulating varnish range",
       link: "/contact",
       tag: "Varnish",
     },
     {
-      title: "ELANTAS Thinner 234",
+      title: "Elmo Luft A1 Golden 225ml",
       description:
-        "ELANTAS Thinner 234 for diluting and adjusting viscosity of impregnating and finishing varnishes. Ensures smooth, even coating application.",
-      image: "/product/02.jpg",
-      alt: "ELANTAS Thinner 234 for insulating varnish dilution",
-      link: "/contact",
-      tag: "Varnish",
-    },
-    {
-      title: "Pink Rayon Tape",
-      description:
-        "Trinity brand pink rayon fabric insulation tape for coil winding, motor assembly, and transformer insulation applications.",
-      image: "/product/03.jpg",
-      alt: "Trinity pink rayon fabric insulation tape roll",
-      link: "/contact",
-      tag: "Tape",
-    },
-    {
-      title: "Polyester Tape",
-      description:
-        "High-quality polyester woven tape with centre-line indicator for precise electrical insulation and coil banding applications.",
-      image: "/product/05.jpg",
-      alt: "Polyester woven insulation tape with centre-line",
-      link: "/contact",
-      tag: "Tape",
-    },
-    {
-      title: "Rayon Thread",
-      description:
-        "Durable synthetic rayon lacing thread for tying and securing electrical coil windings, motor assemblies, and wire harnessing.",
-      image: "/product/06.jpg",
-      alt: "Synthetic rayon lacing thread spools",
-      link: "/contact",
-      tag: "Thread",
-    },
-    {
-      title: "Omega Rubber Compound Tape",
-      description:
-        "OMEGA brand self-amalgamating rubber compound tape for shock-proof and water-proof electrical insulation and joint sealing.",
-      image: "/product/07.jpg",
-      alt: "OMEGA self-amalgamating rubber compound tape",
-      link: "/contact",
-      tag: "Tape",
-    },
-    {
-      title: "Aseal Rubber Compound Tape",
-      description:
-        "A-SEAL No. 1 quality self-adhesive rubber compound tape for reliable electrical insulation, cable jointing, and sealing.",
-      image: "/product/08.jpg",
-      alt: "A-SEAL No.1 self-adhesive rubber compound tape",
-      link: "/contact",
-      tag: "Tape",
-    },
-    {
-      title: "ELANTAS Varnish ISONEL 31J",
-      description:
-        "ELANTAS ISONEL 31J industrial-grade insulating varnish in bulk drums for high-volume motor and transformer manufacturing.",
-      image: "/product/09.jpeg",
-      alt: "ELANTAS ISONEL 31J insulating varnish bulk drum",
-      link: "/contact",
-      tag: "Varnish",
-    },
-    {
-      title: "ELANTAS Varnish 225ml",
-      description:
-        "ELANTAS Elmo Luft 1A-GOLDEN Class F air-drying insulating varnish in convenient 225ml pouch for small-batch and repair applications.",
-      image: "/product/10.jpeg",
+        "ELANTAS Elmo Luft 1A-GOLDEN Class F air-drying insulating varnish in a convenient 225ml pouch for small-batch and repair applications.",
+      image: "/product-page/elmo-luft-a1-golden-225ml.png",
       alt: "ELANTAS Elmo Luft 1A-GOLDEN 225ml varnish pouch",
       link: "/contact",
       tag: "Varnish",
     },
     {
-      title: "Aseal Varnish",
+      title: "Elmo Luft 1A Golden 900ml",
       description:
-        "A-SEAL fast drying insulating varnish available in multiple sizes for motor rewinding, transformer impregnation, and coil protection.",
-      image: "/product/11.jpg",
-      alt: "A-SEAL fast drying insulating varnish bottles",
+        "ELANTAS Elmo Luft 1A-GOLDEN fast drying insulating varnish in 900ml bottles. Class F rated for motors, transformers, and electrical windings.",
+      image: "/product-page/elmo-luft-1a-golden-900ml.png",
+      alt: "ELANTAS Elmo Luft 1A-GOLDEN 900ml insulating varnish bottle",
       link: "/contact",
       tag: "Varnish",
     },
     {
-      title: "Slitting Service",
+      title: "Elmotherm H71",
       description:
-        "Precision slitting and rewinding services for non-adhesive films, tapes, and flexible insulation materials to custom widths.",
-      image: "/product/12.jpeg",
-      alt: "Precision film slitting and rewinding machine",
+        "ELANTAS Elmotherm H71 Class H high-temperature insulating varnish for demanding motor and transformer applications.",
+      image: "/product-page/elmotherm-h71.png",
+      alt: "ELANTAS Elmotherm H71 insulating varnish",
       link: "/contact",
-      tag: "Service",
+      tag: "Varnish",
     },
     {
-      title: "Webbing Tape",
+      title: "Epoxy Gel Coat (Red)",
       description:
-        "Woven webbing tape with centre-line marker for electrical insulation wrapping, coil binding, and transformer winding applications.",
-      image: "/product/13.jpeg",
-      alt: "Woven webbing insulation tape with centre-line",
+        "Epoxy gel coat compound in red for sealing, potting, and protective coating of electrical components.",
+      image: "/product-page/epoxy-gel-coat-red.png",
+      alt: "Red epoxy gel coat compound",
       link: "/contact",
-      tag: "Tape",
+      tag: "Coating",
     },
     {
-      title: "PressBoard",
+      title: "Epoxy Slot Wedges",
       description:
-        "High-density electrical pressboard sheets in various grades for transformer insulation, slot liners, and phase barriers.",
-      image: "/product/15.png",
-      alt: "High-density electrical pressboard sheets",
-      link: "/contact",
-      tag: "Sheet",
-    },
-    {
-      title: "Epoxy Sheet",
-      description:
-        "Glass-reinforced epoxy laminate sheets (FR4/G10) for electrical insulation, switchboards, and structural support applications.",
-      image: "/product/16.jpeg",
-      alt: "FR4 G10 glass-reinforced epoxy laminate sheets",
+        "Glass-epoxy slot wedges for securing motor and generator windings in the stator slots.",
+      image: "/product-page/epoxy-slot-wedges.png",
+      alt: "Glass-epoxy motor slot wedges",
       link: "/contact",
       tag: "Sheet",
     },
     {
-      title: "Fire Retardant Fiberglass Sleeves",
+      title: "F93 Component A",
       description:
-        "Heat-resistant braided fiberglass sleeving for wire and cable protection in high-temperature electrical and industrial environments.",
-      image: "/product/fire-retardant-fiberglass-sleeves.jpeg",
-      alt: "Heat-resistant braided fiberglass sleeving",
+        "F93 two-component epoxy resin — Component A — for potting and encapsulation of electrical windings.",
+      image: "/product-page/f93-component-a.png",
+      alt: "F93 epoxy resin Component A",
+      link: "/contact",
+      tag: "Resin",
+    },
+    {
+      title: "F93 Component B",
+      description:
+        "F93 two-component epoxy resin — Component B hardener — for potting and encapsulation of electrical windings.",
+      image: "/product-page/f93-component-b.png",
+      alt: "F93 epoxy resin Component B hardener",
+      link: "/contact",
+      tag: "Resin",
+    },
+    {
+      title: "Garlam Insulation Paper",
+      description:
+        "Garlam laminated insulation paper for slot lining and phase insulation in motors and transformers.",
+      image: "/product-page/garlam-insulation-paper.png",
+      alt: "Garlam laminated insulation paper",
+      link: "/contact",
+      tag: "Paper",
+    },
+    {
+      title: "Heat Shrink Sleeves",
+      description:
+        "Heat shrink sleeving for insulating and protecting cable joints, terminations, and wire harnesses.",
+      image: "/product-page/heat-shrink-sleeves.png",
+      alt: "Heat shrink insulation sleeves",
       link: "/contact",
       tag: "Sleeve",
+    },
+    {
+      title: "Isonel 51J",
+      description:
+        "ELANTAS ISONEL 51J industrial-grade insulating varnish in bulk drums for high-volume motor and transformer manufacturing.",
+      image: "/product-page/isonel-51j.png",
+      alt: "ELANTAS ISONEL 51J insulating varnish bulk drum",
+      link: "/contact",
+      tag: "Varnish",
+    },
+    {
+      title: "Insulating Kraft Paper",
+      description:
+        "Insulating kraft paper (Leatheroid) for coil wrapping and general-purpose electrical insulation.",
+      image: "/product-page/insulating-kraft-paper.png",
+      alt: "Insulating kraft paper roll",
+      link: "/contact",
+      tag: "Paper",
+    },
+    {
+      title: "Polyester Film Milky White",
+      description:
+        "Milky white polyester (PET) film for slot lining and phase insulation in electrical windings.",
+      image: "/product-page/polyester-film-milky-white.png",
+      alt: "Milky white polyester insulation film",
+      link: "/contact",
+      tag: "Film",
+    },
+    {
+      title: "Polyester Film Slitted",
+      description:
+        "Precision-slitted polyester film rolls for coil winding and electrical insulation applications.",
+      image: "/product-page/polyester-film-slitted.png",
+      alt: "Slitted polyester insulation film rolls",
+      link: "/contact",
+      tag: "Film",
+    },
+    {
+      title: "Polyester Film Transparent Slitted",
+      description:
+        "Transparent slitted polyester film rolls for electrical insulation and wrapping applications.",
+      image: "/product-page/polyester-film-transparent-slitted.png",
+      alt: "Transparent slitted polyester insulation film rolls",
+      link: "/contact",
+      tag: "Film",
+    },
+    {
+      title: "Rayon Winding Thread",
+      description:
+        "Rayon lacing thread for tying and securing electrical coil windings, motor assemblies, and wire harnessing.",
+      image: "/product-page/rayon-winding-thread.png",
+      alt: "Rayon winding lacing thread spools",
+      link: "/contact",
+      tag: "Thread",
+    },
+    {
+      title: "Tinned Copper Fiberglass Cable",
+      description:
+        "Tinned copper braided fiberglass cable for high-temperature electrical connections and grounding.",
+      image: "/product-page/tinned-copper-fiberglass-cable.png",
+      alt: "Tinned copper fiberglass braided cable",
+      link: "/contact",
+      tag: "Cable",
+    },
+    {
+      title: "Thinner 234",
+      description:
+        "ELANTAS Thinner 234 for diluting and adjusting viscosity of impregnating and finishing varnishes. Ensures smooth, even coating application.",
+      image: "/product-page/thinner-234.png",
+      alt: "ELANTAS Thinner 234 for insulating varnish dilution",
+      link: "/contact",
+      tag: "Varnish",
     },
   ];
 

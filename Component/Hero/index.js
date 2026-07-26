@@ -86,8 +86,8 @@ const Hero = () => {
           </div>
 
           <h1 className={styles.title}>
-            <span className={styles.t1}>A.A. SHA IMPEX</span>
-            <span className={styles.t2}>&amp; EXPORTS</span>
+            <span className={styles.t1}>A.A. SHA IMPEX&amp; EXPORTS</span>
+
           </h1>
 
           <p className={styles.tagline}>House of Best Quality Electrical Insulation</p>
