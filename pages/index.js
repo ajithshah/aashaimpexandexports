@@ -30,7 +30,7 @@ const PRODUCT_CATS = [
     name: "Fire Retardant Fiberglass Sleeves",
   },
   {
-    img: "/home-page/aramid-papers.png",
+    img: "/home-page/aramid-papers.jpeg",
     name: "Aramid Papers",
   },
   {
