@@ -13,10 +13,10 @@ const Products = () => {
 
   const productCategories = [
     {
-      title: "Aerotherm Nomex",
+      title: "AAEROTHERM® Nomex (APA)",
       description:
         "AEROTHERM Nomex aramid paper for high-temperature Class H electrical insulation in motors, transformers, and generators.",
-      image: "/product-page/aerotherm-nomex.png",
+      image: "/product-page/aerotherm-nomex-apa.png",
       alt: "AEROTHERM Nomex aramid insulation paper",
       link: "/contact",
       tag: "Paper",
@@ -31,29 +31,20 @@ const Products = () => {
       tag: "Film",
     },
     {
-      title: "Elantas",
+      title: "Insulating Varnish (ELANTAS)",
       description:
         "ELANTAS insulating varnish range for motor rewinding, impregnation, and coil protection — trusted since 1972.",
-      image: "/product-page/elantas.png",
+      image: "/product-page/insulating-varnish-elantas.png",
       alt: "ELANTAS insulating varnish range",
       link: "/contact",
       tag: "Varnish",
     },
     {
-      title: "Elmo Luft A1 Golden 225ml",
+      title: "ELANTAS Elmo Luft 1A Golden",
       description:
-        "ELANTAS Elmo Luft 1A-GOLDEN Class F air-drying insulating varnish in a convenient 225ml pouch for small-batch and repair applications.",
-      image: "/product-page/elmo-luft-a1-golden-225ml.png",
-      alt: "ELANTAS Elmo Luft 1A-GOLDEN 225ml varnish pouch",
-      link: "/contact",
-      tag: "Varnish",
-    },
-    {
-      title: "Elmo Luft 1A Golden 900ml",
-      description:
-        "ELANTAS Elmo Luft 1A-GOLDEN fast drying insulating varnish in 900ml bottles. Class F rated for motors, transformers, and electrical windings.",
-      image: "/product-page/elmo-luft-1a-golden-900ml.png",
-      alt: "ELANTAS Elmo Luft 1A-GOLDEN 900ml insulating varnish bottle",
+        "ELANTAS Elmo Luft 1A-GOLDEN fast drying insulating varnish. Class F rated for motors and transformers.",
+      image: "/product-page/elmo-luft-1a-golden.png",
+      alt: "ELANTAS Elmo Luft 1A-GOLDEN insulating varnish bottle",
       link: "/contact",
       tag: "Varnish",
     },
@@ -76,19 +67,10 @@ const Products = () => {
       tag: "Coating",
     },
     {
-      title: "Epoxy Slot Wedges",
-      description:
-        "Glass-epoxy slot wedges for securing motor and generator windings in the stator slots.",
-      image: "/product-page/epoxy-slot-wedges.png",
-      alt: "Glass-epoxy motor slot wedges",
-      link: "/contact",
-      tag: "Sheet",
-    },
-    {
       title: "F93 Component A",
       description:
         "F93 two-component epoxy resin — Component A — for potting and encapsulation of electrical windings.",
-      image: "/product-page/f93-component-a.png",
+      image: "/product-page/varnish-f93-component-a.png",
       alt: "F93 epoxy resin Component A",
       link: "/contact",
       tag: "Resin",
@@ -97,34 +79,25 @@ const Products = () => {
       title: "F93 Component B",
       description:
         "F93 two-component epoxy resin — Component B hardener — for potting and encapsulation of electrical windings.",
-      image: "/product-page/f93-component-b.png",
+      image: "/product-page/varnish-f93-component-b.png",
       alt: "F93 epoxy resin Component B hardener",
       link: "/contact",
       tag: "Resin",
     },
     {
-      title: "Garlam Insulation Paper",
+      title: "Garlam® Insulation Composite Paper",
       description:
         "Garlam laminated insulation paper for slot lining and phase insulation in motors and transformers.",
-      image: "/product-page/garlam-insulation-paper.png",
+      image: "/product-page/garlam-insulation-composite-paper.png",
       alt: "Garlam laminated insulation paper",
       link: "/contact",
       tag: "Paper",
     },
     {
-      title: "Heat Shrink Sleeves",
-      description:
-        "Heat shrink sleeving for insulating and protecting cable joints, terminations, and wire harnesses.",
-      image: "/product-page/heat-shrink-sleeves.png",
-      alt: "Heat shrink insulation sleeves",
-      link: "/contact",
-      tag: "Sleeve",
-    },
-    {
       title: "Isonel 51J",
       description:
         "ELANTAS ISONEL 51J industrial-grade insulating varnish in bulk drums for high-volume motor and transformer manufacturing.",
-      image: "/product-page/isonel-51j.png",
+      image: "/product-page/isonel-51j.jpg",
       alt: "ELANTAS ISONEL 51J insulating varnish bulk drum",
       link: "/contact",
       tag: "Varnish",
@@ -148,19 +121,10 @@ const Products = () => {
       tag: "Film",
     },
     {
-      title: "Polyester Film Slitted",
-      description:
-        "Precision-slitted polyester film rolls for coil winding and electrical insulation applications.",
-      image: "/product-page/polyester-film-slitted.png",
-      alt: "Slitted polyester insulation film rolls",
-      link: "/contact",
-      tag: "Film",
-    },
-    {
       title: "Polyester Film Transparent Slitted",
       description:
         "Transparent slitted polyester film rolls for electrical insulation and wrapping applications.",
-      image: "/product-page/polyester-film-transparent-slitted.png",
+      image: "/product-page/transparent-clear-polyester-film-slitted.png",
       alt: "Transparent slitted polyester insulation film rolls",
       link: "/contact",
       tag: "Film",
@@ -169,19 +133,10 @@ const Products = () => {
       title: "Rayon Winding Thread",
       description:
         "Rayon lacing thread for tying and securing electrical coil windings, motor assemblies, and wire harnessing.",
-      image: "/product-page/rayon-winding-thread.png",
+      image: "/product-page/rayon-winding-thread.jpg",
       alt: "Rayon winding lacing thread spools",
       link: "/contact",
       tag: "Thread",
-    },
-    {
-      title: "Tinned Copper Fiberglass Cable",
-      description:
-        "Tinned copper braided fiberglass cable for high-temperature electrical connections and grounding.",
-      image: "/product-page/tinned-copper-fiberglass-cable.png",
-      alt: "Tinned copper fiberglass braided cable",
-      link: "/contact",
-      tag: "Cable",
     },
     {
       title: "Thinner 234",
