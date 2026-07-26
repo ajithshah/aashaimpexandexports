@@ -19,22 +19,20 @@ const PRODUCT_CATS = [
   },
   {
     img: "/home-page/aerotherm-nomex.png",
-    name: "Aerotherm Nomex",
+    name: "Aerotherm Nomex (APA)",
   },
   {
     img: "/home-page/dmd-film.png",
     name: "DMD Film",
   },
   {
-    img: "/home-page/thinner-234.png",
-    name: "Thinner 234",
+    img: "/home-page/fire-retardant-fiberglass-sleeves.png",
+    name: "Fire Retardant Fiberglass Sleeves",
   },
   {
     img: "/home-page/heat-shrink-sleeves.png",
     name: "Heat Shrink Sleeves",
   },
-
-
   {
     img: "/home-page/epoxy-gel-coat-red.png",
     name: "Epoxy Gel Coat (Red)",
