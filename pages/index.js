@@ -98,8 +98,8 @@ export default function Home() {
         description="A A Sha Impex and Exports is a leading supplier and exporter of electrical insulation materials, specialty films, industrial tapes, BOPP films, PET films, polyimide films, and Nomex paper from India. 50+ years of trusted global trade."
         keywords="electrical insulation materials India, specialty films supplier India, BOPP films exporter, PET films supplier, polyimide films Kapton India, Nomex paper supplier, industrial tapes exporter India, insulation varnish supplier, ELANTAS resins India, mica tape supplier, A A Sha Impex, specialty materials export India"
         url="https://aashaimpexandexports.com"
-        image="/hemo-product/01.jpg"
-        images={["/product/09.jpeg", "/hemo-product/17.jpg", "/hemo-product/Polyimide.jpg"]}
+        image="/product-page/elmo-luft-1a-golden.png"
+        images={["/product-page/isonel-31j.png", "/product-page/fiberglass-sleeves.jpg", "/product-page/aerotherm-nomex-apa.png"]}
         siteName="A A Sha Impex and Exports"
         breadcrumb={[{ name: "Home", path: "/" }]}
       />

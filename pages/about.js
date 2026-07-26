@@ -9,8 +9,8 @@ export default function AboutPage() {
         description="Learn about A A Sha Impex and Exports — Authorised Importers, Distributors, and Stockists of electrical insulation materials since 1972. Based in Chennai, India. Trusted by 500+ customers for quality Polyester Films, Aramid Papers, Varnishes, and more."
         keywords="about A A Sha Impex, electrical insulation company Chennai, insulation materials supplier India, trusted since 1972, motor insulation stockist, transformer insulation dealer, polyester film dealer Chennai"
         url="https://aashaimpexandexports.com/about"
-        image="/product/Sample01.jpg"
-        images={["/hemo-product/01.jpg", "/hemo-product/Polyimide.jpg"]}
+        image="/hero/hero-2.jpg"
+        images={["/product-page/insulating-varnish-elantas.png", "/product-page/dmd-film.png"]}
         siteName="A A Sha Impex and Exports"
         breadcrumb={[
           { name: "Home", path: "/" },

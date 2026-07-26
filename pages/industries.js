@@ -9,8 +9,8 @@ export default function IndustriesPage() {
         description="A A Sha Impex and Exports supplies electrical insulation materials for electric motors, transformers, generators, fans, pumps, switchgear, motor rewinding shops, railways, renewable energy, and automotive/EV applications."
         keywords="motor insulation supplier India, transformer insulation materials, generator insulation, fan motor insulation, pump motor insulation, motor rewinding materials, switchgear insulation, railway traction insulation, EV motor insulation, insulation materials industries"
         url="https://aashaimpexandexports.com/industries"
-        image="/hemo-product/Polyimide.jpg"
-        images={["/hemo-product/17.jpg", "/hemo-product/16.jpeg", "/hemo-product/15.png"]}
+        image="/product-page/dmd-film.png"
+        images={["/product-page/fiberglass-sleeves.jpg", "/product-page/h-class-pure-aramid-paper.png", "/product-page/insulating-varnish-elantas.png"]}
         siteName="A A Sha Impex and Exports"
         breadcrumb={[
           { name: "Home", path: "/" },

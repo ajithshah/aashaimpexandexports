@@ -65,8 +65,8 @@ export default function ProductsPage() {
         description="Browse our full range of electrical insulation materials: Polyester Films, Aramid Papers, ELANTAS Varnishes, DMD/FPF Laminates, Fibre Glass Sleeves, Epoxy Sheets, Rubber Compound Tapes, Kraft Paper, and more. Authorised stockist in Chennai, India."
         keywords="polyester film supplier Chennai, ELANTAS varnish dealer India, aramid paper stockist, Nomex paper India, DMD laminates supplier, fibre glass sleeve dealer, epoxy sheet India, rubber compound tape, Kraft paper insulation, motor insulation materials, transformer insulation supplier, insulation materials store Chennai"
         url="https://aashaimpexandexports.com/products"
-        image="/hemo-product/01.jpg"
-        images={["/product/09.jpeg", "/hemo-product/17.jpg", "/hemo-product/Polyimide.jpg", "/hemo-product/15.png"]}
+        image="/product-page/aerotherm-nomex-apa.png"
+        images={["/product-page/isonel-31j.png", "/product-page/fiberglass-sleeves.jpg", "/product-page/insulating-varnish-elantas.png", "/product-page/dmd-film.png"]}
         siteName="A A Sha Impex and Exports"
         productSchema={productListSchema}
         breadcrumb={[

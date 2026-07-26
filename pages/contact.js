@@ -63,8 +63,8 @@ export default function ContactPage() {
         description="Contact A A Sha Impex and Exports to request a quote for electrical insulation materials — Polyester Films, Aramid Papers, Varnishes, Fibre Glass Sleeves, and more. Located at No.24, Sembudoss Street, Broadway, Chennai - 600 001."
         keywords="contact A A Sha Impex, insulation materials quote Chennai, buy polyester film Chennai, buy varnish ELANTAS India, insulation materials inquiry, fibre glass sleeve supplier contact, motor insulation quote, Chennai insulation supplier, Broadway Chennai"
         url="https://aashaimpexandexports.com/contact"
-        image="/product/Sample01.jpg"
-        images={["/hemo-product/01.jpg", "/product/09.jpeg"]}
+        image="/hero/hero-3.jpg"
+        images={["/product-page/elmo-luft-1a-golden.png", "/product-page/isonel-31j.png"]}
         siteName="A A Sha Impex and Exports"
         breadcrumb={[
           { name: "Home", path: "/" },
