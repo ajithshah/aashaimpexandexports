@@ -6,35 +6,35 @@ import styles from "@/styles/Home.module.css";
 
 const PRODUCT_CATS = [
   {
-    img: "/home-page-image/polyester-film-milky-white.png",
+    img: "/product-page/polyester-film-milky-white.png",
     name: "Polyester Film Milky White",
   },
   {
-    img: "/home-page-image/insulating-kraft-paper.png",
+    img: "/product-page/insulating-kraft-paper.png",
     name: "Insulating Kraft Paper",
   },
   {
-    img: "/home-page-image/insulating-varnish-elantas.png",
+    img: "/product-page/insulating-varnish-elantas.png",
     name: "Insulating Varnish (ELANTAS)",
   },
   {
-    img: "/home-page-image/aerotherm-nomex-apa.png",
+    img: "/product-page/aerotherm-nomex-apa.png",
     name: "AAEROTHERM® Nomex (APA)",
   },
   {
-    img: "/home-page-image/dmd-film.png",
+    img: "/product-page/dmd-film.png",
     name: "DMD Film",
   },
   {
-    img: "/home-page-image/fiberglass-sleeves.jpg",
+    img: "/product-page/fiberglass-sleeves.jpg",
     name: "Fiberglass Sleeves",
   },
   {
-    img: "/home-page-image/h-class-pure-aramid-paper.png",
+    img: "/product-page/h-class-pure-aramid-paper.png",
     name: "H Class pure Aramid Papers",
   },
   {
-    img: "/home-page-image/h-class-fiberglass-tape.png",
+    img: "/product-page/h-class-fiberglass-tape.png",
     name: "H class Fiberglass Tape",
   }
 
