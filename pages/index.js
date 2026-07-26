@@ -6,7 +6,7 @@ import styles from "@/styles/Home.module.css";
 
 const PRODUCT_CATS = [
   {
-    img: "/home-page/polyester-film-milky-white.png",
+    img: "/home-page-image/polyester-film-milky-white.png",
     name: "Polyester Film Milky White",
   },
   {
@@ -14,27 +14,27 @@ const PRODUCT_CATS = [
     name: "Insulating Kraft Paper",
   },
   {
-    img: "/home-page/group.png",
+    img: "/home-page-image/insulating-varnish-elantas.png",
     name: "Insulating Varnish",
   },
   {
-    img: "/home-page/aerotherm-nomex.png",
+    img: "/home-page-image/aerotherm-nomex-apa.png",
     name: "Aerotherm Nomex (APA)",
   },
   {
-    img: "/home-page/dmd-film.png",
+    img: "/home-page-image/dmd-film.png",
     name: "DMD Film",
   },
   {
-    img: "/home-page/fire-retardant-fiberglass-sleeves.png",
+    img: "/home-page-image/fiberglass-sleeves.jpg",
     name: "Fire Retardant Fiberglass Sleeves",
   },
   {
-    img: "/home-page/aramid-papers.jpeg",
+    img: "/home-page-image/h-class-pure-aramid-paper.png",
     name: "Aramid Papers",
   },
   {
-    img: "/home-page/epoxy-gel-coat-red.png",
+    img: "/home-page-image/epoxy-gel-coat-red.png",
     name: "Epoxy Gel Coat (Red)",
   }
 
