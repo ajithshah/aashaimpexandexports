@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/react";
 import "@/styles/globals.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Header from "@/Component/Header";
@@ -39,6 +40,7 @@ export default function App({ Component, pageProps }) {
       </div>
       <Footer />
       <WhatsAppFab />
+      <Analytics />
     </>
   );
 }
